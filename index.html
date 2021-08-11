@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Estadística 101</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Estadística 101</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Curso</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Estadística 101</h1>
+
+</div>
+
+
+<p><br/> Este curso se basa en <a href="https://www.goodreads.com/book/show/578667.Statistics_Without_Tears" target="_blank">Statistics without tears</a> de Derek Rowntree y <a href="https://www.discoveringstatistics.com/books/discovering-statistics-using-r/" target="_blank">Discovering statistics using R</a> de Andy Field, Jeremy Miles y Zoë Field. Dicho eso, cualquier error que puedas encontrar es mi responsabilidad.<br/> Este curso también utiliza material del libro &quot;Discovering statistics using R&quot;. Este material no me pertenece y es accesible <a href="https://studysites.uk.sagepub.com/dsur/study/articles.htm" target="_blank">aquí.</a></p>
+<p>Este curso asume que no sabes nada de estadística. Sin embargo, si asume que sabes lo básico de aritmética y fracciones. La mejor manera de aprender es que respondas las preguntas clave de cada capítulo. Y que realizes los ejercicios con la ayuda de Jamovi. La base de datos que vamos a utilizar se encuentra <a href="https://github.com/joseluisulloafulgeri/estadistica101_database" target="_blank">aquí.</a> Y las diapositivas están <a href="https://osf.io/6hv75/" target="_blank">aquí.</a></p>
+<p>¡Que disfrutes el curso!<br/><br/></p>
+<div id="capítulo-1a-para-que-nos-sirve-la-estadística" class="section level2">
+<h2><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGaCt1fDe0vl-pBt_Y4A0uaU" target="_blank">Capítulo 1a: ¿Para que nos sirve la estadística?</a></h2>
+<p>Contenido: 4 videos (27 minutos en total)</p>
+<p>Preguntas clave:</p>
+<ul>
+<li>¿Qué es la estadística descriptiva? ¿Qué es la estadística inferencial?</li>
+<li>¿Qué es una población y una muestra? ¿Qué son los parámetros y los estadísticos?</li>
+<li>¿Por qué necesitamos obtener una muestra para nuestros experimentos?</li>
+<li><p>¿Por qué necesitamos las probabilidades para análisis estadísticos?</p></li>
+<li>¿Que tipos de variables nos sirven para describir una muestra?</li>
+<li>¿Que significa definir variables y operacionalizar?</li>
+<li>¿Que es una variable independiente? ¿Que es una variable dependiente?</li>
+<li><p>¿Cómo se construye una hipótesis?</p></li>
+<li>En un diseño experimental ¿qué es un factor?</li>
+<li>En un diseño experimental ¿qué es un nivel?</li>
+<li>¿Cuál es la diferencia entre un diseño intra-sujetos y un diseño entre-sujetos?</li>
+<li>¿Qué es un diseño experimental mixto?</li>
+<li>¿Qué tipo de prueba se utiliza para comparar dos grupos experimentales?</li>
+<li><p>¿Qué tipo de prueba se utiliza para comparar mas de dos grupos experimentales? <br/><br/></p></li>
+</ul>
+</div>
+<div id="capítulo-1b-que-es-lo-más-esencial-que-debería-saber" class="section level2">
+<h2><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZdIZuvGySMRfKq2r1UKnCg" target="_blank">Capítulo 1b: ¿Que es lo más esencial que debería saber?</a></h2>
+<p>Contenido: 6 videos (41 minutos en total)</p>
+<p>Preguntas clave:</p>
+<ul>
+<li>¿Qué aspectos son importantes a la hora de diseñar un experimento?</li>
+<li>¿Qué es la validez de una medición?</li>
+<li>¿Qué es la replicabilidad de una medición?</li>
+<li><p>¿Qué es un factor confundente?</p></li>
+<li>¿Qué hace un prueba estadística (en términos de los cambios que experimenta una variable)?</li>
+<li><p>¿Qué es la variación sistemática? ¿Qué es la variación no sistemática?</p></li>
+<li>¿Cuál es la diferencia entre un diseño intra-sujetos y un diseño entre-sujetos?</li>
+<li><p>¿Cuál es la relación entre un diseño experimental y su análisis estadístico asociado?</p></li>
+<li>¿Quién fué Roland Fisher?</li>
+<li><p>¿Dé dónde viene el 5% (o p = 0.05) que usamos en estadística?</p></li>
+<li>¿Para que se usa la randomización?</li>
+<li>¿Qué son los efectos de práctica y de aburrimiento en un diseño intra-sujetos?</li>
+<li><p>¿Cómo podemos confeccionar un buen diseño entre-sujetos?</p></li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=K0djrU94yvg&ab_channel=Jos%C3%A9LuisBlues" target="_blank"><span style="color:blue">Estadística en la práctica 1: Instalando Jamovi (2.5 minutos)</span></a> <br/><br/></p>
+</div>
+<div id="capítulo-2-por-qué-importa-tanto-tanto-la-curva-normal" class="section level2">
+<h2><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGYNH1thjd8KkRyr-JVPzvR3" target="_blank">Capítulo 2: ¿Por qué importa tanto tanto la curva normal?</a></h2>
+<p>Contenido: 8 videos (1 hora 32 minutos en total)</p>
+<ul>
+<li>¿Por qué es importante graficar los datos?</li>
+<li>¿Cómo se calcula la desviación estándar?</li>
+<li><p>¿Qué es la suma de cuadrados (o suma de los errores al cuadrado)?</p></li>
+<li>¿Cómo se puede visualizar la &quot;forma&quot; de los datos?</li>
+<li>¿Qué características tiene la curva normal?</li>
+<li>¿Cómo estimamos cuantas observaciones caen entre dos valores para una set de datos?</li>
+<li><p>¿Qué porcentaje de los datos esta entre -1 SD y 1 SD?</p></li>
+<li>¿Qué significa generalizar nuestros hallazgos?</li>
+<li>¿Qué es la variación de la muestra (o sampling variation)?</li>
+<li>¿Qué es el error estándar y como se calcula?</li>
+<li>¿Qué son los intervalos de confianza?</li>
+<li>¿Qué significa que cálculemos un promedio con un intervalo de confianza al 68%?</li>
+<li><p>¿Qué significa que cálculemos un promedio con un intervalo de confianza al 95%?</p></li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=1DaF6lau7hA&ab_channel=Jos%C3%A9LuisBlues" target="_blank"><span style="color:blue">Estadística en la práctica 2: Explorando mis datos (17 minutos)</span></a> <br/><br/></p>
+</div>
+<div id="capítulo-3-que-es-un-t-test" class="section level2">
+<h2><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGbZKFJCnsK8Sxd840FatDm-" target="_blank">Capítulo 3: ¿Que es un t-test?</a></h2>
+<p>Contenido: 4 videos (45 minutos en total)</p>
+<ul>
+<li>¿Cómo se sabe si dos muestras viene de una misma población o de poblaciones diferentes?</li>
+<li>¿Para que nos sirve la distribución normal para compara dos muestras?</li>
+<li>¿Cuál es la hipótesis nula cuando comparamos dos muestras?</li>
+<li>¿Cómo se refleja un t-test en un modelo lineal general (GLM)?</li>
+<li>¿Qué representa el intercepto de la ecuación de un GLM para una variable outcome cuando se comparan dos grupos?</li>
+<li>¿Qué representa la pendiente de la ecuación de un GLM para una variable outcome cuando se comparan dos grupos?</li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=-XgeZ-cAtEc&ab_channel=Jos%C3%A9LuisBlues" target="_blank"><span style="color:blue">Estadística en la práctica 3: T-test entre-sujetos (23 minutos)</span></a></p>
+<p><a href="https://www.youtube.com/watch?v=fjKGrAlonPI&ab_channel=Jos%C3%A9LuisBlues" target="_blank"><span style="color:blue">Estadística en la práctica 4: T-test intra-sujetos (13 minutos)</span></a> <br/><br/></p>
+</div>
+<div id="capítulo-4-que-es-un-modelo-estadístico" class="section level2">
+<h2><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGaAEQlidg92YdaCvYBCWoSj" target="_blank">Capítulo 4: ¿Que es un modelo estadístico?</a></h2>
+<p>Contenido: 3 videos (39 minutos en total)</p>
+<ul>
+<li>¿Qué es un modelo estadístico?</li>
+<li>¿Por qué es importante tener buenos modelos?</li>
+<li>¿Cómo de determina el error en un modelo?</li>
+<li>¿Qué son los grados de libertad?</li>
+<li>¿Cómo se define la línea de la ecuación de un GLM que se ajuste mejor a los datos?</li>
+<li>¿Cuál es el modelo más básico con el cual se compara un modelo que uno construya?</li>
+<li>¿Qué es la SS total?</li>
+<li>¿Qué es la SS de los residuales?</li>
+<li>¿Qué es la SS del modelo?</li>
+<li>¿Cómo se establece que un modelo dado explica mejor los datos que un modelo básico?</li>
+<li>¿Cómo se establece cuan bueno es un modelo comparado con cuan malo es? ¿Lo que explica y lo que no explica un modelo?</li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=rH8uFlhVb5A&ab_channel=Jos%C3%A9LuisBlues" target="_blank"><span style="color:blue">Estadística en la práctica 5: Correlación (8 minutos)</span></a> <br/><br/></p>
+</div>
+<div id="capítulo-5-que-es-un-anova" class="section level2">
+<h2><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGaJHRDX7kGcfA659l8FMRAO" target="_blank">Capítulo 5: ¿Que es un ANOVA?</a></h2>
+<p>Contenido: 4 videos (53 minutos en total)</p>
+<ul>
+<li>¿Cómo comparamos varias condiciones experimentales?</li>
+<li>¿Cuántos distintos tipos de ANOVA existen?</li>
+<li>¿De qué dependen del tipo de ANOVA que usemos para realizar un análisis?</li>
+<li>¿Qué es un factor en un ANOVA?</li>
+<li>¿Qué es un nivel en un ANOVA?</li>
+<li>¿Qué es un ANOVA mixto?</li>
+<li>¿En un experimento hipotético con 3 condiciones experimentales por qué no podemos usar 3 t-test?</li>
+<li>¿Cuanto aumenta el error de tipo 1 cuando aumentamos el número de comparaciones que hacemos?</li>
+<li>¿Qué es una prueba omnibus?</li>
+<li>¿Cuáles son los supuestos del ANOVA?</li>
+<li>¿Qué nos dice el valor F en un ANOVA?</li>
+<li>¿Por qué el ANOVA se puede representar como una regresión?</li>
+<li>¿Para que nos sirven las variables ficticias (dummy coding) en el ANOVA?</li>
+<li>¿Qué es el intercepto en la ecuación que representa el ANOVA?</li>
+<li>¿Qué indican los coeficientes (o betas) en la ecuación que representa el ANOVA?</li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=ND6EalaIWa4&ab_channel=Jos%C3%A9LuisBlues" target="_blank"><span style="color:blue">Estadística en la práctica 6: ANOVA independiente (15 minutos)</span></a> <br/><br/></p>
+</div>
+<div id="capítulo-6-y-que-hago-después-que-calculo-un-anova" class="section level2">
+<h2><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGaIAxM2bxJVkNDbKs5KnaId" target="_blank">Capítulo 6: ¿Y que hago después que calculo un ANOVA?</a></h2>
+<p>Contenido: 3 videos (35 minutos en total)</p>
+<ul>
+<li>¿Que hago después de una prueba omnibus?</li>
+<li>¿De qué depende el tipo de análisis que se hace después del ANOVA?</li>
+<li>¿Qué significa que desglocemos la varianza explicada en los distintos contrastes en el análisis de contrastes planificados?</li>
+<li>¿En un experimento dónde analizo el efecto de dos dosis de droga comparada con un placebo, que contrastes planificados se podrían hacer y que indican el intercepto y los betas de este modelo?</li>
+<li>¿Por que es importante que el contraste que hagamos sea un contraste ortogonal?</li>
+<li>¿Para que sirven los contrastes que evaluan una tendencia líneal o cuadrática?</li>
+<li>¿Qué tipos de pruebas post-hoc existen?</li>
+<li>¿Cuál es el riesgo que corremos si usamos una prueba post-hoc muy exigente (o conservadora)?</li>
+<li>¿Cuál es el riesgo que corremos si usamos una prueba post-hoc poco exigente (o conservadora)?</li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=fykbEKSPT3g&ab_channel=Jos%C3%A9LuisBlues" target="_blank"><span style="color:blue">Estadística en la práctica 7: ANOVA de medidas repetidas (13 minutos)</span></a></p>
+<p><a href="http://youtube.com/watch?v=3upUpRLBgH0&ab_channel=Jos%C3%A9LuisBlues" target="_blank"><span style="color:blue">Estadística en la práctica 8: ANOVA mixto (15 minutos)</span></a> <br/><br/></p>
+</div>
+<div id="capítulo-7-qué-conceptos-estadísticos-debería-manejar" class="section level2">
+<h2><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGb_yYkeLqCSX0xz_0n1tu9z" target="_blank">Capítulo 7: ¿Qué conceptos estadísticos debería manejar?</a></h2>
+<p>Contenido: 5 videos (46 minutos en total)</p>
+<ul>
+<li>¿Qué me dice y qué no me dice el valor de p?</li>
+<li>¿Cómo se interpreta un resultado estadístico nulo?</li>
+<li>¿Cuál es la diferencia entre una hipótesis de una cola y una hipótesis de dos colas?</li>
+<li>¿Por qué los criterios de significancia son más altos para una hipótesis de una cola que para una hipótesis de dos colas?</li>
+<li>¿Qué es un error de tipo I?</li>
+<li>¿Qué es un error de tipo II?</li>
+<li>¿Por qué hay un balance entre el error de tipo I y II?</li>
+<li>¿Qué es mas perjudicial para un estudio? ¿Un error de tipo I o II?</li>
+<li>¿Qué es el tamaño del efecto?</li>
+<li>¿Qué es el poder estadístico?</li>
+<li>¿Qué podemos hacer para que en un proyecto de investigación tengamos las mejores posibilidades de encontrar un efecto que realmente existe?</li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

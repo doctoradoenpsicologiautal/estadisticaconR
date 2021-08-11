@@ -1,0 +1,11 @@
+name: "estadistica101"
+output_dir: "."
+navbar:
+  title: "Estadística 101"
+  left:
+    - text: "Curso"
+      href: index.html
+output:
+  html_document:
+    theme: flatly
+    css: style.css
