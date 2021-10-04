@@ -8,10 +8,6 @@ Este curso también utiliza material del libro "Discovering statistics using R".
 
 Este curso asume que no sabes nada de estadística. Sin embargo, si asume que sabes lo básico de aritmética y fracciones. La mejor manera de aprender es que respondas las preguntas clave de cada capítulo. Y que realizes los ejercicios con la ayuda de Jamovi. La base de datos que vamos a utilizar se encuentra <a href="https://github.com/joseluisulloafulgeri/estadistica101_database" target="_blank">aquí.</a> Y las diapositivas están <a href="https://osf.io/6hv75/" target="_blank">aquí.</a>
 
-```{r, echo=FALSE}
-plot(cars)
-```
-
 ¡Que disfrutes el curso!<br/><br/>
 
 ## <a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGaCt1fDe0vl-pBt_Y4A0uaU" target="_blank">Capítulo 1a: ¿Para que nos sirve la estadística?</a>
@@ -62,7 +58,7 @@ Preguntas clave:
 - ¿Qué son los efectos de práctica y de aburrimiento en un diseño intra-sujetos?
 - ¿Cómo podemos confeccionar un buen diseño entre-sujetos?
 
-<a href="https://www.youtube.com/watch?v=K0djrU94yvg&ab_channel=Jos%C3%A9LuisBlues" target="_blank"><span style="color:blue">Estadística en la práctica 1: Instalando Jamovi (2.5 minutos)</span></a>
+<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZZ-qzu160UrC8TC6EfBvCr" target="_blank"><span style="color:blue">Programación con R. Capítulo 1</span></a>
 <br/><br/>
 
 ## <a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGYNH1thjd8KkRyr-JVPzvR3" target="_blank">Capítulo 2: ¿Por qué importa tanto tanto la curva normal?</a>
@@ -85,10 +81,10 @@ Contenido: 8 videos (1 hora 32 minutos en total)
 - ¿Qué significa que cálculemos un promedio con un intervalo de confianza al 68%?
 - ¿Qué significa que cálculemos un promedio con un intervalo de confianza al 95%?
 
-<a href="https://www.youtube.com/watch?v=1DaF6lau7hA&ab_channel=Jos%C3%A9LuisBlues" target="_blank"><span style="color:blue">Estadística en la práctica 2: Explorando mis datos (17 minutos)</span></a>
+<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGbTjJEkzZLLQHIOHYdK1-Ca" target="_blank"><span style="color:blue">Programación con R. Capítulo 2</span></a>
 <br/><br/>
 
-## <a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGbZKFJCnsK8Sxd840FatDm-" target="_blank">Capítulo 3: ¿Que es un t-test?</a>
+## <a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZXm9fSogEShVDKnzgQT3Cf" target="_blank">Capítulo 3: ¿Que es un t-test?</a>
 
 Contenido: 4 videos (45 minutos en total)
 
@@ -98,10 +94,6 @@ Contenido: 4 videos (45 minutos en total)
 - ¿Cómo se refleja un t-test en un modelo lineal general (GLM)?
 - ¿Qué representa el intercepto de la ecuación de un GLM para una variable outcome cuando se comparan dos grupos?
 - ¿Qué representa la pendiente de la ecuación de un GLM para una variable outcome cuando se comparan dos grupos?
-
-<a href="https://www.youtube.com/watch?v=-XgeZ-cAtEc&ab_channel=Jos%C3%A9LuisBlues" target="_blank"><span style="color:blue">Estadística en la práctica 3: T-test entre-sujetos (23 minutos)</span></a>
-
-<a href="https://www.youtube.com/watch?v=fjKGrAlonPI&ab_channel=Jos%C3%A9LuisBlues" target="_blank"><span style="color:blue">Estadística en la práctica 4: T-test intra-sujetos (13 minutos)</span></a>
 <br/><br/>
 
 ## <a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGaAEQlidg92YdaCvYBCWoSj" target="_blank">Capítulo 4: ¿Que es un modelo estadístico?</a>
@@ -119,11 +111,9 @@ Contenido: 3 videos (39 minutos en total)
 - ¿Qué es la SS del modelo?
 - ¿Cómo se establece que un modelo dado explica mejor los datos que un modelo básico?
 - ¿Cómo se establece cuan bueno es un modelo comparado con cuan malo es? ¿Lo que explica y lo que no explica un modelo?
-
-<a href="https://www.youtube.com/watch?v=rH8uFlhVb5A&ab_channel=Jos%C3%A9LuisBlues" target="_blank"><span style="color:blue">Estadística en la práctica 5: Correlación (8 minutos)</span></a>
 <br/><br/>
 
-## <a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGaJHRDX7kGcfA659l8FMRAO" target="_blank">Capítulo 5: ¿Que es un ANOVA?</a>
+## <a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGb7SIBsvmQpwy3Wi5wH7fBe" target="_blank">Capítulo 5: ¿Que es un ANOVA?</a>
 
 Contenido: 4 videos (53 minutos en total)
 
@@ -142,11 +132,9 @@ Contenido: 4 videos (53 minutos en total)
 - ¿Para que nos sirven las variables ficticias (dummy coding) en el ANOVA?
 - ¿Qué es el intercepto en la ecuación que representa el ANOVA?
 - ¿Qué indican los coeficientes (o betas) en la ecuación que representa el ANOVA?
-
-<a href="https://www.youtube.com/watch?v=ND6EalaIWa4&ab_channel=Jos%C3%A9LuisBlues" target="_blank"><span style="color:blue">Estadística en la práctica 6: ANOVA independiente (15 minutos)</span></a>
 <br/><br/>
 
-## <a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGaIAxM2bxJVkNDbKs5KnaId" target="_blank">Capítulo 6: ¿Y que hago después que calculo un ANOVA?</a>
+## <a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZyMYhJtEN7PtT_a_ebC4nY" target="_blank">Capítulo 6: ¿Y que hago después que calculo un ANOVA?</a>
 
 Contenido: 3 videos (35 minutos en total)
 
@@ -159,10 +147,6 @@ Contenido: 3 videos (35 minutos en total)
 - ¿Qué tipos de pruebas post-hoc existen?
 - ¿Cuál es el riesgo que corremos si usamos una prueba post-hoc muy exigente (o conservadora)?
 - ¿Cuál es el riesgo que corremos si usamos una prueba post-hoc poco exigente (o conservadora)?
-
-<a href="https://www.youtube.com/watch?v=fykbEKSPT3g&ab_channel=Jos%C3%A9LuisBlues" target="_blank"><span style="color:blue">Estadística en la práctica 7: ANOVA de medidas repetidas (13 minutos)</span></a>
-
-<a href="http://youtube.com/watch?v=3upUpRLBgH0&ab_channel=Jos%C3%A9LuisBlues" target="_blank"><span style="color:blue">Estadística en la práctica 8: ANOVA mixto (15 minutos)</span></a>
 <br/><br/>
 
 ## <a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGb_yYkeLqCSX0xz_0n1tu9z" target="_blank">Capítulo 7: ¿Qué conceptos estadísticos debería manejar?</a>
