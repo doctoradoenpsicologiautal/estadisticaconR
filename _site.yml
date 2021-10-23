@@ -1,11 +1,18 @@
 name: "estadistica101"
-output_dir: "."
-navbar:
-  title: "Estadística 101"
-  left:
-    - text: "Curso"
-      href: index.html
-output:
+title: "Estadística 101"
+#navbar:
+#  title: "Estadística 101"
+#  left:
+#    - text: "Curso"
+#      href: index.html
+# output:
+#   html_document:
+#     theme: flatly
+#     css: style.css
+output: 
   html_document:
-    theme: flatly
-    css: style.css
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    theme: lumen
+output_dir: "."

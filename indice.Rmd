@@ -1,0 +1,233 @@
+---
+title: "Estadística 101"
+output: html_document
+---
+
+## Introducción
+
+Este curso se basa en <a href="https://www.goodreads.com/book/show/578667.Statistics_Without_Tears" target="_blank">Statistics without tears</a> de Derek Rowntree y <a href="https://www.discoveringstatistics.com/books/discovering-statistics-using-r/" target="_blank">Discovering statistics using R</a>  de Andy Field, Jeremy Miles y Zoë Field. Dicho eso, cualquier error que puedas encontrar es mi responsabilidad.<br/>
+Este curso también utiliza material del libro "Discovering statistics using R". Este material no me pertenece y es accesible <a href="https://studysites.uk.sagepub.com/dsur/study/articles.htm" target="_blank">aquí.</a>
+
+Este curso asume que no sabes nada de estadística. Sin embargo, si asume que sabes lo básico de aritmética y fracciones. La mejor manera de aprender es que respondas las preguntas clave de cada capítulo. Y que realizes los ejercicios con la ayuda de Jamovi. La base de datos que vamos a utilizar se encuentra <a href="https://github.com/joseluisulloafulgeri/estadistica101_database" target="_blank">aquí.</a> Y las diapositivas están <a href="https://osf.io/6hv75/" target="_blank">aquí.</a>
+
+¡Que disfrutes el curso!
+
+<br/>
+<br/>
+
+## Capítulo 1: ¿Qué es la estadística?
+
+### Capítulo 1a: ¿Para qué nos sirve la estadística?
+
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGaCt1fDe0vl-pBt_Y4A0uaU" target="_blank">Ver</a>-->
+
+Contenido: 4 videos (27 minutos en total)
+
+
+#### Parte 1
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/10yOugyLLQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br/>
+
+#### Parte 2
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZHQsBt2xGkE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br/>
+
+#### Parte 3
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/R6qDgUyJDJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br/>
+
+#### Parte 4
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XiiWWa4VdqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br/>
+
+Preguntas clave:
+
+- ¿Qué es la estadística descriptiva? ¿Qué es la estadística inferencial?
+- ¿Qué es una población y una muestra? ¿Qué son los parámetros y los estadísticos?
+- ¿Por qué necesitamos obtener una muestra para nuestros experimentos?
+- ¿Por qué necesitamos las probabilidades para análisis estadísticos?
+
+- ¿Que tipos de variables nos sirven para describir una muestra?
+- ¿Que significa definir variables y operacionalizar?
+- ¿Que es una variable independiente? ¿Que es una variable dependiente?
+- ¿Cómo se construye una hipótesis?
+
+- En un diseño experimental ¿qué es un factor?
+- En un diseño experimental ¿qué es un nivel?
+- ¿Cuál es la diferencia entre un diseño intra-sujetos y un diseño entre-sujetos?
+- ¿Qué es un diseño experimental mixto?
+- ¿Qué tipo de prueba se utiliza para comparar dos grupos experimentales?
+- ¿Qué tipo de prueba se utiliza para comparar mas de dos grupos experimentales?
+
+<br/>
+<br/>
+
+### Capítulo 1b: ¿Que es lo más esencial que debería saber?
+
+<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZdIZuvGySMRfKq2r1UKnCg" target="_blank">Ver</a>
+
+Contenido: 6 videos (41 minutos en total)
+
+Preguntas clave:
+
+- ¿Qué aspectos son importantes a la hora de diseñar un experimento?
+- ¿Qué es la validez de una medición?
+- ¿Qué es la replicabilidad de una medición?
+- ¿Qué es un factor confundente?
+
+- ¿Qué hace un prueba estadística (en términos de los cambios que experimenta una variable)?
+- ¿Qué es la variación sistemática? ¿Qué es la variación no sistemática?
+
+- ¿Cuál es la diferencia entre un diseño intra-sujetos y un diseño entre-sujetos?
+- ¿Cuál es la relación entre un diseño experimental y su análisis estadístico asociado?
+
+- ¿Quién fué Roland Fisher?
+- ¿Dé dónde viene el 5% (o p = 0.05) que usamos en estadística?
+
+- ¿Para que se usa la randomización?
+- ¿Qué son los efectos de práctica y de aburrimiento en un diseño intra-sujetos?
+- ¿Cómo podemos confeccionar un buen diseño entre-sujetos?
+
+<br/>
+<br/>
+
+<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZZ-qzu160UrC8TC6EfBvCr" target="_blank"><span style="color:blue">Programación con R. Capítulo 1</span></a>
+<br/><br/>
+
+## Capítulo 2: ¿Por qué importa tanto tanto la curva normal?
+
+<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGYNH1thjd8KkRyr-JVPzvR3" target="_blank">Ver</a>
+
+Contenido: 8 videos (1 hora 32 minutos en total)
+
+- ¿Por qué es importante graficar los datos?
+- ¿Cómo se calcula la desviación estándar?
+- ¿Qué es la suma de cuadrados (o suma de los errores al cuadrado)?
+
+- ¿Cómo se puede visualizar la "forma" de los datos?
+- ¿Qué características tiene la curva normal?
+- ¿Cómo estimamos cuantas observaciones caen entre dos valores para una set de datos?
+- ¿Qué porcentaje de los datos esta entre -1 SD y 1 SD?
+
+- ¿Qué significa generalizar nuestros hallazgos?
+- ¿Qué es la variación de la muestra (o sampling variation)?
+- ¿Qué es el error estándar y como se calcula?
+- ¿Qué son los intervalos de confianza?
+- ¿Qué significa que cálculemos un promedio con un intervalo de confianza al 68%?
+- ¿Qué significa que cálculemos un promedio con un intervalo de confianza al 95%?
+
+<br/>
+<br/>
+
+<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGbTjJEkzZLLQHIOHYdK1-Ca" target="_blank"><span style="color:blue">Programación con R. Capítulo 2</span></a>
+<br/><br/>
+
+## Capítulo 3: ¿Que es un t-test?
+
+<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZXm9fSogEShVDKnzgQT3Cf" target="_blank">Ver</a>
+
+Contenido: 4 videos (45 minutos en total)
+
+- ¿Cómo se sabe si dos muestras viene de una misma población o de poblaciones diferentes?
+- ¿Para que nos sirve la distribución normal para compara dos muestras?
+- ¿Cuál es la hipótesis nula cuando comparamos dos muestras?
+- ¿Cómo se refleja un t-test en un modelo lineal general (GLM)?
+- ¿Qué representa el intercepto de la ecuación de un GLM para una variable outcome cuando se comparan dos grupos?
+- ¿Qué representa la pendiente de la ecuación de un GLM para una variable outcome cuando se comparan dos grupos?
+
+<br/>
+<br/>
+
+## Capítulo 4: ¿Que es un modelo estadístico?
+
+<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGaAEQlidg92YdaCvYBCWoSj" target="_blank">Ver</a>
+
+Contenido: 3 videos (39 minutos en total)
+
+- ¿Qué es un modelo estadístico?
+- ¿Por qué es importante tener buenos modelos?
+- ¿Cómo de determina el error en un modelo?
+- ¿Qué son los grados de libertad?
+- ¿Cómo se define la línea de la ecuación de un GLM que se ajuste mejor a los datos?
+- ¿Cuál es el modelo más básico con el cual se compara un modelo que uno construya?
+- ¿Qué es la SS total?
+- ¿Qué es la SS de los residuales?
+- ¿Qué es la SS del modelo?
+- ¿Cómo se establece que un modelo dado explica mejor los datos que un modelo básico?
+- ¿Cómo se establece cuan bueno es un modelo comparado con cuan malo es? ¿Lo que explica y lo que no explica un modelo?
+
+<br/>
+<br/>
+
+## Capítulo 5: ¿Que es un ANOVA?
+
+<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGb7SIBsvmQpwy3Wi5wH7fBe" target="_blank">Ver</a>
+
+Contenido: 4 videos (53 minutos en total)
+
+- ¿Cómo comparamos varias condiciones experimentales?
+- ¿Cuántos distintos tipos de ANOVA existen?
+- ¿De qué dependen del tipo de ANOVA que usemos para realizar un análisis?
+- ¿Qué es un factor en un ANOVA?
+- ¿Qué es un nivel en un ANOVA?
+- ¿Qué es un ANOVA mixto?
+- ¿En un experimento hipotético con 3 condiciones experimentales por qué no podemos usar 3 t-test?
+- ¿Cuanto aumenta el error de tipo 1 cuando aumentamos el número de comparaciones que hacemos?
+- ¿Qué es una prueba omnibus?
+- ¿Cuáles son los supuestos del ANOVA?
+- ¿Qué nos dice el valor F en un ANOVA?
+- ¿Por qué el ANOVA se puede representar como una regresión?
+- ¿Para que nos sirven las variables ficticias (dummy coding) en el ANOVA?
+- ¿Qué es el intercepto en la ecuación que representa el ANOVA?
+- ¿Qué indican los coeficientes (o betas) en la ecuación que representa el ANOVA?
+
+<br/>
+<br/>
+
+## Capítulo 6: ¿Y que hago después que calculo un ANOVA?
+
+<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZyMYhJtEN7PtT_a_ebC4nY" target="_blank">Ver</a>
+
+Contenido: 3 videos (35 minutos en total)
+
+- ¿Que hago después de una prueba omnibus?
+- ¿De qué depende el tipo de análisis que se hace después del ANOVA?
+- ¿Qué significa que desglocemos la varianza explicada en los distintos contrastes en el análisis de contrastes planificados?
+- ¿En un experimento dónde analizo el efecto de dos dosis de droga comparada con un placebo, que contrastes planificados se podrían hacer y que indican el intercepto y los betas de este modelo?
+- ¿Por que es importante que el contraste que hagamos sea un contraste ortogonal?
+- ¿Para que sirven los contrastes que evaluan una tendencia líneal o cuadrática?
+- ¿Qué tipos de pruebas post-hoc existen?
+- ¿Cuál es el riesgo que corremos si usamos una prueba post-hoc muy exigente (o conservadora)?
+- ¿Cuál es el riesgo que corremos si usamos una prueba post-hoc poco exigente (o conservadora)?
+
+<br/>
+<br/>
+
+## Capítulo 7: ¿Qué conceptos estadísticos debería manejar?
+
+<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGb_yYkeLqCSX0xz_0n1tu9z" target="_blank">Ver</a>
+
+Contenido: 5 videos (46 minutos en total)
+
+- ¿Qué me dice y qué no me dice el valor de p?
+- ¿Cómo se interpreta un resultado estadístico nulo?
+- ¿Cuál es la diferencia entre una hipótesis de una cola y una hipótesis de dos colas?
+- ¿Por qué los criterios de significancia son más altos para una hipótesis de una cola que para una hipótesis de dos colas?
+- ¿Qué es un error de tipo I?
+- ¿Qué es un error de tipo II?
+- ¿Por qué hay un balance entre el error de tipo I y II?
+- ¿Qué es mas perjudicial para un estudio? ¿Un error de tipo I o II?
+- ¿Qué es el tamaño del efecto?
+- ¿Qué es el poder estadístico?
+- ¿Qué podemos hacer para que en un proyecto de investigación tengamos las mejores posibilidades de encontrar un efecto que realmente existe?
+
+<br/>
+<br/>
