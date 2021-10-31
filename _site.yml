@@ -15,4 +15,5 @@ output:
     toc_float: true
     toc_collapsed: true
     theme: lumen
+    css: "style.css"
 output_dir: "."
