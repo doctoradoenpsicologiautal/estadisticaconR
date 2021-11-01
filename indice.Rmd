@@ -26,25 +26,33 @@ Contenido: 4 videos (27 minutos en total)
 
 #### Parte 1
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/10yOugyLLQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/10yOugyLLQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <br/>
 
 #### Parte 2
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZHQsBt2xGkE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/ZHQsBt2xGkE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <br/>
 
 #### Parte 3
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/R6qDgUyJDJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/R6qDgUyJDJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <br/>
 
 #### Parte 4
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XiiWWa4VdqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/XiiWWa4VdqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <br/>
 
@@ -99,9 +107,6 @@ Preguntas clave:
 <br/>
 <br/>
 
-<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZZ-qzu160UrC8TC6EfBvCr" target="_blank"><span style="color:blue">Programación con R. Capítulo 1</span></a>
-<br/><br/>
-
 ## Capítulo 2: ¿Por qué importa tanto tanto la curva normal?
 
 <a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGYNH1thjd8KkRyr-JVPzvR3" target="_blank">Ver</a>
@@ -126,9 +131,6 @@ Contenido: 8 videos (1 hora 32 minutos en total)
 
 <br/>
 <br/>
-
-<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGbTjJEkzZLLQHIOHYdK1-Ca" target="_blank"><span style="color:blue">Programación con R. Capítulo 2</span></a>
-<br/><br/>
 
 ## Capítulo 3: ¿Que es un t-test?
 
@@ -231,3 +233,371 @@ Contenido: 5 videos (46 minutos en total)
 
 <br/>
 <br/>
+
+## Programación con R
+
+### Capítulo 1
+
+<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZZ-qzu160UrC8TC6EfBvCr" target="_blank">Ver</a>
+
+
+```{r setup, include = FALSE}
+library(ggplot2)
+library(dplyr)
+```
+
+<br/>
+
+#### Comentarios
+
+```{r comentarios}
+# a <- 1
+# always write down your name and the date
+# 
+# JLUF 09/12/2017
+# add some general description to your script
+# description: getting started with R and some descriptive stats
+
+# always comment!
+# always comment!
+# always comment!
+
+# let's get started with some basic stuff
+
+```
+
+<br/>
+
+#### Paquetes
+
+```{r paquetes}
+# R has some built-in functions like: mean (mean), standard deviation (sd) ... etc
+# however, many time you will need to install packages
+# you can do it by hand, o by typing "install.packages" like in:
+
+# install.packages("foreign")
+library(foreign)
+
+# install.packages("Hmisc")
+# install.packages("reshape") # uncomment this last one and try it, we will use it later
+
+# next, in order to use the package or library type ...
+# library(reshape) # uncomment this and try it
+# we will use it later, and it will become clearer
+```
+
+<br/>
+
+#### Asignación
+
+```{r asignacion}
+# let's move on
+
+#    __ 
+#   /\ \   
+#  / /\ \ assignment ----
+# / /__\ \
+# \/____\/
+
+a <- 5
+b <- 4
+
+# a command line is usually composed of an object and a function
+# they are usually separated by a "<-" (which means "created from")
+# for instance you can create a dataset with the funtion "c", which means concatenate
+# I'm going to create the object "metallica"
+metallica <- c("Lars", "James", "Jason", "Kirk")
+
+# this is a vector of characters
+
+# or you can simply type
+metallica
+# the [1] means one row, which make sense because is a simple row vector
+
+# you can check the type of data by using "class"
+class(metallica)
+
+# you can also check the structure of your data with "str"
+str(metallica)
+# in addition it tells you there are 4 elements
+# this is also something you can check within the working space, under "Values"
+```
+
+<br/>
+
+#### Indices
+
+```{r indices}
+#    __ 
+#   /\ \   
+#  / /\ \ indexing ----
+# / /__\ \
+# \/____\/
+
+# you can also check each element of the objects by using the square brackets
+# for instance, the first element
+# this is called indexing, and is very useful!
+metallica[1]
+
+# for instance, the second element
+metallica[2]
+
+# or, for instance, from the first to the second element
+metallica[1:2]
+
+# you can also realize your list is wrong
+# for instance Jason was an old member of the group but not now anymore
+# we also use the square brackets, but instead of a number
+# we tell R we want all element of metallica except Jason (this is the "!=")
+# so to get ride of jason we do
+metallica2 <- metallica[metallica != "Jason"]
+
+# Eliminate 2+ elements
+metallica3 <- metallica[-c(2,3)]
+
+# we might also want to add a new member, for instance Rob
+# we do this by concatenating the previous list with a new element
+metallica4 <- c(metallica2, "Rob")
+
+metallica_X <- c(metallica, "Rob") # Add at the end
+metallica_Y <- c("Rob", metallica) # Add at the beginning
+# Add in the middle
+metallica <- c(metallica[1:2], "Rob", metallica[3:4])
+
+# --- exercise ---
+# create an object that represent your favorite band
+####
+
+# we can create variables of distinct types
+# string variables
+metallicaNames <- c("Lars", "James", "Kirk", "Rob")
+
+# numeric variables
+metallicaAges <- c(47, 47, 48, 46)
+
+# Eliminate a column
+metallica$Name <- NULL
+```
+
+<br/>
+
+#### Data frames
+
+```{r dataframes}
+#    __ 
+#   /\ \   
+#  / /\ \ data frames ----
+# / /__\ \
+# \/____\/
+
+# there are different type of data, among them vectors and data frames
+# vectors can accomodate either numbers or characters
+# data frames can accomodate different kind of data, like in boxes
+# let's create a data frame
+# we use the function "data.frame"
+metallicaDataFrame <- data.frame(metallicaNames, metallicaAges)
+
+# the name in each box is the name of the variable itself
+# this happen by default
+# but, you can change these names
+# you can change this by using "colnames" which means column names
+colnames(metallicaDataFrame) <- c("name", "age")
+
+# or you can name it at the moment of creating the data frame
+metallicaDataFrame2 <- data.frame(Name = metallicaNames, Age = metallicaAges)
+
+# also check
+str(metallicaDataFrame2)
+# you can check there are 4 observations, for 2 variables: names and ages
+# "Name" has become now a factor, R recognize this automatically
+# We will see factors in detail later
+
+# To access each variable we use the "$"
+metallica$Name
+metallica$Age
+
+# let's do some mathematical operations
+# we can add more data by creating a new variable in the data frame
+# and asigning it data, for instance, a data vector
+metallicaDataFrame$childAge <- c(12, 12, 4, 6)
+
+# we can calculate new variables from existing ones
+metallicaDataFrame$fatherhoodAge <- metallicaDataFrame$age - metallicaDataFrame$childAge
+
+# rename
+colnames(metallicaDataFrame) <- c("A", "B", "C")
+
+# we can also create a numeric vector using the function "rep"
+vector1 <- c(rep(1,5), rep(2,5), rep(3,5))
+
+# remember you can create a data frame with this data
+new_df <- data.frame(vector1)
+
+# there is also other functions like list" and "cbind" functions
+metallica <- list(metallicaNames, metallicaAges)
+metallica <- cbind(metallicaNames, metallicaAges)
+# these are different kind of data
+
+# a complete example for creating a dataframe is the next:
+
+name <- c("Ben", "Martin","Andy","Paul", "Graham","Carina","Karina","Doug","Mark", "Zoe")
+
+birth_date <- as.Date(c("1977-07-03", "1969-05-24", "1973-06-21", "1970-07-16", "1949-10-10", "1983-11-05", "1987-10-08", "1989-09-16", "1973-05-20", "1984-11-12"))
+# the default date format is yyyy-mm-dd
+
+job <- c(rep(1, 5), rep(2, 5)) # which is the same as job <- c(1,1,1,1,1,2,2,2,2,2)
+
+# job is a categorial variable
+# that can allows you for instance to check differences between lectures and students
+
+# so far, this is just plain numbers with 1 indicating "lecturers" and 2 indicating "students"
+# also "job" is so far a vector of numbers
+# but you can convert it to a factor and give a name to the distinct levels of this factor
+job <- factor(job, levels = c(1:2), labels = c("Lecturer", "Student"))
+
+# putting all togetger
+dataframe1 <- data.frame(name, birth_date, job)
+
+# check it
+dataframe1
+
+# ---- exercise ----
+# create a new data frame incorporating friends, alcohol, income and neurotic
+
+dataframe1$friends <- c(5,2,0,4,1,10,12,15,12,17)
+dataframe1$alcohol <- c(10,15,20,5,30,25,20,16,17,18)
+dataframe1$income <- c(20000,40000,35000,22000,50000,5000,100,3000,10000,10)
+dataframe1$neurotic <- c(10,17,14,13,21,7,13,9,14,13)
+```
+
+<br/>
+
+#### Importación de datos
+
+```{r import, eval=FALSE}
+#    __ 
+#   /\ \   
+#  / /\ \ import data ----
+# / /__\ \
+# \/____\/
+
+# however, most of the time we are going to import data
+
+# whenever you work with imported data you will need to set the working directory
+
+# set working directory
+setwd("C:/Users/Usuario/Documents/JoseLuis/UTalca_2018/Stats_UTalca/database_2020_DocPsychol")
+
+#setwd("C:/Users/Usuario/Documents/JoseLuis/UTalca_2018/Stats_101/course_2018/part2_how_to_use_R/1_data")
+
+# getwd() this function allows you to see what is your current working directory,
+# so, it allows you to check whether you set correctly (previous lines) your current directory,
+
+# import data
+dat2 <- read.delim(file = "facebook_friends_2.txt")
+# in this case we noticed that the imported data will be wrong because the "header" is set to TRUE by default
+
+# this is the same as: 
+dat2 <- read.delim("facebook_friends_2.txt", header = FALSE)
+
+dat3 <- read.delim("facebook_friends_1.txt", header = FALSE)
+colnames(dat3) <- c("friends")
+
+# this means that some parameters such as "header" have values by default,
+# in this case R assumes that the data has a "header"
+# the 108 is out
+ 
+# to correct this we tell R that there is no header, hence we put header equal to FALSE
+
+# import data
+dat2 <- read.delim("facebook_friends_2.txt")
+dat3 <- read.csv("facebook_friends_1.csv", header = FALSE)
+
+# checking the structure of the data you might realize this is a "data frame"
+str(dat2)
+
+#  this is a special data format that can accomodate data of different types in boxes: numeric, characters, etc
+
+# let's do some descriptive stats
+# let's see some centre of a distribution
+
+# to visualize the mode () the score that occurs more frequently) we can do an histogram
+hist(dat2$CASAS, 10)
+
+# how to compute the median?
+# we can sort the data
+sort(dat2$CASAS)
+
+# seems there is an outlier, let's compare data with and without the outlier
+dat3 <- dat2 # we copy the data
+dat3$V1[3] <- NA # and we replace one value for an NA (NA stands for non available)
+
+colnames(dat2) <- c("friendsNb") # rename header
+
+hist(dat2$friendsNb, 10) # plot
+
+dat2$friendsNb <- dat2[order(dat2$friendsNb),] # sort data
+dat2$NUMEROS <- dat2[order(dat2$NUMEROS),] # sort data
+
+# get ride of last value in a new dataframe
+dat2woOL <- data.frame(friendsNb = dat2$friendsNb[-length(dat2$friendsNb)])
+
+summary(dat2$friendsNb) # descrip stats
+summary(dat2woOL$friendsNb) # descrip stats
+
+sum1 <- summary(dat2$friendsNb) # descrip stats
+
+IQR(dat2$friendsNb)
+
+
+
+
+summary(dat2)
+summary(dat3)
+# the median does not change a lot
+# question: why use the mean instead of the median?
+
+# let's look at some dipersion in the distribution of the data
+
+# range
+max(dat2) - min(dat2)
+
+# range
+max(dat3, na.rm = TRUE) - min(dat3, na.rm = TRUE)
+
+errorstad <- sd(dat2$V1) / sqrt(length(dat2$V1))
+
+# range is affected by extreme values, one workaorund would be excluding values at the extremes
+# we cut off the top and bottom 25% of scores and compute the range of the middle 50% of scores, this is the 'interquartile range'
+
+# first, we need to compute the quartiles
+# But, we have already seen this data, remember summary??
+summary(dat2)
+
+# if only we could funnel this data into a variable!!
+# wait a minute... maybe somebody already do this? ...
+# just find the right words, for instance type: "r save summary to data frame" in google!
+
+summaryDat2 <- do.call(cbind, lapply(dat2, summary))
+summaryDat2
+
+# compute the interquartile range
+summaryDat2[5] - summaryDat2[2]
+
+# let's see this graphically!
+boxplot(dat2)
+
+# let's see this graphically!
+boxplot(dat3)
+```
+
+<br/>
+<br/>
+
+### Capítulo 2
+
+<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGbTjJEkzZLLQHIOHYdK1-Ca" target="_blank">Ver</a>
+
+<br/>
+<br/>
+
