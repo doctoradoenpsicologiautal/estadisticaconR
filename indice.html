@@ -59,6 +59,7 @@ if (window.hljs) {
 
 
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 
 
 
@@ -258,26 +259,34 @@ div.tocify {
 <p>Contenido: 4 videos (27 minutos en total)</p>
 <div id="parte-1" class="section level4">
 <h4>Parte 1</h4>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/10yOugyLLQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/10yOugyLLQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
+</div>
 <p><br/></p>
 </div>
 <div id="parte-2" class="section level4">
 <h4>Parte 2</h4>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZHQsBt2xGkE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/ZHQsBt2xGkE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
+</div>
 <p><br/></p>
 </div>
 <div id="parte-3" class="section level4">
 <h4>Parte 3</h4>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/R6qDgUyJDJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/R6qDgUyJDJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
+</div>
 <p><br/></p>
 </div>
 <div id="parte-4" class="section level4">
 <h4>Parte 4</h4>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XiiWWa4VdqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/XiiWWa4VdqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
+</div>
 <p><br/></p>
 <p>Preguntas clave:</p>
 <ul>
@@ -320,7 +329,6 @@ div.tocify {
 <li><p>¿Cómo podemos confeccionar un buen diseño entre-sujetos?</p></li>
 </ul>
 <p><br/> <br/></p>
-<p><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZZ-qzu160UrC8TC6EfBvCr" target="_blank"><span style="color:blue">Programación con R. Capítulo 1</span></a> <br/><br/></p>
 </div>
 </div>
 <div id="capítulo-2-por-qué-importa-tanto-tanto-la-curva-normal" class="section level2">
@@ -343,7 +351,6 @@ div.tocify {
 <li><p>¿Qué significa que cálculemos un promedio con un intervalo de confianza al 95%?</p></li>
 </ul>
 <p><br/> <br/></p>
-<p><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGbTjJEkzZLLQHIOHYdK1-Ca" target="_blank"><span style="color:blue">Programación con R. Capítulo 2</span></a> <br/><br/></p>
 </div>
 <div id="capítulo-3-que-es-un-t-test" class="section level2">
 <h2>Capítulo 3: ¿Que es un t-test?</h2>
@@ -436,6 +443,362 @@ div.tocify {
 <li>¿Qué podemos hacer para que en un proyecto de investigación tengamos las mejores posibilidades de encontrar un efecto que realmente existe?</li>
 </ul>
 <p><br/> <br/></p>
+</div>
+<div id="programación-con-r" class="section level2">
+<h2>Programación con R</h2>
+<div id="capítulo-1" class="section level3">
+<h3>Capítulo 1</h3>
+<p><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZZ-qzu160UrC8TC6EfBvCr" target="_blank">Ver</a></p>
+<p><br/></p>
+<div id="comentarios" class="section level4">
+<h4>Comentarios</h4>
+<pre class="r"><code># a &lt;- 1
+# always write down your name and the date
+# 
+# JLUF 09/12/2017
+# add some general description to your script
+# description: getting started with R and some descriptive stats
+
+# always comment!
+# always comment!
+# always comment!
+
+# let&#39;s get started with some basic stuff</code></pre>
+<p><br/></p>
+</div>
+<div id="paquetes" class="section level4">
+<h4>Paquetes</h4>
+<pre class="r"><code># R has some built-in functions like: mean (mean), standard deviation (sd) ... etc
+# however, many time you will need to install packages
+# you can do it by hand, o by typing &quot;install.packages&quot; like in:
+
+# install.packages(&quot;foreign&quot;)
+library(foreign)
+
+# install.packages(&quot;Hmisc&quot;)
+# install.packages(&quot;reshape&quot;) # uncomment this last one and try it, we will use it later
+
+# next, in order to use the package or library type ...
+# library(reshape) # uncomment this and try it
+# we will use it later, and it will become clearer</code></pre>
+<p><br/></p>
+</div>
+<div id="asignación" class="section level4">
+<h4>Asignación</h4>
+<pre class="r"><code># let&#39;s move on
+
+#    __ 
+#   /\ \   
+#  / /\ \ assignment ----
+# / /__\ \
+# \/____\/
+
+a &lt;- 5
+b &lt;- 4
+
+# a command line is usually composed of an object and a function
+# they are usually separated by a &quot;&lt;-&quot; (which means &quot;created from&quot;)
+# for instance you can create a dataset with the funtion &quot;c&quot;, which means concatenate
+# I&#39;m going to create the object &quot;metallica&quot;
+metallica &lt;- c(&quot;Lars&quot;, &quot;James&quot;, &quot;Jason&quot;, &quot;Kirk&quot;)
+
+# this is a vector of characters
+
+# or you can simply type
+metallica</code></pre>
+<pre><code>## [1] &quot;Lars&quot;  &quot;James&quot; &quot;Jason&quot; &quot;Kirk&quot;</code></pre>
+<pre class="r"><code># the [1] means one row, which make sense because is a simple row vector
+
+# you can check the type of data by using &quot;class&quot;
+class(metallica)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<pre class="r"><code># you can also check the structure of your data with &quot;str&quot;
+str(metallica)</code></pre>
+<pre><code>##  chr [1:4] &quot;Lars&quot; &quot;James&quot; &quot;Jason&quot; &quot;Kirk&quot;</code></pre>
+<pre class="r"><code># in addition it tells you there are 4 elements
+# this is also something you can check within the working space, under &quot;Values&quot;</code></pre>
+<p><br/></p>
+</div>
+<div id="indices" class="section level4">
+<h4>Indices</h4>
+<pre class="r"><code>#    __ 
+#   /\ \   
+#  / /\ \ indexing ----
+# / /__\ \
+# \/____\/
+
+# you can also check each element of the objects by using the square brackets
+# for instance, the first element
+# this is called indexing, and is very useful!
+metallica[1]</code></pre>
+<pre><code>## [1] &quot;Lars&quot;</code></pre>
+<pre class="r"><code># for instance, the second element
+metallica[2]</code></pre>
+<pre><code>## [1] &quot;James&quot;</code></pre>
+<pre class="r"><code># or, for instance, from the first to the second element
+metallica[1:2]</code></pre>
+<pre><code>## [1] &quot;Lars&quot;  &quot;James&quot;</code></pre>
+<pre class="r"><code># you can also realize your list is wrong
+# for instance Jason was an old member of the group but not now anymore
+# we also use the square brackets, but instead of a number
+# we tell R we want all element of metallica except Jason (this is the &quot;!=&quot;)
+# so to get ride of jason we do
+metallica2 &lt;- metallica[metallica != &quot;Jason&quot;]
+
+# Eliminate 2+ elements
+metallica3 &lt;- metallica[-c(2,3)]
+
+# we might also want to add a new member, for instance Rob
+# we do this by concatenating the previous list with a new element
+metallica4 &lt;- c(metallica2, &quot;Rob&quot;)
+
+metallica_X &lt;- c(metallica, &quot;Rob&quot;) # Add at the end
+metallica_Y &lt;- c(&quot;Rob&quot;, metallica) # Add at the beginning
+# Add in the middle
+metallica &lt;- c(metallica[1:2], &quot;Rob&quot;, metallica[3:4])
+
+# --- exercise ---
+# create an object that represent your favorite band
+####
+
+# we can create variables of distinct types
+# string variables
+metallicaNames &lt;- c(&quot;Lars&quot;, &quot;James&quot;, &quot;Kirk&quot;, &quot;Rob&quot;)
+
+# numeric variables
+metallicaAges &lt;- c(47, 47, 48, 46)
+
+# Eliminate a column
+metallica$Name &lt;- NULL</code></pre>
+<pre><code>## Warning in metallica$Name &lt;- NULL: Coercing LHS to a list</code></pre>
+<p><br/></p>
+</div>
+<div id="data-frames" class="section level4">
+<h4>Data frames</h4>
+<pre class="r"><code>#    __ 
+#   /\ \   
+#  / /\ \ data frames ----
+# / /__\ \
+# \/____\/
+
+# there are different type of data, among them vectors and data frames
+# vectors can accomodate either numbers or characters
+# data frames can accomodate different kind of data, like in boxes
+# let&#39;s create a data frame
+# we use the function &quot;data.frame&quot;
+metallicaDataFrame &lt;- data.frame(metallicaNames, metallicaAges)
+
+# the name in each box is the name of the variable itself
+# this happen by default
+# but, you can change these names
+# you can change this by using &quot;colnames&quot; which means column names
+colnames(metallicaDataFrame) &lt;- c(&quot;name&quot;, &quot;age&quot;)
+
+# or you can name it at the moment of creating the data frame
+metallicaDataFrame2 &lt;- data.frame(Name = metallicaNames, Age = metallicaAges)
+
+# also check
+str(metallicaDataFrame2)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    4 obs. of  2 variables:
+##  $ Name: chr  &quot;Lars&quot; &quot;James&quot; &quot;Kirk&quot; &quot;Rob&quot;
+##  $ Age : num  47 47 48 46</code></pre>
+<pre class="r"><code># you can check there are 4 observations, for 2 variables: names and ages
+# &quot;Name&quot; has become now a factor, R recognize this automatically
+# We will see factors in detail later
+
+# To access each variable we use the &quot;$&quot;
+metallica$Name</code></pre>
+<pre><code>## NULL</code></pre>
+<pre class="r"><code>metallica$Age</code></pre>
+<pre><code>## NULL</code></pre>
+<pre class="r"><code># let&#39;s do some mathematical operations
+# we can add more data by creating a new variable in the data frame
+# and asigning it data, for instance, a data vector
+metallicaDataFrame$childAge &lt;- c(12, 12, 4, 6)
+
+# we can calculate new variables from existing ones
+metallicaDataFrame$fatherhoodAge &lt;- metallicaDataFrame$age - metallicaDataFrame$childAge
+
+# rename
+colnames(metallicaDataFrame) &lt;- c(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)
+
+# we can also create a numeric vector using the function &quot;rep&quot;
+vector1 &lt;- c(rep(1,5), rep(2,5), rep(3,5))
+
+# remember you can create a data frame with this data
+new_df &lt;- data.frame(vector1)
+
+# there is also other functions like list&quot; and &quot;cbind&quot; functions
+metallica &lt;- list(metallicaNames, metallicaAges)
+metallica &lt;- cbind(metallicaNames, metallicaAges)
+# these are different kind of data
+
+# a complete example for creating a dataframe is the next:
+
+name &lt;- c(&quot;Ben&quot;, &quot;Martin&quot;,&quot;Andy&quot;,&quot;Paul&quot;, &quot;Graham&quot;,&quot;Carina&quot;,&quot;Karina&quot;,&quot;Doug&quot;,&quot;Mark&quot;, &quot;Zoe&quot;)
+
+birth_date &lt;- as.Date(c(&quot;1977-07-03&quot;, &quot;1969-05-24&quot;, &quot;1973-06-21&quot;, &quot;1970-07-16&quot;, &quot;1949-10-10&quot;, &quot;1983-11-05&quot;, &quot;1987-10-08&quot;, &quot;1989-09-16&quot;, &quot;1973-05-20&quot;, &quot;1984-11-12&quot;))
+# the default date format is yyyy-mm-dd
+
+job &lt;- c(rep(1, 5), rep(2, 5)) # which is the same as job &lt;- c(1,1,1,1,1,2,2,2,2,2)
+
+# job is a categorial variable
+# that can allows you for instance to check differences between lectures and students
+
+# so far, this is just plain numbers with 1 indicating &quot;lecturers&quot; and 2 indicating &quot;students&quot;
+# also &quot;job&quot; is so far a vector of numbers
+# but you can convert it to a factor and give a name to the distinct levels of this factor
+job &lt;- factor(job, levels = c(1:2), labels = c(&quot;Lecturer&quot;, &quot;Student&quot;))
+
+# putting all togetger
+dataframe1 &lt;- data.frame(name, birth_date, job)
+
+# check it
+dataframe1</code></pre>
+<pre><code>##      name birth_date      job
+## 1     Ben 1977-07-03 Lecturer
+## 2  Martin 1969-05-24 Lecturer
+## 3    Andy 1973-06-21 Lecturer
+## 4    Paul 1970-07-16 Lecturer
+## 5  Graham 1949-10-10 Lecturer
+## 6  Carina 1983-11-05  Student
+## 7  Karina 1987-10-08  Student
+## 8    Doug 1989-09-16  Student
+## 9    Mark 1973-05-20  Student
+## 10    Zoe 1984-11-12  Student</code></pre>
+<pre class="r"><code># ---- exercise ----
+# create a new data frame incorporating friends, alcohol, income and neurotic
+
+dataframe1$friends &lt;- c(5,2,0,4,1,10,12,15,12,17)
+dataframe1$alcohol &lt;- c(10,15,20,5,30,25,20,16,17,18)
+dataframe1$income &lt;- c(20000,40000,35000,22000,50000,5000,100,3000,10000,10)
+dataframe1$neurotic &lt;- c(10,17,14,13,21,7,13,9,14,13)</code></pre>
+<p><br/></p>
+</div>
+<div id="importación-de-datos" class="section level4">
+<h4>Importación de datos</h4>
+<pre class="r"><code>#    __ 
+#   /\ \   
+#  / /\ \ import data ----
+# / /__\ \
+# \/____\/
+
+# however, most of the time we are going to import data
+
+# whenever you work with imported data you will need to set the working directory
+
+# set working directory
+setwd(&quot;C:/Users/Usuario/Documents/JoseLuis/UTalca_2018/Stats_UTalca/database_2020_DocPsychol&quot;)
+
+#setwd(&quot;C:/Users/Usuario/Documents/JoseLuis/UTalca_2018/Stats_101/course_2018/part2_how_to_use_R/1_data&quot;)
+
+# getwd() this function allows you to see what is your current working directory,
+# so, it allows you to check whether you set correctly (previous lines) your current directory,
+
+# import data
+dat2 &lt;- read.delim(file = &quot;facebook_friends_2.txt&quot;)
+# in this case we noticed that the imported data will be wrong because the &quot;header&quot; is set to TRUE by default
+
+# this is the same as: 
+dat2 &lt;- read.delim(&quot;facebook_friends_2.txt&quot;, header = FALSE)
+
+dat3 &lt;- read.delim(&quot;facebook_friends_1.txt&quot;, header = FALSE)
+colnames(dat3) &lt;- c(&quot;friends&quot;)
+
+# this means that some parameters such as &quot;header&quot; have values by default,
+# in this case R assumes that the data has a &quot;header&quot;
+# the 108 is out
+ 
+# to correct this we tell R that there is no header, hence we put header equal to FALSE
+
+# import data
+dat2 &lt;- read.delim(&quot;facebook_friends_2.txt&quot;)
+dat3 &lt;- read.csv(&quot;facebook_friends_1.csv&quot;, header = FALSE)
+
+# checking the structure of the data you might realize this is a &quot;data frame&quot;
+str(dat2)
+
+#  this is a special data format that can accomodate data of different types in boxes: numeric, characters, etc
+
+# let&#39;s do some descriptive stats
+# let&#39;s see some centre of a distribution
+
+# to visualize the mode () the score that occurs more frequently) we can do an histogram
+hist(dat2$CASAS, 10)
+
+# how to compute the median?
+# we can sort the data
+sort(dat2$CASAS)
+
+# seems there is an outlier, let&#39;s compare data with and without the outlier
+dat3 &lt;- dat2 # we copy the data
+dat3$V1[3] &lt;- NA # and we replace one value for an NA (NA stands for non available)
+
+colnames(dat2) &lt;- c(&quot;friendsNb&quot;) # rename header
+
+hist(dat2$friendsNb, 10) # plot
+
+dat2$friendsNb &lt;- dat2[order(dat2$friendsNb),] # sort data
+dat2$NUMEROS &lt;- dat2[order(dat2$NUMEROS),] # sort data
+
+# get ride of last value in a new dataframe
+dat2woOL &lt;- data.frame(friendsNb = dat2$friendsNb[-length(dat2$friendsNb)])
+
+summary(dat2$friendsNb) # descrip stats
+summary(dat2woOL$friendsNb) # descrip stats
+
+sum1 &lt;- summary(dat2$friendsNb) # descrip stats
+
+IQR(dat2$friendsNb)
+
+
+
+
+summary(dat2)
+summary(dat3)
+# the median does not change a lot
+# question: why use the mean instead of the median?
+
+# let&#39;s look at some dipersion in the distribution of the data
+
+# range
+max(dat2) - min(dat2)
+
+# range
+max(dat3, na.rm = TRUE) - min(dat3, na.rm = TRUE)
+
+errorstad &lt;- sd(dat2$V1) / sqrt(length(dat2$V1))
+
+# range is affected by extreme values, one workaorund would be excluding values at the extremes
+# we cut off the top and bottom 25% of scores and compute the range of the middle 50% of scores, this is the &#39;interquartile range&#39;
+
+# first, we need to compute the quartiles
+# But, we have already seen this data, remember summary??
+summary(dat2)
+
+# if only we could funnel this data into a variable!!
+# wait a minute... maybe somebody already do this? ...
+# just find the right words, for instance type: &quot;r save summary to data frame&quot; in google!
+
+summaryDat2 &lt;- do.call(cbind, lapply(dat2, summary))
+summaryDat2
+
+# compute the interquartile range
+summaryDat2[5] - summaryDat2[2]
+
+# let&#39;s see this graphically!
+boxplot(dat2)
+
+# let&#39;s see this graphically!
+boxplot(dat3)</code></pre>
+<p><br/> <br/></p>
+</div>
+</div>
+<div id="capítulo-2" class="section level3">
+<h3>Capítulo 2</h3>
+<p><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGbTjJEkzZLLQHIOHYdK1-Ca" target="_blank">Ver</a></p>
+<p><br/> <br/></p>
+</div>
 </div>
 
 
