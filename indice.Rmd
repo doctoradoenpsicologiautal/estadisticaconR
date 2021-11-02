@@ -80,9 +80,57 @@ Preguntas clave:
 
 ### Capítulo 1b: ¿Que es lo más esencial que debería saber?
 
-<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZdIZuvGySMRfKq2r1UKnCg" target="_blank">Ver</a>
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZdIZuvGySMRfKq2r1UKnCg" target="_blank">Ver</a>-->
 
 Contenido: 6 videos (41 minutos en total)
+
+#### Parte 1
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/FRotXNmdzwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 2
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/JdhW8gV9dOI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 3
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/BsXkMAIRaLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 4
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/ZDrbXr_VJOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 5
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/0vNh-JNx2b0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 6
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/-ktM6xENx-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
 
 Preguntas clave:
 
@@ -109,9 +157,73 @@ Preguntas clave:
 
 ## Capítulo 2: ¿Por qué importa tanto tanto la curva normal?
 
-<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGYNH1thjd8KkRyr-JVPzvR3" target="_blank">Ver</a>
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGYNH1thjd8KkRyr-JVPzvR3" target="_blank">Ver</a>-->
 
 Contenido: 8 videos (1 hora 32 minutos en total)
+
+#### Parte 1
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/IFNrCATEjxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 2
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/AdPw4jita2o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 3
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/kcxyC1b-QZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 4
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/zKnxXD9C-78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 5
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/BpH3_BJf5do" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 6
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/SF4vsowPyrw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 7
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/WPgwrvY8SEw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 8
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/tHovt9mI7Xg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
 
 - ¿Por qué es importante graficar los datos?
 - ¿Cómo se calcula la desviación estándar?
@@ -134,9 +246,49 @@ Contenido: 8 videos (1 hora 32 minutos en total)
 
 ## Capítulo 3: ¿Que es un t-test?
 
-<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZXm9fSogEShVDKnzgQT3Cf" target="_blank">Ver</a>
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZXm9fSogEShVDKnzgQT3Cf" target="_blank">Ver</a>-->
 
 Contenido: 4 videos (45 minutos en total)
+
+#### Parte 1
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/3JKMXCpQvzw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 2
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/nUutIbaRWCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 3
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/L3SbEqzEWW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 4
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/RS79Z69iu5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 5
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/HPz59fOGIps" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
 
 - ¿Cómo se sabe si dos muestras viene de una misma población o de poblaciones diferentes?
 - ¿Para que nos sirve la distribución normal para compara dos muestras?
@@ -150,9 +302,33 @@ Contenido: 4 videos (45 minutos en total)
 
 ## Capítulo 4: ¿Que es un modelo estadístico?
 
-<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGaAEQlidg92YdaCvYBCWoSj" target="_blank">Ver</a>
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGaAEQlidg92YdaCvYBCWoSj" target="_blank">Ver</a>-->
 
 Contenido: 3 videos (39 minutos en total)
+
+#### Parte 1
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/DOIjIB1FGYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 2
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/In1vL_kZeYk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 3
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/maFx6TKuaQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
 
 - ¿Qué es un modelo estadístico?
 - ¿Por qué es importante tener buenos modelos?
@@ -171,9 +347,41 @@ Contenido: 3 videos (39 minutos en total)
 
 ## Capítulo 5: ¿Que es un ANOVA?
 
-<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGb7SIBsvmQpwy3Wi5wH7fBe" target="_blank">Ver</a>
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGb7SIBsvmQpwy3Wi5wH7fBe" target="_blank">Ver</a>-->
 
 Contenido: 4 videos (53 minutos en total)
+
+#### Parte 1
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/hzasDQY0GVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 2
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/CyrNtF3C0Mc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 3
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/sWdZHcBWTGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 4
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/uYsCQR-7uRo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>>
+</div>
+
+<br/>
 
 - ¿Cómo comparamos varias condiciones experimentales?
 - ¿Cuántos distintos tipos de ANOVA existen?
@@ -196,9 +404,33 @@ Contenido: 4 videos (53 minutos en total)
 
 ## Capítulo 6: ¿Y que hago después que calculo un ANOVA?
 
-<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZyMYhJtEN7PtT_a_ebC4nY" target="_blank">Ver</a>
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZyMYhJtEN7PtT_a_ebC4nY" target="_blank">Ver</a>-->
 
 Contenido: 3 videos (35 minutos en total)
+
+#### Parte 1
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/nFcxN5qVYxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 2
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/z_jVSEKOVZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 3
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/qXR27qqjDvU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
 
 - ¿Que hago después de una prueba omnibus?
 - ¿De qué depende el tipo de análisis que se hace después del ANOVA?
@@ -218,6 +450,46 @@ Contenido: 3 videos (35 minutos en total)
 <a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGb_yYkeLqCSX0xz_0n1tu9z" target="_blank">Ver</a>
 
 Contenido: 5 videos (46 minutos en total)
+
+#### Parte 1
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/cOtuIWu9NQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 2
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/dQ0LnqUAVnA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 3
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/AbsXEad0gMQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 4
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/Xh9-Mt2_WTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 5
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/bumW9zlQJdo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
 
 - ¿Qué me dice y qué no me dice el valor de p?
 - ¿Cómo se interpreta un resultado estadístico nulo?
