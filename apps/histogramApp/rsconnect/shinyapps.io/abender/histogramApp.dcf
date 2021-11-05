@@ -1,0 +1,13 @@
+name: histogramApp
+title: histogramApp
+username:
+account: abender
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5053786
+bundleId: 5218044
+url: https://abender.shinyapps.io/histogramApp/
+when: 1636125910.49503
+lastSyncTime: 1636125910.49503
+asMultiple: FALSE
+asStatic: FALSE

@@ -1509,3 +1509,11 @@ ggplot(datac, aes(x=Time, y=Grammar_Score, colour=Group)) +
 <br/>
 <br/>
 
+
+## Ejemplo Shinny
+
+<div class="video-responsive">
+<iframe src="https://abender.shinyapps.io/histogramApp/" title="YouTube video player" frameborder="no"></iframe>
+</div>
+
+<br/>
