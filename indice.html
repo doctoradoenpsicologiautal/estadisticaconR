@@ -13,6 +13,7 @@
 
 <title>Estadística 101</title>
 
+<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
@@ -90,6 +91,76 @@ pre code {
 </style>
 
 
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
 
 <!-- tabsets -->
 
@@ -235,6 +306,29 @@ div.tocify {
 
 
 
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Curso</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
 <div id="header">
 
 
@@ -246,7 +340,7 @@ div.tocify {
 
 <div id="introducción" class="section level2">
 <h2>Introducción</h2>
-<p>Este curso se basa en <a href="https://www.goodreads.com/book/show/578667.Statistics_Without_Tears" target="_blank">Statistics without tears</a> de Derek Rowntree y <a href="https://www.discoveringstatistics.com/books/discovering-statistics-using-r/" target="_blank">Discovering statistics using R</a> de Andy Field, Jeremy Miles y Zoë Field. Dicho eso, cualquier error que puedas encontrar es mi responsabilidad.<br/> Este curso también utiliza material del libro &quot;Discovering statistics using R&quot;. Este material no me pertenece y es accesible <a href="https://studysites.uk.sagepub.com/dsur/study/articles.htm" target="_blank">aquí.</a></p>
+<p>Este curso se basa en <a href="https://www.goodreads.com/book/show/578667.Statistics_Without_Tears" target="_blank">Statistics without tears</a> de Derek Rowntree y <a href="https://www.discoveringstatistics.com/books/discovering-statistics-using-r/" target="_blank">Discovering statistics using R</a> de Andy Field, Jeremy Miles y Zoë Field. Dicho eso, cualquier error que puedas encontrar es mi responsabilidad.<br/> Este curso también utiliza material del libro “Discovering statistics using R”. Este material no me pertenece y es accesible <a href="https://studysites.uk.sagepub.com/dsur/study/articles.htm" target="_blank">aquí.</a></p>
 <p>Este curso asume que no sabes nada de estadística. Sin embargo, si asume que sabes lo básico de aritmética y fracciones. La mejor manera de aprender es que respondas las preguntas clave de cada capítulo. Y que realizes los ejercicios con la ayuda de Jamovi. La base de datos que vamos a utilizar se encuentra <a href="https://github.com/joseluisulloafulgeri/estadistica101_database" target="_blank">aquí.</a> Y las diapositivas están <a href="https://osf.io/6hv75/" target="_blank">aquí.</a></p>
 <p>¡Que disfrutes el curso!</p>
 <p><br/> <br/></p>
@@ -290,19 +384,19 @@ div.tocify {
 <p><br/></p>
 <p>Preguntas clave:</p>
 <ul>
-<li>¿Qué es la estadística descriptiva? ¿Qué es la estadística inferencial?</li>
-<li>¿Qué es una población y una muestra? ¿Qué son los parámetros y los estadísticos?</li>
-<li>¿Por qué necesitamos obtener una muestra para nuestros experimentos?</li>
+<li><p>¿Qué es la estadística descriptiva? ¿Qué es la estadística inferencial?</p></li>
+<li><p>¿Qué es una población y una muestra? ¿Qué son los parámetros y los estadísticos?</p></li>
+<li><p>¿Por qué necesitamos obtener una muestra para nuestros experimentos?</p></li>
 <li><p>¿Por qué necesitamos las probabilidades para análisis estadísticos?</p></li>
-<li>¿Que tipos de variables nos sirven para describir una muestra?</li>
-<li>¿Que significa definir variables y operacionalizar?</li>
-<li>¿Que es una variable independiente? ¿Que es una variable dependiente?</li>
+<li><p>¿Que tipos de variables nos sirven para describir una muestra?</p></li>
+<li><p>¿Que significa definir variables y operacionalizar?</p></li>
+<li><p>¿Que es una variable independiente? ¿Que es una variable dependiente?</p></li>
 <li><p>¿Cómo se construye una hipótesis?</p></li>
-<li>En un diseño experimental ¿qué es un factor?</li>
-<li>En un diseño experimental ¿qué es un nivel?</li>
-<li>¿Cuál es la diferencia entre un diseño intra-sujetos y un diseño entre-sujetos?</li>
-<li>¿Qué es un diseño experimental mixto?</li>
-<li>¿Qué tipo de prueba se utiliza para comparar dos grupos experimentales?</li>
+<li><p>En un diseño experimental ¿qué es un factor?</p></li>
+<li><p>En un diseño experimental ¿qué es un nivel?</p></li>
+<li><p>¿Cuál es la diferencia entre un diseño intra-sujetos y un diseño entre-sujetos?</p></li>
+<li><p>¿Qué es un diseño experimental mixto?</p></li>
+<li><p>¿Qué tipo de prueba se utiliza para comparar dos grupos experimentales?</p></li>
 <li><p>¿Qué tipo de prueba se utiliza para comparar mas de dos grupos experimentales?</p></li>
 </ul>
 <p><br/> <br/></p>
@@ -310,52 +404,203 @@ div.tocify {
 </div>
 <div id="capítulo-1b-que-es-lo-más-esencial-que-debería-saber" class="section level3">
 <h3>Capítulo 1b: ¿Que es lo más esencial que debería saber?</h3>
-<p><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZdIZuvGySMRfKq2r1UKnCg" target="_blank">Ver</a></p>
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZdIZuvGySMRfKq2r1UKnCg" target="_blank">Ver</a>-->
 <p>Contenido: 6 videos (41 minutos en total)</p>
+<div id="parte-1-1" class="section level4">
+<h4>Parte 1</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/FRotXNmdzwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-2-1" class="section level4">
+<h4>Parte 2</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/JdhW8gV9dOI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-3-1" class="section level4">
+<h4>Parte 3</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/BsXkMAIRaLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-4-1" class="section level4">
+<h4>Parte 4</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/ZDrbXr_VJOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-5" class="section level4">
+<h4>Parte 5</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/0vNh-JNx2b0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-6" class="section level4">
+<h4>Parte 6</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/-ktM6xENx-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
 <p>Preguntas clave:</p>
 <ul>
-<li>¿Qué aspectos son importantes a la hora de diseñar un experimento?</li>
-<li>¿Qué es la validez de una medición?</li>
-<li>¿Qué es la replicabilidad de una medición?</li>
+<li><p>¿Qué aspectos son importantes a la hora de diseñar un experimento?</p></li>
+<li><p>¿Qué es la validez de una medición?</p></li>
+<li><p>¿Qué es la replicabilidad de una medición?</p></li>
 <li><p>¿Qué es un factor confundente?</p></li>
-<li>¿Qué hace un prueba estadística (en términos de los cambios que experimenta una variable)?</li>
+<li><p>¿Qué hace un prueba estadística (en términos de los cambios que experimenta una variable)?</p></li>
 <li><p>¿Qué es la variación sistemática? ¿Qué es la variación no sistemática?</p></li>
-<li>¿Cuál es la diferencia entre un diseño intra-sujetos y un diseño entre-sujetos?</li>
+<li><p>¿Cuál es la diferencia entre un diseño intra-sujetos y un diseño entre-sujetos?</p></li>
 <li><p>¿Cuál es la relación entre un diseño experimental y su análisis estadístico asociado?</p></li>
-<li>¿Quién fué Roland Fisher?</li>
+<li><p>¿Quién fué Roland Fisher?</p></li>
 <li><p>¿Dé dónde viene el 5% (o p = 0.05) que usamos en estadística?</p></li>
-<li>¿Para que se usa la randomización?</li>
-<li>¿Qué son los efectos de práctica y de aburrimiento en un diseño intra-sujetos?</li>
+<li><p>¿Para que se usa la randomización?</p></li>
+<li><p>¿Qué son los efectos de práctica y de aburrimiento en un diseño intra-sujetos?</p></li>
 <li><p>¿Cómo podemos confeccionar un buen diseño entre-sujetos?</p></li>
 </ul>
 <p><br/> <br/></p>
 </div>
 </div>
+</div>
 <div id="capítulo-2-por-qué-importa-tanto-tanto-la-curva-normal" class="section level2">
 <h2>Capítulo 2: ¿Por qué importa tanto tanto la curva normal?</h2>
-<p><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGYNH1thjd8KkRyr-JVPzvR3" target="_blank">Ver</a></p>
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGYNH1thjd8KkRyr-JVPzvR3" target="_blank">Ver</a>-->
 <p>Contenido: 8 videos (1 hora 32 minutos en total)</p>
+<div id="parte-1-2" class="section level4">
+<h4>Parte 1</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/IFNrCATEjxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-2-2" class="section level4">
+<h4>Parte 2</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/AdPw4jita2o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-3-2" class="section level4">
+<h4>Parte 3</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/kcxyC1b-QZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-4-2" class="section level4">
+<h4>Parte 4</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/zKnxXD9C-78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-5-1" class="section level4">
+<h4>Parte 5</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/BpH3_BJf5do" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-6-1" class="section level4">
+<h4>Parte 6</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/SF4vsowPyrw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-7" class="section level4">
+<h4>Parte 7</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/WPgwrvY8SEw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-8" class="section level4">
+<h4>Parte 8</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/tHovt9mI7Xg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
 <ul>
-<li>¿Por qué es importante graficar los datos?</li>
-<li>¿Cómo se calcula la desviación estándar?</li>
+<li><p>¿Por qué es importante graficar los datos?</p></li>
+<li><p>¿Cómo se calcula la desviación estándar?</p></li>
 <li><p>¿Qué es la suma de cuadrados (o suma de los errores al cuadrado)?</p></li>
-<li>¿Cómo se puede visualizar la &quot;forma&quot; de los datos?</li>
-<li>¿Qué características tiene la curva normal?</li>
-<li>¿Cómo estimamos cuantas observaciones caen entre dos valores para una set de datos?</li>
+<li><p>¿Cómo se puede visualizar la “forma” de los datos?</p></li>
+<li><p>¿Qué características tiene la curva normal?</p></li>
+<li><p>¿Cómo estimamos cuantas observaciones caen entre dos valores para una set de datos?</p></li>
 <li><p>¿Qué porcentaje de los datos esta entre -1 SD y 1 SD?</p></li>
-<li>¿Qué significa generalizar nuestros hallazgos?</li>
-<li>¿Qué es la variación de la muestra (o sampling variation)?</li>
-<li>¿Qué es el error estándar y como se calcula?</li>
-<li>¿Qué son los intervalos de confianza?</li>
-<li>¿Qué significa que cálculemos un promedio con un intervalo de confianza al 68%?</li>
+<li><p>¿Qué significa generalizar nuestros hallazgos?</p></li>
+<li><p>¿Qué es la variación de la muestra (o sampling variation)?</p></li>
+<li><p>¿Qué es el error estándar y como se calcula?</p></li>
+<li><p>¿Qué son los intervalos de confianza?</p></li>
+<li><p>¿Qué significa que cálculemos un promedio con un intervalo de confianza al 68%?</p></li>
 <li><p>¿Qué significa que cálculemos un promedio con un intervalo de confianza al 95%?</p></li>
 </ul>
 <p><br/> <br/></p>
 </div>
+</div>
 <div id="capítulo-3-que-es-un-t-test" class="section level2">
 <h2>Capítulo 3: ¿Que es un t-test?</h2>
-<p><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZXm9fSogEShVDKnzgQT3Cf" target="_blank">Ver</a></p>
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZXm9fSogEShVDKnzgQT3Cf" target="_blank">Ver</a>-->
 <p>Contenido: 4 videos (45 minutos en total)</p>
+<div id="parte-1-3" class="section level4">
+<h4>Parte 1</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/3JKMXCpQvzw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-2-3" class="section level4">
+<h4>Parte 2</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/nUutIbaRWCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-3-3" class="section level4">
+<h4>Parte 3</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/L3SbEqzEWW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-4-3" class="section level4">
+<h4>Parte 4</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/RS79Z69iu5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-5-2" class="section level4">
+<h4>Parte 5</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/HPz59fOGIps" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
 <ul>
 <li>¿Cómo se sabe si dos muestras viene de una misma población o de poblaciones diferentes?</li>
 <li>¿Para que nos sirve la distribución normal para compara dos muestras?</li>
@@ -366,10 +611,34 @@ div.tocify {
 </ul>
 <p><br/> <br/></p>
 </div>
+</div>
 <div id="capítulo-4-que-es-un-modelo-estadístico" class="section level2">
 <h2>Capítulo 4: ¿Que es un modelo estadístico?</h2>
-<p><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGaAEQlidg92YdaCvYBCWoSj" target="_blank">Ver</a></p>
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGaAEQlidg92YdaCvYBCWoSj" target="_blank">Ver</a>-->
 <p>Contenido: 3 videos (39 minutos en total)</p>
+<div id="parte-1-4" class="section level4">
+<h4>Parte 1</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/DOIjIB1FGYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-2-4" class="section level4">
+<h4>Parte 2</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/In1vL_kZeYk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-3-4" class="section level4">
+<h4>Parte 3</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/maFx6TKuaQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
 <ul>
 <li>¿Qué es un modelo estadístico?</li>
 <li>¿Por qué es importante tener buenos modelos?</li>
@@ -385,10 +654,45 @@ div.tocify {
 </ul>
 <p><br/> <br/></p>
 </div>
+</div>
 <div id="capítulo-5-que-es-un-anova" class="section level2">
 <h2>Capítulo 5: ¿Que es un ANOVA?</h2>
-<p><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGb7SIBsvmQpwy3Wi5wH7fBe" target="_blank">Ver</a></p>
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGb7SIBsvmQpwy3Wi5wH7fBe" target="_blank">Ver</a>-->
 <p>Contenido: 4 videos (53 minutos en total)</p>
+<div id="parte-1-5" class="section level4">
+<h4>Parte 1</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/hzasDQY0GVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-2-5" class="section level4">
+<h4>Parte 2</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/CyrNtF3C0Mc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-3-5" class="section level4">
+<h4>Parte 3</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/sWdZHcBWTGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-4-4" class="section level4">
+<h4>Parte 4</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/uYsCQR-7uRo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<blockquote>
+
+</blockquote>
+</div>
+<p><br/></p>
 <ul>
 <li>¿Cómo comparamos varias condiciones experimentales?</li>
 <li>¿Cuántos distintos tipos de ANOVA existen?</li>
@@ -408,10 +712,34 @@ div.tocify {
 </ul>
 <p><br/> <br/></p>
 </div>
+</div>
 <div id="capítulo-6-y-que-hago-después-que-calculo-un-anova" class="section level2">
 <h2>Capítulo 6: ¿Y que hago después que calculo un ANOVA?</h2>
-<p><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZyMYhJtEN7PtT_a_ebC4nY" target="_blank">Ver</a></p>
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZyMYhJtEN7PtT_a_ebC4nY" target="_blank">Ver</a>-->
 <p>Contenido: 3 videos (35 minutos en total)</p>
+<div id="parte-1-6" class="section level4">
+<h4>Parte 1</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/nFcxN5qVYxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-2-6" class="section level4">
+<h4>Parte 2</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/z_jVSEKOVZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-3-6" class="section level4">
+<h4>Parte 3</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/qXR27qqjDvU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
 <ul>
 <li>¿Que hago después de una prueba omnibus?</li>
 <li>¿De qué depende el tipo de análisis que se hace después del ANOVA?</li>
@@ -425,10 +753,50 @@ div.tocify {
 </ul>
 <p><br/> <br/></p>
 </div>
+</div>
 <div id="capítulo-7-qué-conceptos-estadísticos-debería-manejar" class="section level2">
 <h2>Capítulo 7: ¿Qué conceptos estadísticos debería manejar?</h2>
 <p><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGb_yYkeLqCSX0xz_0n1tu9z" target="_blank">Ver</a></p>
 <p>Contenido: 5 videos (46 minutos en total)</p>
+<div id="parte-1-7" class="section level4">
+<h4>Parte 1</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/cOtuIWu9NQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-2-7" class="section level4">
+<h4>Parte 2</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/dQ0LnqUAVnA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-3-7" class="section level4">
+<h4>Parte 3</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/AbsXEad0gMQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-4-5" class="section level4">
+<h4>Parte 4</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/Xh9-Mt2_WTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-5-3" class="section level4">
+<h4>Parte 5</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/bumW9zlQJdo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
 <ul>
 <li>¿Qué me dice y qué no me dice el valor de p?</li>
 <li>¿Cómo se interpreta un resultado estadístico nulo?</li>
@@ -443,6 +811,7 @@ div.tocify {
 <li>¿Qué podemos hacer para que en un proyecto de investigación tengamos las mejores posibilidades de encontrar un efecto que realmente existe?</li>
 </ul>
 <p><br/> <br/></p>
+</div>
 </div>
 <div id="programación-con-r" class="section level2">
 <h2>Programación con R</h2>
@@ -570,7 +939,7 @@ metallicaAges &lt;- c(47, 47, 48, 46)
 
 # Eliminate a column
 metallica$Name &lt;- NULL</code></pre>
-<pre><code>## Warning in metallica$Name &lt;- NULL: Coercing LHS to a list</code></pre>
+<pre><code>## Warning in metallica$Name &lt;- NULL: Realizando coercion de LHD a una lista</code></pre>
 <p><br/></p>
 </div>
 <div id="data-frames" class="section level4">
@@ -688,7 +1057,7 @@ dataframe1$neurotic &lt;- c(10,17,14,13,21,7,13,9,14,13)</code></pre>
 # whenever you work with imported data you will need to set the working directory
 
 # set working directory
-setwd(&quot;C:/Users/Usuario/Documents/JoseLuis/UTalca_2018/Stats_UTalca/database_2020_DocPsychol&quot;)
+setwd(&quot;./data&quot;)
 
 #setwd(&quot;C:/Users/Usuario/Documents/JoseLuis/UTalca_2018/Stats_101/course_2018/part2_how_to_use_R/1_data&quot;)
 
@@ -716,89 +1085,1033 @@ dat2 &lt;- read.delim(&quot;facebook_friends_2.txt&quot;)
 dat3 &lt;- read.csv(&quot;facebook_friends_1.csv&quot;, header = FALSE)
 
 # checking the structure of the data you might realize this is a &quot;data frame&quot;
-str(dat2)
-
-#  this is a special data format that can accomodate data of different types in boxes: numeric, characters, etc
+str(dat2)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    11 obs. of  1 variable:
+##  $ CASAS: int  108 103 252 121 93 57 40 53 22 116 ...</code></pre>
+<pre class="r"><code>#  this is a special data format that can accomodate data of different types in boxes: numeric, characters, etc
 
 # let&#39;s do some descriptive stats
 # let&#39;s see some centre of a distribution
 
 # to visualize the mode () the score that occurs more frequently) we can do an histogram
-hist(dat2$CASAS, 10)
-
-# how to compute the median?
+hist(dat2$CASAS, 10)</code></pre>
+<p><img src="indice_files/figure-html/import-1.png" width="672" /></p>
+<pre class="r"><code># how to compute the median?
 # we can sort the data
-sort(dat2$CASAS)
-
-# seems there is an outlier, let&#39;s compare data with and without the outlier
+sort(dat2$CASAS)</code></pre>
+<pre><code>##  [1]  22  40  53  57  93  98 103 108 116 121 252</code></pre>
+<pre class="r"><code># seems there is an outlier, let&#39;s compare data with and without the outlier
 dat3 &lt;- dat2 # we copy the data
-dat3$V1[3] &lt;- NA # and we replace one value for an NA (NA stands for non available)
+
+#OJO dat3$V1[3] &lt;- NA # and we replace one value for an NA (NA stands for non available)
 
 colnames(dat2) &lt;- c(&quot;friendsNb&quot;) # rename header
 
-hist(dat2$friendsNb, 10) # plot
-
-dat2$friendsNb &lt;- dat2[order(dat2$friendsNb),] # sort data
-dat2$NUMEROS &lt;- dat2[order(dat2$NUMEROS),] # sort data
+hist(dat2$friendsNb, 10) # plot</code></pre>
+<p><img src="indice_files/figure-html/import-2.png" width="672" /></p>
+<pre class="r"><code>dat2$friendsNb &lt;- dat2[order(dat2$friendsNb),] # sort data
+#OJO dat2$NUMEROS &lt;- dat2[order(dat2$NUMEROS),] # sort data
 
 # get ride of last value in a new dataframe
-dat2woOL &lt;- data.frame(friendsNb = dat2$friendsNb[-length(dat2$friendsNb)])
+#dat2woOL &lt;- data.frame(friendsNb = dat2$friendsNb[-length(dat2$friendsNb)])
 
-summary(dat2$friendsNb) # descrip stats
-summary(dat2woOL$friendsNb) # descrip stats
+summary(dat2$friendsNb) # descrip stats</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   22.00   55.00   98.00   96.64  112.00  252.00</code></pre>
+<pre class="r"><code>#OJO summary(dat2woOL$friendsNb) # descrip stats
 
 sum1 &lt;- summary(dat2$friendsNb) # descrip stats
 
-IQR(dat2$friendsNb)
-
-
-
-
-summary(dat2)
-summary(dat3)
-# the median does not change a lot
+IQR(dat2$friendsNb)</code></pre>
+<pre><code>## [1] 57</code></pre>
+<pre class="r"><code>summary(dat2)</code></pre>
+<pre><code>##    friendsNb     
+##  Min.   : 22.00  
+##  1st Qu.: 55.00  
+##  Median : 98.00  
+##  Mean   : 96.64  
+##  3rd Qu.:112.00  
+##  Max.   :252.00</code></pre>
+<pre class="r"><code>summary(dat3)</code></pre>
+<pre><code>##      CASAS       
+##  Min.   : 22.00  
+##  1st Qu.: 55.00  
+##  Median : 98.00  
+##  Mean   : 96.64  
+##  3rd Qu.:112.00  
+##  Max.   :252.00</code></pre>
+<pre class="r"><code># the median does not change a lot
 # question: why use the mean instead of the median?
 
 # let&#39;s look at some dipersion in the distribution of the data
 
 # range
-max(dat2) - min(dat2)
-
-# range
-max(dat3, na.rm = TRUE) - min(dat3, na.rm = TRUE)
-
-errorstad &lt;- sd(dat2$V1) / sqrt(length(dat2$V1))
+max(dat2) - min(dat2)</code></pre>
+<pre><code>## [1] 230</code></pre>
+<pre class="r"><code># range
+max(dat3, na.rm = TRUE) - min(dat3, na.rm = TRUE)</code></pre>
+<pre><code>## [1] 230</code></pre>
+<pre class="r"><code>errorstad &lt;- sd(dat2$V1) / sqrt(length(dat2$V1))
 
 # range is affected by extreme values, one workaorund would be excluding values at the extremes
 # we cut off the top and bottom 25% of scores and compute the range of the middle 50% of scores, this is the &#39;interquartile range&#39;
 
 # first, we need to compute the quartiles
 # But, we have already seen this data, remember summary??
-summary(dat2)
-
-# if only we could funnel this data into a variable!!
+summary(dat2)</code></pre>
+<pre><code>##    friendsNb     
+##  Min.   : 22.00  
+##  1st Qu.: 55.00  
+##  Median : 98.00  
+##  Mean   : 96.64  
+##  3rd Qu.:112.00  
+##  Max.   :252.00</code></pre>
+<pre class="r"><code># if only we could funnel this data into a variable!!
 # wait a minute... maybe somebody already do this? ...
 # just find the right words, for instance type: &quot;r save summary to data frame&quot; in google!
 
 summaryDat2 &lt;- do.call(cbind, lapply(dat2, summary))
-summaryDat2
-
-# compute the interquartile range
-summaryDat2[5] - summaryDat2[2]
-
-# let&#39;s see this graphically!
+summaryDat2</code></pre>
+<pre><code>##         friendsNb
+## Min.     22.00000
+## 1st Qu.  55.00000
+## Median   98.00000
+## Mean     96.63636
+## 3rd Qu. 112.00000
+## Max.    252.00000</code></pre>
+<pre class="r"><code># compute the interquartile range
+summaryDat2[5] - summaryDat2[2]</code></pre>
+<pre><code>## [1] 57</code></pre>
+<pre class="r"><code># let&#39;s see this graphically!
 boxplot(dat2)
 
 # let&#39;s see this graphically!
 boxplot(dat3)</code></pre>
+<p><img src="indice_files/figure-html/import-3.png" width="672" /></p>
+<pre class="r"><code># set directory
+setwd(&quot;./data&quot;)
+#setwd(&quot;C:/Users/Usuario/Documents/JoseLuis/UTalca_2018/Stats_UTalca/database_2020_DocPsychol&quot;)
+
+library(reshape)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;reshape&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     rename</code></pre>
+<pre class="r"><code># load data
+satisfactionData &lt;- read.delim(&quot;Honeymoon_Period.dat&quot;, header = TRUE)
+
+# check data
+head(satisfactionData)</code></pre>
+<pre><code>##   Person Satisfaction_Base Satisfaction_6_Months Satisfaction_12_Months
+## 1      1                 6                     6                      5
+## 2      2                 7                     7                      8
+## 3      3                 4                     6                      2
+## 4      4                 6                     9                      4
+## 5      5                 6                     7                      6
+## 6      6                 5                    10                      4
+##   Satisfaction_18_Months Gender
+## 1                      2      0
+## 2                      4      1
+## 3                      2      1
+## 4                      1      0
+## 5                      6      0
+## 6                      2      1</code></pre>
+<pre class="r"><code>str(satisfactionData)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    115 obs. of  6 variables:
+##  $ Person                : int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ Satisfaction_Base     : int  6 7 4 6 6 5 6 2 10 10 ...
+##  $ Satisfaction_6_Months : int  6 7 6 9 7 10 6 5 9 10 ...
+##  $ Satisfaction_12_Months: int  5 8 2 4 6 4 4 4 5 10 ...
+##  $ Satisfaction_18_Months: int  2 4 2 1 6 2 2 NA 6 9 ...
+##  $ Gender                : int  0 1 1 0 0 1 0 0 0 0 ...</code></pre>
+<pre class="r"><code>#    __ 
+#   /\ \   
+#  / /\ \ wide to long (stack) ----
+# / /__\ \
+# \/____\/
+
+# using stack
+# ex:
+# newDataFrame &lt;- stack(oldDataFrame, select = c(variable_list))
+# here we stack relative to the &quot;life satisfaction scores&quot;
+
+satisfactionStacked &lt;- stack(satisfactionData, 
+                             select = c(&quot;Satisfaction_Base&quot;,
+                                        &quot;Satisfaction_6_Months&quot;,
+                                        &quot;Satisfaction_12_Months&quot;,
+                                        &quot;Satisfaction_18_Months&quot;))
+
+# check it
+head(satisfactionStacked)</code></pre>
+<pre><code>##   values               ind
+## 1      6 Satisfaction_Base
+## 2      7 Satisfaction_Base
+## 3      4 Satisfaction_Base
+## 4      6 Satisfaction_Base
+## 5      6 Satisfaction_Base
+## 6      5 Satisfaction_Base</code></pre>
+<pre class="r"><code>str(satisfactionStacked)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    460 obs. of  2 variables:
+##  $ values: int  6 7 4 6 6 5 6 2 10 10 ...
+##  $ ind   : Factor w/ 4 levels &quot;Satisfaction_Base&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<pre class="r"><code># optionally we can change the name of the columns
+
+colnames(satisfactionStacked) &lt;- c(&quot;Values&quot;, &quot;SatisfType&quot;)
+# check it
+head(satisfactionStacked)</code></pre>
+<pre><code>##   Values        SatisfType
+## 1      6 Satisfaction_Base
+## 2      7 Satisfaction_Base
+## 3      4 Satisfaction_Base
+## 4      6 Satisfaction_Base
+## 5      6 Satisfaction_Base
+## 6      5 Satisfaction_Base</code></pre>
+<pre class="r"><code>str(satisfactionStacked)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    460 obs. of  2 variables:
+##  $ Values    : int  6 7 4 6 6 5 6 2 10 10 ...
+##  $ SatisfType: Factor w/ 4 levels &quot;Satisfaction_Base&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<pre class="r"><code># attention!!: we lose the info about &quot;person&quot; and &quot;gender&quot;
+
+#    __ 
+#   /\ \   
+#  / /\ \ long to wide (unstack) ----
+# / /__\ \
+# \/____\/
+
+# to reverse this procedure we can &quot;unstack&quot;
+
+# simple unstack
+satisfactionUnstacked &lt;- unstack(satisfactionStacked)
+
+# check it
+head(satisfactionUnstacked)</code></pre>
+<pre><code>##   Satisfaction_Base Satisfaction_6_Months Satisfaction_12_Months
+## 1                 6                     6                      5
+## 2                 7                     7                      8
+## 3                 4                     6                      2
+## 4                 6                     9                      4
+## 5                 6                     7                      6
+## 6                 5                    10                      4
+##   Satisfaction_18_Months
+## 1                      2
+## 2                      4
+## 3                      2
+## 4                      1
+## 5                      6
+## 6                      2</code></pre>
+<pre class="r"><code>str(satisfactionUnstacked)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    115 obs. of  4 variables:
+##  $ Satisfaction_Base     : int  6 7 4 6 6 5 6 2 10 10 ...
+##  $ Satisfaction_6_Months : int  6 7 6 9 7 10 6 5 9 10 ...
+##  $ Satisfaction_12_Months: int  5 8 2 4 6 4 4 4 5 10 ...
+##  $ Satisfaction_18_Months: int  2 4 2 1 6 2 2 NA 6 9 ...</code></pre>
+<pre class="r"><code># or you can specify the name for the values themselves and for the name of the variables
+# ex: 
+# newDataFrame &lt;- unstack(oldDataFrame, scores ~ columns)
+
+# scores: name of the variable containing your scores
+# columns: name of the variable that indicates the variable to which the score belongs
+
+satisfactionUnstacked2 &lt;- unstack(satisfactionStacked,
+                                  Values ~ SatisfType)
+
+# check it
+head(satisfactionUnstacked2)</code></pre>
+<pre><code>##   Satisfaction_Base Satisfaction_6_Months Satisfaction_12_Months
+## 1                 6                     6                      5
+## 2                 7                     7                      8
+## 3                 4                     6                      2
+## 4                 6                     9                      4
+## 5                 6                     7                      6
+## 6                 5                    10                      4
+##   Satisfaction_18_Months
+## 1                      2
+## 2                      4
+## 3                      2
+## 4                      1
+## 5                      6
+## 6                      2</code></pre>
+<pre class="r"><code>str(satisfactionUnstacked2)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    115 obs. of  4 variables:
+##  $ Satisfaction_Base     : int  6 7 4 6 6 5 6 2 10 10 ...
+##  $ Satisfaction_6_Months : int  6 7 6 9 7 10 6 5 9 10 ...
+##  $ Satisfaction_12_Months: int  5 8 2 4 6 4 4 4 5 10 ...
+##  $ Satisfaction_18_Months: int  2 4 2 1 6 2 2 NA 6 9 ...</code></pre>
+<pre class="r"><code>#    __ 
+#   /\ \   
+#  / /\ \ wide to long (melt) ----
+# / /__\ \
+# \/____\/
+
+# melt
+# ex: 
+# newDataFrame &lt;- melt(oldDataFrame, id = c(constant_variables), measured = c(variables_that_change_across_columns))
+
+# id: This option specifies any variables in the dataframe that do not vary over time, ex: person identifier (Person), and gender (Gender)
+# id = c(Person, Gender)
+
+# measured: This option specifies the variables that do vary over time or are repeated measures(i.e., scores within the same entity).
+
+# In other words, it specifies the names of variables currently in different columns that you would like to be restructured so that they are in different rows. 
+
+# We have 4 columns that we want to restructure (Satisfaction_Base, Satisfaction_6_Months, Satisfaction_12_ Months, Satisfaction_18_Months). 
+
+# These can be specified as: 
+# measured = c(&quot;Satisfaction_Base&quot;, &quot;Satisfaction_6_Months&quot;, &quot;Satisfaction_12_Months&quot;,  &quot;Satisfaction_18_Months&quot;)
+
+restructuredData &lt;- melt(satisfactionData,
+                         id = c(&quot;Person&quot;, &quot;Gender&quot;),
+                         measured = c(&quot;Satisfaction_Base&quot;,
+                                      &quot;Satisfaction_6_Months&quot;,
+                                      &quot;Satisfaction_12_Months&quot;,
+                                      &quot;Satisfaction_18_Months&quot;))
+
+# optionally we can change the name of the columns
+colnames(restructuredData)[3:4] &lt;- c(&quot;SatisfType&quot;, &quot;Values&quot;)
+
+# we can also reorder data
+# datLongreorder &lt;- datLong[order(datLong$Person),]
+reorder2 &lt;- restructuredData[order(restructuredData$Person),]
+
+# check it
+head(restructuredData)</code></pre>
+<pre><code>##   Person Gender        SatisfType Values
+## 1      1      0 Satisfaction_Base      6
+## 2      2      1 Satisfaction_Base      7
+## 3      3      1 Satisfaction_Base      4
+## 4      4      0 Satisfaction_Base      6
+## 5      5      0 Satisfaction_Base      6
+## 6      6      1 Satisfaction_Base      5</code></pre>
+<pre class="r"><code>str(restructuredData)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    460 obs. of  4 variables:
+##  $ Person    : int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ Gender    : int  0 1 1 0 0 1 0 0 0 0 ...
+##  $ SatisfType: Factor w/ 4 levels &quot;Satisfaction_Base&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ Values    : int  6 7 4 6 6 5 6 2 10 10 ...</code></pre>
+<pre class="r"><code>#    __ 
+#   /\ \   
+#  / /\ \ long to wide (cast) ----
+# / /__\ \
+# \/____\/
+
+# cast
+# ex: 
+# newData &lt;- cast(longData, variables_coded_within_a_single_column ~ variables_coded_across_many_columns, value = &quot;outcome_variable&quot;)
+
+wideData &lt;- cast(restructuredData, Person + Gender ~ SatisfType, value = &quot;Values&quot;)
+
+# check it
+head(wideData)</code></pre>
+<pre><code>##   Person Gender Satisfaction_Base Satisfaction_6_Months Satisfaction_12_Months
+## 1      1      0                 6                     6                      5
+## 2      2      1                 7                     7                      8
+## 3      3      1                 4                     6                      2
+## 4      4      0                 6                     9                      4
+## 5      5      0                 6                     7                      6
+## 6      6      1                 5                    10                      4
+##   Satisfaction_18_Months
+## 1                      2
+## 2                      4
+## 3                      2
+## 4                      1
+## 5                      6
+## 6                      2</code></pre>
+<pre class="r"><code>str(wideData)</code></pre>
+<pre><code>## List of 6
+##  $ Person                : int [1:115] 1 2 3 4 5 6 7 8 9 10 ...
+##  $ Gender                : int [1:115] 0 1 1 0 0 1 0 0 0 0 ...
+##  $ Satisfaction_Base     : int [1:115] 6 7 4 6 6 5 6 2 10 10 ...
+##  $ Satisfaction_6_Months : int [1:115] 6 7 6 9 7 10 6 5 9 10 ...
+##  $ Satisfaction_12_Months: int [1:115] 5 8 2 4 6 4 4 4 5 10 ...
+##  $ Satisfaction_18_Months: int [1:115] 2 4 2 1 6 2 2 NA 6 9 ...
+##  - attr(*, &quot;row.names&quot;)= int [1:115] 1 2 3 4 5 6 7 8 9 10 ...
+##  - attr(*, &quot;idvars&quot;)= chr [1:2] &quot;Person&quot; &quot;Gender&quot;
+##  - attr(*, &quot;rdimnames&quot;)=List of 2
+##   ..$ :&#39;data.frame&#39;: 115 obs. of  2 variables:
+##   .. ..$ Person: int [1:115] 1 2 3 4 5 6 7 8 9 10 ...
+##   .. ..$ Gender: int [1:115] 0 1 1 0 0 1 0 0 0 0 ...
+##   ..$ :&#39;data.frame&#39;: 4 obs. of  1 variable:
+##   .. ..$ SatisfType: Factor w/ 4 levels &quot;Satisfaction_Base&quot;,..: 1 2 3 4</code></pre>
+<pre class="r"><code># END</code></pre>
 <p><br/> <br/></p>
 </div>
 </div>
 <div id="capítulo-2" class="section level3">
 <h3>Capítulo 2</h3>
 <p><a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGbTjJEkzZLLQHIOHYdK1-Ca" target="_blank">Ver</a></p>
+<pre class="r"><code># JLUF modified 31/07/2020
+# directly inspired from Field (2012) &quot;Discovering Statistics Using R&quot;
+setwd(&quot;./data&quot;)
+#setwd(&quot;C:/Users/Usuario/Documents/JoseLuis/UTalca_2018/Stats_UTalca/database_2020_DocPsychol&quot;)
+
+# install.packages(c(&quot;ggplot2&quot;, &quot;plyr&quot;))
+library(ggplot2)
+library(reshape)
+library(plyr)</code></pre>
+<pre><code>## ------------------------------------------------------------------------------</code></pre>
+<pre><code>## You have loaded plyr after dplyr - this is likely to cause problems.
+## If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+## library(plyr); library(dplyr)</code></pre>
+<pre><code>## ------------------------------------------------------------------------------</code></pre>
+<pre><code>## 
+## Attaching package: &#39;plyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:reshape&#39;:
+## 
+##     rename, round_any</code></pre>
+<pre><code>## The following objects are masked from &#39;package:dplyr&#39;:
+## 
+##     arrange, count, desc, failwith, id, mutate, rename, summarise,
+##     summarize</code></pre>
+<pre class="r"><code>library(Rmisc)</code></pre>
+<pre><code>## Loading required package: lattice</code></pre>
+<pre class="r"><code>#---1. dot graphs-----
+
+# get data
+facebookData &lt;- read.delim(&quot;FacebookNarcissism.dat&quot;, header = TRUE) # load data
+head(facebookData)</code></pre>
+<pre><code>##   id NPQC_R_Total Rating_Type Rating
+## 1  1           31  Attractive      2
+## 2  1           31 Fashionable      2
+## 3  1           31  Glamourous      2
+## 4  1           31        Cool      2
+## 5  2           37  Attractive      2
+## 6  2           37 Fashionable      2</code></pre>
+<pre class="r"><code>str(facebookData)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    776 obs. of  4 variables:
+##  $ id          : int  1 1 1 1 2 2 2 2 5 5 ...
+##  $ NPQC_R_Total: num  31 31 31 31 37 ...
+##  $ Rating_Type : chr  &quot;Attractive&quot; &quot;Fashionable&quot; &quot;Glamourous&quot; &quot;Cool&quot; ...
+##  $ Rating      : int  2 2 2 2 2 2 2 2 3 3 ...</code></pre>
+<pre class="r"><code># id: a number indicating the identity of the participant.
+# NPQC_R_Total: the total score on the narcissism questionnaire.
+# Rating_Type: whether the rating was for coolness, ...
+# ... glamour, fashion or attractiveness.
+# Rating: the rating given (on a scale from 1 to 5).
+
+# fig 1 - NPQC_R_Total in the x-axis, Rating in the y-axis
+graph &lt;- ggplot(facebookData, aes(NPQC_R_Total, Rating))
+graph + geom_point() + labs(title = &quot;plot 1&quot;)</code></pre>
+<p><img src="indice_files/figure-html/plotting-1.png" width="672" /></p>
+<pre class="r"><code># fig 2
+graph + geom_point(shape = 17) # will change the dots to triangles</code></pre>
+<p><img src="indice_files/figure-html/plotting-2.png" width="672" /></p>
+<pre class="r"><code># fig 3
+graph + geom_point(size = 6)</code></pre>
+<p><img src="indice_files/figure-html/plotting-3.png" width="672" /></p>
+<pre class="r"><code># Differentiate different ratings by plotting them in different colours
+
+# fig 4 - to differentiate distinct ratings
+graph + geom_point(aes(colour = Rating_Type))</code></pre>
+<p><img src="indice_files/figure-html/plotting-4.png" width="672" /></p>
+<pre class="r"><code># We potentially have a problem of overplotting
+# because there were a limited number of responses that people could give
+# To avoid this overplotting we use the &quot;position&quot; option to add a jitter:
+
+# fig 5
+graph + geom_point(aes(colour = Rating_Type), position = &quot;jitter&quot;)</code></pre>
+<p><img src="indice_files/figure-html/plotting-5.png" width="672" /></p>
+<pre class="r"><code># fig 6
+graph + geom_point(aes(shape = Rating_Type), position = &quot;jitter&quot;)</code></pre>
+<p><img src="indice_files/figure-html/plotting-6.png" width="672" /></p>
+<pre class="r"><code>#---2. scatterplot-----
+
+# A scatterplot is a graph that plots
+# each person score on one variable against their score on another
+
+# Example: a psychologist was interested in the effects of exam stress on exam performance
+# A questionnaire was devised and validated to assess state anxiety relating to exams (called the Exam Anxiety Questionnaire, or EAQ)
+# This scale produced a measure of anxiety scored out of 100
+# Anxiety was measured before an exam, and the % mark of each student on the exam was used to assess the exam performance
+
+# get data
+examData &lt;- read.delim(&quot;ExamAnxiety.dat&quot;, header = TRUE)
+head(examData)</code></pre>
+<pre><code>##   Code Revise Exam Anxiety Gender
+## 1    1      4   40  86.298   Male
+## 2    2     11   65  88.716 Female
+## 3    3     27   80  70.178   Male
+## 4    4     53   80  61.312   Male
+## 5    5      4   40  89.522   Male
+## 6    6     22   70  60.506 Female</code></pre>
+<pre class="r"><code>str(examData)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    103 obs. of  5 variables:
+##  $ Code   : int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ Revise : int  4 11 27 53 4 22 16 21 25 18 ...
+##  $ Exam   : int  40 65 80 80 40 70 20 55 50 40 ...
+##  $ Anxiety: num  86.3 88.7 70.2 61.3 89.5 ...
+##  $ Gender : chr  &quot;Male&quot; &quot;Female&quot; &quot;Male&quot; &quot;Male&quot; ...</code></pre>
+<pre class="r"><code># There are 5 variables:
+# Code: a number that indicates the identity of the participant
+# Revise: the total hours spent revising
+# Exam: mark on the exam as a percentage
+# Anxiety: the score on the EAQ
+# Gender: male or female
+
+# Plot relationship between exam anxiety (Anxiety) and exam performance (Exam)
+
+# fig 1
+scatter &lt;- ggplot(examData, aes(Anxiety, Exam))
+scatter + 
+  geom_point() + 
+  labs(x = &quot;Exam Anxiety&quot;, y = &quot;Exam Performance %&quot;)</code></pre>
+<p><img src="indice_files/figure-html/plotting-7.png" width="672" /></p>
+<pre class="r"><code># fig 2 - scatter plot are often accompanied of a line that summarize the relationship between the variables
+# the shaded line is the 95% CI
+scatter + 
+  geom_point() + 
+  geom_smooth() + 
+  labs(x = &quot;Exam Anxiety&quot;, y = &quot;Exam Performance %&quot;)</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="indice_files/figure-html/plotting-8.png" width="672" /></p>
+<pre class="r"><code># fig 3 - we often use a straight line
+scatter +
+  geom_point() +
+  # geom_smooth(method = &quot;lm&quot;) +
+  geom_smooth(method = &quot;lm&quot;, colour = &quot;Red&quot;) +
+  labs(x = &quot;Exam Anxiety&quot;, y = &quot;Exam Performance %&quot;)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="indice_files/figure-html/plotting-9.png" width="672" /></p>
+<pre class="r"><code># fig 4 - we can switch off the CI
+scatter +
+  geom_point() + 
+  geom_smooth(method = &quot;lm&quot;, colour = &quot;Green&quot;, se = FALSE) +
+  labs(x = &quot;Exam Anxiety&quot;, y = &quot;Exam Performance %&quot;)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="indice_files/figure-html/plotting-10.png" width="672" /></p>
+<pre class="r"><code># fig 5 - we can change the transparency and the color of the line
+scatter +
+  geom_point() + 
+  geom_smooth(method = &quot;lm&quot;, alpha = 0.1, fill = &quot;Blue&quot;) +
+  labs(x = &quot;Exam Anxiety&quot;, y = &quot;Exam Performance %&quot;)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="indice_files/figure-html/plotting-11.png" width="672" /></p>
+<pre class="r"><code># fig 6
+scatter +
+  geom_point() + 
+  geom_smooth(method = &quot;lm&quot;, colour = &quot;Red&quot;, alpha = 0.1, fill = &quot;Blue&quot;) +
+  labs(x = &quot;Exam Anxiety&quot;, y = &quot;Exam Performance %&quot;)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="indice_files/figure-html/plotting-12.png" width="672" /></p>
+<pre class="r"><code>#---3. grouped scatterplot-----
+
+# What if we want to see 
+# whether male and female students had different reactions to exam anxiety?
+# we need to set &quot;Gender&quot; as an aesthetic
+
+# fig 1
+scatter &lt;- ggplot(examData, aes(Anxiety, Exam, colour = Gender))
+scatter + 
+  geom_point() + 
+  geom_smooth(method = &quot;lm&quot;)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="indice_files/figure-html/plotting-13.png" width="672" /></p>
+<pre class="r"><code># fig 2 - better to see the lines according to the gender
+scatter + 
+  geom_point() + 
+  geom_smooth(method = &quot;lm&quot;, alpha = 0.1, aes(fill = Gender)) +
+  labs(x = &quot;Exam Anxiety&quot;, y = &quot;Exam Performance %&quot;, colour = &quot;Gender&quot;)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="indice_files/figure-html/plotting-14.png" width="672" /></p>
+<pre class="r"><code>#---4. histograms-----
+
+# A biologist was worried about the potential health effects of music festivals.
+# So, one year she went to the Download Music Festival and measured the hygiene of 810 concert-goers over the three days of the festival
+# Since it was difficult to track people down there were some missing data on days 2 and 3
+# Hygiene was measured using a standardized technique that results in a score ranging between 0 (you smell like a corpse that has been left to rot up a skunk&#39;s arse) and 4 (you smell of sweet roses on a fresh spring day)
+
+# get data
+festivalData &lt;- read.delim(&quot;DownloadFestival.dat&quot;, header = TRUE)
+head(festivalData)</code></pre>
+<pre><code>##   ticknumb gender day1 day2 day3
+## 1     2111   Male 2.64 1.35 1.61
+## 2     2229 Female 0.97 1.41 0.29
+## 3     2338   Male 0.84   NA   NA
+## 4     2384 Female 3.03   NA   NA
+## 5     2401 Female 0.88 0.08   NA
+## 6     2405   Male 0.85   NA   NA</code></pre>
+<pre class="r"><code># fig 1
+festivalHistogram &lt;- ggplot(festivalData, aes(day1))
+festivalHistogram + geom_histogram()</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="indice_files/figure-html/plotting-15.png" width="672" /></p>
+<pre class="r"><code># fig 2
+festivalHistogram +
+  geom_histogram(binwidth = 0.4) +
+  labs(x = &quot;Hygiene (Day 1 of Festival)&quot;, y = &quot;Frequency&quot;)</code></pre>
+<p><img src="indice_files/figure-html/plotting-16.png" width="672" /></p>
+<pre class="r"><code>festivalDataAlt &lt;- read.delim(&quot;DownloadFestival_NoOutlier.dat&quot;, header = TRUE)
+
+# fig 2b
+festivalHistogramAlt &lt;- ggplot(festivalDataAlt, aes(day1))
+festivalHistogramAlt +
+  geom_histogram(binwidth = 0.6) +
+  labs(x = &quot;Hygiene (Day 1 of Festival)&quot;, y = &quot;Frequency&quot;)</code></pre>
+<p><img src="indice_files/figure-html/plotting-17.png" width="672" /></p>
+<pre class="r"><code>#---5. boxplots-----
+
+# fig 1 - let&#39;s check also the gender
+festivalBoxplot &lt;- ggplot(festivalData, aes(gender, day1))
+festivalBoxplot + 
+  geom_boxplot() + 
+  labs(x = &quot;Gender&quot;, y = &quot;Hygiene (Day 1 of Festival)&quot;)</code></pre>
+<p><img src="indice_files/figure-html/plotting-18.png" width="672" /></p>
+<pre class="r"><code># An outlier is an extreme score, so the easiest way to find it is to sort the data:
+festivalData &lt;- festivalData[order(festivalData$day1),]
+tail(festivalData)</code></pre>
+<pre><code>##     ticknumb gender  day1 day2 day3
+## 774     4564 Female  3.38 3.44 3.41
+## 300     3371 Female  3.41   NA   NA
+## 657     4264   Male  3.44   NA   NA
+## 303     3374   Male  3.58 3.35   NA
+## 574     4016 Female  3.69   NA   NA
+## 611     4158 Female 20.02 2.44   NA</code></pre>
+<pre class="r"><code># get the other data
+festivalData2 &lt;- read.delim(&quot;DownloadFestival_NoOutlier.dat&quot;,  header = TRUE)
+
+# fig 2
+festivalBoxplot2 &lt;- ggplot(festivalData2, aes(gender, day1))
+festivalBoxplot2 + 
+  geom_boxplot() + 
+  labs(x = &quot;Gender&quot;, y = &quot;Hygiene (Day 1 of Festival)&quot;)</code></pre>
+<p><img src="indice_files/figure-html/plotting-19.png" width="672" /></p>
+<pre class="r"><code># Or We can do it by hand
+festivalData$day1[810] &lt;- 2.02
+
+# fig 3
+festivalBoxplot &lt;- ggplot(festivalData, aes(gender, day1))
+festivalBoxplot + 
+  geom_boxplot() + 
+  labs(x = &quot;Gender&quot;, y = &quot;Hygiene (Day 1 of Festival)&quot;)</code></pre>
+<p><img src="indice_files/figure-html/plotting-20.png" width="672" /></p>
+<pre class="r"><code># fig 4 - day 2
+festivalBoxplot &lt;- ggplot(festivalData, aes(gender, day2))
+festivalBoxplot + geom_boxplot() + labs(x = &quot;Gender&quot;, y = &quot;Hygiene (Day 2 of Festival)&quot;)</code></pre>
+<pre><code>## Warning: Removed 546 rows containing non-finite values (stat_boxplot).</code></pre>
+<p><img src="indice_files/figure-html/plotting-21.png" width="672" /></p>
+<pre class="r"><code># fig 5 - day 3
+festivalBoxplot &lt;- ggplot(festivalData, aes(gender, day3))
+festivalBoxplot + geom_boxplot() + labs(x = &quot;Gender&quot;, y = &quot;Hygiene (Day 3 of Festival)&quot;)</code></pre>
+<pre><code>## Warning: Removed 687 rows containing non-finite values (stat_boxplot).</code></pre>
+<p><img src="indice_files/figure-html/plotting-22.png" width="672" /></p>
+<pre class="r"><code>#---6. bar charts-----
+
+# Imagine that a film company director was interested in whether 
+# there was really such a thing as a chick flick 
+# (a film that typically appeals to women more than men).
+# He took 20 men and 20 women and showed half of each sample a film
+# that was supposed to be a chick flick (Bridget Jones&#39;s Diary),
+# and the other half of each sample a film that didn&#39;t fall 
+# into the category of chick flick (Memento, a brilliant film by the way).
+# In all cases he measured their physiological arousal 
+# as an indicator of how much they enjoyed the film.
+
+# get data
+chickFlick &lt;- read.csv(&quot;chick_flick.csv&quot;, header = TRUE)
+head(chickFlick)</code></pre>
+<pre><code>##   genero             pelicula estado.de.alerta
+## 1 Hombre Bridget Jones&#39; Diary               22
+## 2 Hombre Bridget Jones&#39; Diary               13
+## 3 Hombre Bridget Jones&#39; Diary               16
+## 4 Hombre Bridget Jones&#39; Diary               10
+## 5 Hombre Bridget Jones&#39; Diary               18
+## 6 Hombre Bridget Jones&#39; Diary               24</code></pre>
+<pre class="r"><code>str(chickFlick)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    40 obs. of  3 variables:
+##  $ genero          : chr  &quot;Hombre&quot; &quot;Hombre&quot; &quot;Hombre&quot; &quot;Hombre&quot; ...
+##  $ pelicula        : chr  &quot;Bridget Jones&#39; Diary&quot; &quot;Bridget Jones&#39; Diary&quot; &quot;Bridget Jones&#39; Diary&quot; &quot;Bridget Jones&#39; Diary&quot; ...
+##  $ estado.de.alerta: int  22 13 16 10 18 24 13 14 19 23 ...</code></pre>
+<pre class="r"><code>colnames(chickFlick) &lt;- c(&quot;gender&quot;, &quot;film&quot;, &quot;arousal&quot;)
+
+# Note there are 3 variables:
+# gender: specifies the gender of the participant as text.
+# film: specifies the film watched as text.
+# arousal: is their arousal score.
+
+#---
+# bar &lt;- ggplot(chickFlick, aes(film, arousal))
+#---
+
+# The stat_summary() function takes the following general form:
+# stat_summary(function = x, geom = y)
+
+# Functions can be specified either for individual points (fun.y)
+# or for the data as a whole (fun.data) 
+# and are set to be common statistical functions such as &quot;mean&quot;, &quot;median&quot; ...
+
+# add
+#---
+# bar + stat_summary(fun.y = mean, geom = &quot;bar&quot;, fill = &quot;White&quot;, colour = &quot;Black&quot;)
+#---
+
+# &quot;fun.y = mean&quot; computes the mean for us, 
+# &quot;geom = bar&quot; displays these values as bars,
+# &quot;fill = &quot;White&quot; makes the bars white (the default is dark grey),
+# and &quot;colour = Black&quot; makes the outline of the bars black.
+
+# If we want to add error bars to create an error bar chart, 
+# we can again add these as a layer using stat_summary():
+# add
+
+#---
+# bar + stat_summary(fun.data = mean_cl_normal, geom = &quot;pointrange&quot;)
+#---
+# This command adds a standard 95% confidence interval
+# in the form of the pointrange geom
+
+# all together 
+# fig 1
+bar &lt;- ggplot(chickFlick, aes(film, arousal))
+bar +
+  stat_summary(fun.y = mean, geom = &quot;bar&quot;, fill = &quot;White&quot;, colour = &quot;Black&quot;) +
+  stat_summary(fun.data = mean_cl_normal, geom = &quot;pointrange&quot;) +
+  # stat_summary(fun.data = mean_se, geom = &quot;pointrange&quot;) +
+  labs(x = &quot;Film&quot;, y = &quot;Mean Arousal&quot;)</code></pre>
+<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
+<pre><code>## Warning: Computation failed in `stat_summary()`:
+## The `Hmisc` package is required.</code></pre>
+<p><img src="indice_files/figure-html/plotting-23.png" width="672" /></p>
+<pre class="r"><code># fig 1b with ggplot, type 2,
+# we use summarySE to compute the SE
+datac &lt;- summarySE(chickFlick, measurevar=&quot;arousal&quot;, groupvars = c(&quot;film&quot;))
+# we use a variable to set the space
+dodge &lt;- position_dodge(width = 0.9)
+# the figure!
+ggplot(datac, aes(x=film, y=arousal)) +
+  geom_bar(position = dodge, stat=&quot;identity&quot;,
+           color=&quot;black&quot;, fill=&quot;green&quot;, show.legend=FALSE) +
+    geom_errorbar(position=position_dodge(.9), width=.25,
+                  aes(ymin=arousal, ymax=arousal+se)) +
+    theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        panel.background = element_blank(), axis.line = element_line(colour = &quot;black&quot;)) +
+  scale_y_continuous(limits = c(0,30), breaks = seq(0, 30, 5)) +
+  ylab(&quot;Arousal&quot;)</code></pre>
+<p><img src="indice_files/figure-html/plotting-24.png" width="672" /></p>
+<pre class="r"><code># If we want to factor in gender we could do this in several ways.
+# First we could set an aesthetic (such as colour) to represent the different genders,
+# but we could also use faceting to create separate plots for men and women.
+# We could also do both.
+
+# fig 2
+bar &lt;- ggplot(chickFlick, aes(film, arousal, fill = gender))
+bar + 
+  stat_summary(fun.y = mean, geom = &quot;bar&quot;, position=&quot;dodge&quot;) +
+  stat_summary(fun.data = mean_cl_normal,
+                   geom = &quot;errorbar&quot;, 
+                   position = position_dodge(width=0.9),
+                   width = 0.2) +
+  labs(x = &quot;Film&quot;, y = &quot;Mean Arousal&quot;, fill = &quot;Gender&quot;)</code></pre>
+<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.
+
+## Warning: Computation failed in `stat_summary()`:
+## The `Hmisc` package is required.</code></pre>
+<p><img src="indice_files/figure-html/plotting-25.png" width="672" /></p>
+<pre class="r"><code># Or maybe is better to switch the layers
+bar +
+  stat_summary(fun.data = mean_cl_normal, 
+               geom = &quot;errorbar&quot;, 
+               position = position_dodge(width = 0.90), 
+               width = 0.2) +
+  stat_summary(fun.y = mean, 
+               geom = &quot;bar&quot;, position=&quot;dodge&quot;) +
+  labs(x = &quot;Film&quot;, y = &quot;Mean Arousal&quot;, fill = &quot;Gender&quot;)</code></pre>
+<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.
+
+## Warning: Computation failed in `stat_summary()`:
+## The `Hmisc` package is required.</code></pre>
+<p><img src="indice_files/figure-html/plotting-26.png" width="672" /></p>
+<pre class="r"><code># And if we want to get ride of the title of the legend
+bar +
+  stat_summary(fun.data = mean_cl_normal, 
+               geom = &quot;errorbar&quot;, 
+               position = position_dodge(width = 0.90), 
+               width = 0.2) +
+  stat_summary(fun.y = mean, 
+               geom = &quot;bar&quot;, position=&quot;dodge&quot;) +
+  labs(x = &quot;Film&quot;, y = &quot;Mean Arousal&quot;, fill = &quot;&quot;) +
+  labs(title = &quot;fig 2&quot;)</code></pre>
+<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.
+
+## Warning: Computation failed in `stat_summary()`:
+## The `Hmisc` package is required.</code></pre>
+<p><img src="indice_files/figure-html/plotting-27.png" width="672" /></p>
+<pre class="r"><code># The second way to express gender
+
+# fig 3
+bar &lt;- ggplot(chickFlick, aes(film, arousal, fill = film))
+# bar &lt;- ggplot(chickFlick, aes(film, arousal))
+bar +
+  stat_summary(fun.data = mean_cl_normal, geom = &quot;errorbar&quot;, width = 0.2) +
+  stat_summary(fun.y = mean, geom = &quot;bar&quot;) +
+  facet_wrap( ~ gender) +
+  labs(x = &quot;Film&quot;, y = &quot;Mean Arousal&quot;) +
+  theme(legend.position = &quot;none&quot;)</code></pre>
+<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.
+
+## Warning: Computation failed in `stat_summary()`:
+## The `Hmisc` package is required.
+
+## Warning: Computation failed in `stat_summary()`:
+## The `Hmisc` package is required.</code></pre>
+<p><img src="indice_files/figure-html/plotting-28.png" width="672" /></p>
+<pre class="r"><code># fig 3b with ggplot, type 2,
+# we use summarySE to compute the SE
+datac &lt;- summarySE(chickFlick, measurevar=&quot;arousal&quot;, groupvars = c(&quot;film&quot;, &quot;gender&quot;))
+# we use a variable to set the space
+dodge &lt;- position_dodge(width = 0.9)
+# the figure!
+ggplot(datac, aes(x=film, y=arousal, fill=gender)) +
+  geom_bar(position = dodge, stat=&quot;identity&quot;,
+           color=&quot;black&quot;) +
+  geom_errorbar(position=position_dodge(.9), width=.25,
+                aes(ymin=arousal, ymax=arousal+se)) +
+  scale_fill_manual(values=c(&quot;white&quot;, &quot;black&quot;)) +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        panel.background = element_blank(), axis.line = element_line(colour = &quot;black&quot;)) +
+  scale_y_continuous(limits = c(0,30), breaks = seq(0, 30, 5)) +
+  ylab(&quot;Arousal&quot;)</code></pre>
+<p><img src="indice_files/figure-html/plotting-29.png" width="672" /></p>
+<pre class="r"><code>#---7. line graphs-----
+
+# People have many methods for stopping hiccups (a surprise, holding your breath),
+# but actually medical science has put its collective mind to the task too.
+# The official treatment methods include tongue-pulling manoeuvres, 
+# massage of the carotid artery, and,
+# believe it or not, digital rectal massage (Fesmire, 1988).
+
+# We took 15 hiccup sufferers, and during a bout of hiccups
+# administered each of the three procedures 
+# (in random order and at intervals of 5 minutes) after 
+# taking a baseline of how many hiccups they had per minute. 
+# We counted the number of hiccups in the minute after each procedure.
+
+# get data
+hiccupsData &lt;- read.csv(&quot;hipo.csv&quot;, header = TRUE)
+head(hiccupsData)</code></pre>
+<pre><code>##   ID Linea.base Susto Azucar Bolsa
+## 1  1         15     9      7     2
+## 2  2         13    18      7     4
+## 3  3          9    17      5     4
+## 4  4          7    15     10     5
+## 5  5         11    18      7     4
+## 6  6         14     8     10     3</code></pre>
+<pre class="r"><code>str(hiccupsData)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    15 obs. of  5 variables:
+##  $ ID        : int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ Linea.base: int  15 13 9 7 11 14 20 9 17 19 ...
+##  $ Susto     : int  9 18 17 15 18 8 3 16 10 10 ...
+##  $ Azucar    : int  7 7 5 10 7 10 7 12 9 8 ...
+##  $ Bolsa     : int  2 4 4 5 4 3 3 3 4 4 ...</code></pre>
+<pre class="r"><code># missing something!
+hiccupsData$ID &lt;- NULL
+colnames(hiccupsData) &lt;- c(&quot;Baseline&quot;, &quot;Tongue&quot;, &quot;Carotid&quot;, &quot;Rectum&quot;)
+
+# Note there are 4 variables:
+# Baseline: specifies the number of hiccups at baseline.
+# Tongue: specifies the number of hiccups after tongue pulling.
+# Carotid: specifies the number of hiccups after carotid artery massage.
+# Rectum: specifies the number of hiccups after digital rectal massage.
+
+# Each row in the data file represents a different person, 
+# so these data are laid out as a repeated-measures design, 
+# with each column representing a different treatment condition 
+# and every person undergoing each treatment.
+
+# These data are in the wrong format for ggplot2 to use. 
+# We can rearrange the data as follows:
+hiccups &lt;- stack(hiccupsData)
+head(hiccups)</code></pre>
+<pre><code>##   values      ind
+## 1     15 Baseline
+## 2     13 Baseline
+## 3      9 Baseline
+## 4      7 Baseline
+## 5     11 Baseline
+## 6     14 Baseline</code></pre>
+<pre class="r"><code>str(hiccups)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    60 obs. of  2 variables:
+##  $ values: int  15 13 9 7 11 14 20 9 17 19 ...
+##  $ ind   : Factor w/ 4 levels &quot;Baseline&quot;,&quot;Tongue&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<pre class="r"><code>colnames(hiccups) &lt;- c(&quot;Hiccups&quot;,&quot;Intervention&quot;)
+head(hiccups)</code></pre>
+<pre><code>##   Hiccups Intervention
+## 1      15     Baseline
+## 2      13     Baseline
+## 3       9     Baseline
+## 4       7     Baseline
+## 5      11     Baseline
+## 6      14     Baseline</code></pre>
+<pre class="r"><code>str(hiccups)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    60 obs. of  2 variables:
+##  $ Hiccups     : int  15 13 9 7 11 14 20 9 17 19 ...
+##  $ Intervention: Factor w/ 4 levels &quot;Baseline&quot;,&quot;Tongue&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<pre class="r"><code># To plot a categorical variable in ggplot() it needs to be recognized as a factor,
+# What we could do, however, is set a new order for the factors,
+hiccups$Intervention2 &lt;- factor(hiccups$Intervention, 
+                                levels(hiccups$Intervention)[c(1, 4, 2, 3)])
+
+# fig 1
+line &lt;- ggplot(hiccups, aes(Intervention, Hiccups))
+# line2 &lt;- ggplot(hiccups, aes(Intervention2, Hiccups))
+
+# To make the line display we also need to set an aesthetic of group = 1;
+# this is because we are joining summary points  (points that summarize a group)
+# rather than individual data points.
+
+line +
+  stat_summary(fun.y = mean, geom = &quot;point&quot;) +
+  stat_summary(fun.y = mean, geom = &quot;line&quot;, aes(group = 1), 
+               colour = &quot;Blue&quot;, linetype = &quot;dashed&quot;) +
+  stat_summary(fun.data = mean_cl_boot, geom = &quot;errorbar&quot;, width = 0.2) +
+  labs(x = &quot;Intervention&quot;, y = &quot;Mean Number of Hiccups&quot;)</code></pre>
+<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
+<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
+<pre><code>## Warning: Computation failed in `stat_summary()`:
+## The `Hmisc` package is required.</code></pre>
+<p><img src="indice_files/figure-html/plotting-30.png" width="672" /></p>
+<pre class="r"><code># We can check what happen if we change the order of the conditions
+line2 &lt;- ggplot(hiccups, aes(Intervention2, Hiccups))
+line2 +
+  stat_summary(fun.y = mean, geom = &quot;point&quot;) +
+  stat_summary(fun.y = mean, geom = &quot;line&quot;, aes(group=1), colour = &quot;Red&quot;, linetype = &quot;dashed&quot;) +
+  stat_summary(fun.data = mean_cl_boot, geom = &quot;errorbar&quot;, width = 0.2) +
+  labs(x = &quot;Intervention&quot;, y = &quot;Mean Number of Hiccups&quot;)</code></pre>
+<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
+<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
+<pre><code>## Warning: Computation failed in `stat_summary()`:
+## The `Hmisc` package is required.</code></pre>
+<p><img src="indice_files/figure-html/plotting-31.png" width="672" /></p>
+<pre class="r"><code># fig with ggplot, type 2,
+# we use summarySE to compute the SE
+datac &lt;- summarySE(hiccups, measurevar=&quot;Hiccups&quot;, groupvars=&quot;Intervention2&quot;)
+# the figure!
+ggplot(datac, aes(x=Intervention2, y=Hiccups, group=1)) +
+  geom_errorbar(width=.1, aes(ymin=Hiccups-se, ymax=Hiccups+se)) +
+  geom_line(colour = &quot;Red&quot;, linetype = &quot;dashed&quot;) + 
+  geom_point() +
+  ylab(&quot;Mean Number of Hiccups&quot;) +
+  #coord_cartesian(ylim = c(830, 900)) +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        panel.background = element_blank(), axis.line = element_line(colour = &quot;black&quot;))</code></pre>
+<p><img src="indice_files/figure-html/plotting-32.png" width="672" /></p>
+<pre class="r"><code>#---7b. line graphs-----
+
+# Imagine we conducted an experiment in which a group of 25 children 
+# was encouraged to send text messages on their mobile phones over a six-month period.
+
+# A second group of 25 children was forbidden from sending text messages for the same period.
+# The outcome was a score on a grammatical test (as a percentage) 
+# that was measured both before and after the intervention. 
+
+# The first independent variable was, therefore, 
+# text message use (text messagers versus controls) and
+# the second independent variable was the time 
+# at which grammatical ability was assessed (baseline or after 6 months). 
+
+textData &lt;- read.csv(&quot;usuarios_de_whatsapp.csv&quot;, header = TRUE)
+head(textData)</code></pre>
+<pre><code>##                 Grupo Linea.base X6.meses
+## 1 Usarios de Whatsapp         52       32
+## 2 Usarios de Whatsapp         68       48
+## 3 Usarios de Whatsapp         85       62
+## 4 Usarios de Whatsapp         47       16
+## 5 Usarios de Whatsapp         73       63
+## 6 Usarios de Whatsapp         57       53</code></pre>
+<pre class="r"><code>str(textData)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    50 obs. of  3 variables:
+##  $ Grupo     : chr  &quot;Usarios de Whatsapp&quot; &quot;Usarios de Whatsapp&quot; &quot;Usarios de Whatsapp&quot; &quot;Usarios de Whatsapp&quot; ...
+##  $ Linea.base: int  52 68 85 47 73 57 63 50 66 60 ...
+##  $ X6.meses  : int  32 48 62 16 63 53 59 58 59 57 ...</code></pre>
+<pre class="r"><code># missing something!
+colnames(textData) &lt;- c(&quot;Group&quot;, &quot;Baseline&quot;, &quot;Six_months&quot;)
+
+# There are 3 variables:
+# Group: specifies whether they were in the text message group or the control group.
+# Baseline: grammar scores at baseline.
+# Six_months: grammar scores after 6 months.
+
+# Each row in the data file represents a different person.
+# These data are again in the wrong format for ggplot2. 
+# Instead of the current wide format,
+# we need the data in long (i.e., molten) format.
+# So  we need to restructure the data to a new dataframe
+# called textMessages that is in long format.
+
+textMessages &lt;- melt(textData,
+                     id = c(&quot;Group&quot;),
+                     measured = c(&quot;Baseline&quot;, &quot;Six_months&quot;))
+
+head(textMessages)</code></pre>
+<pre><code>##                 Group variable value
+## 1 Usarios de Whatsapp Baseline    52
+## 2 Usarios de Whatsapp Baseline    68
+## 3 Usarios de Whatsapp Baseline    85
+## 4 Usarios de Whatsapp Baseline    47
+## 5 Usarios de Whatsapp Baseline    73
+## 6 Usarios de Whatsapp Baseline    57</code></pre>
+<pre class="r"><code>tail(textMessages)</code></pre>
+<pre><code>##         Group   variable value
+## 95  Controles Six_months    78
+## 96  Controles Six_months    62
+## 97  Controles Six_months    71
+## 98  Controles Six_months    55
+## 99  Controles Six_months    46
+## 100 Controles Six_months    79</code></pre>
+<pre class="r"><code>str(textMessages)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    100 obs. of  3 variables:
+##  $ Group   : chr  &quot;Usarios de Whatsapp&quot; &quot;Usarios de Whatsapp&quot; &quot;Usarios de Whatsapp&quot; &quot;Usarios de Whatsapp&quot; ...
+##  $ variable: Factor w/ 2 levels &quot;Baseline&quot;,&quot;Six_months&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ value   : int  52 68 85 47 73 57 63 50 66 60 ...</code></pre>
+<pre class="r"><code>colnames(textMessages)[c(2,3)] &lt;- c(&quot;Time&quot;, &quot;Grammar_Score&quot;)
+
+# We might want to rename the labels from &quot;Six months&quot; to &quot;6 Months&quot;,
+textMessages$Time &lt;- factor(textMessages$Time, labels = c(&quot;Baseline&quot;, &quot;6 Months&quot;))
+
+# This format will have the following variables:
+# Group: specifies whether they were in the text message group or the control group.
+# Time: specifies whether the score relates to baseline or 6 months.
+# Grammar_Score: the grammar scores.
+
+# fig 2
+line &lt;- ggplot(textMessages, aes(Time, Grammar_Score, colour = Group))
+
+pd &lt;- position_dodge(0.1) # move them .05 to the left and right
+line +
+  stat_summary(fun.y = mean, geom = &quot;point&quot;, position = pd) +
+  stat_summary(fun.y = mean, geom = &quot;line&quot;, aes(group = Group), position = pd) +
+  stat_summary(fun.data = mean_se, geom = &quot;errorbar&quot;, width = 0.2, position = pd) +
+  labs(x = &quot;Time&quot;, y = &quot;Mean Grammar Score&quot;, colour = &quot;Group&quot;) +
+  coord_cartesian(ylim = c(45, 70))</code></pre>
+<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
+<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
+<p><img src="indice_files/figure-html/plotting-33.png" width="672" /></p>
+<pre class="r"><code># fig with ggplot, type 2,
+# we use summarySE to compute the SE
+datac &lt;- summarySE(textMessages, measurevar=&quot;Grammar_Score&quot;, groupvars=c(&quot;Group&quot;, &quot;Time&quot;))
+# the figure!
+pd &lt;- position_dodge(0.1) # dodge
+ggplot(datac, aes(x=Time, y=Grammar_Score, colour=Group)) +
+  geom_errorbar(aes(ymin=Grammar_Score-se, ymax=Grammar_Score+se), width=.1, position=pd) +
+  geom_line(position=pd, aes(group=Group), show.legend=FALSE) +
+  geom_point(position=pd, aes(group=Group), show.legend=FALSE) + 
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        panel.background = element_blank(), axis.line = element_line(colour = &quot;black&quot;)) +
+  ylab(&quot;Mean Grammar Score&quot;) +
+  scale_colour_manual(values=c(&quot;red&quot;, &quot;blue&quot;)) +
+  coord_cartesian(ylim = c(45, 70))</code></pre>
+<p><img src="indice_files/figure-html/plotting-34.png" width="672" /></p>
+<pre class="r"><code># END</code></pre>
+<p><br/></p>
 <p><br/> <br/></p>
 </div>
+</div>
+<div id="ejemplo-shinny" class="section level2">
+<h2>Ejemplo Shinny</h2>
+<div class="video-responsive">
+<iframe src="https://abender.shinyapps.io/histogramApp/" title="YouTube video player" frameborder="no">
+</iframe>
+</div>
+<p><br/></p>
 </div>
 
 
