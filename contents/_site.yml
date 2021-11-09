@@ -1,0 +1,8 @@
+name: "estadistica101"
+title: "Estadística 101"
+output: 
+  html_document:
+    template: default.html5
+    theme: lumen
+    css: "../style.css"
+output_dir: "."

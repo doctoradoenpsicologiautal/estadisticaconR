@@ -1,0 +1,60 @@
+---
+title: "Estadística 101"
+output: html_document
+---
+
+## Capítulo 3: ¿Que es un t-test?
+
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZXm9fSogEShVDKnzgQT3Cf" target="_blank">Ver</a>-->
+
+Contenido: 4 videos (45 minutos en total)
+
+#### Parte 1
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/3JKMXCpQvzw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 2
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/nUutIbaRWCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 3
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/L3SbEqzEWW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 4
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/RS79Z69iu5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 5
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/HPz59fOGIps" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+- ¿Cómo se sabe si dos muestras viene de una misma población o de poblaciones diferentes?
+- ¿Para que nos sirve la distribución normal para compara dos muestras?
+- ¿Cuál es la hipótesis nula cuando comparamos dos muestras?
+- ¿Cómo se refleja un t-test en un modelo lineal general (GLM)?
+- ¿Qué representa el intercepto de la ecuación de un GLM para una variable outcome cuando se comparan dos grupos?
+- ¿Qué representa la pendiente de la ecuación de un GLM para una variable outcome cuando se comparan dos grupos?
+
+<br/>
+<br/>

@@ -1,0 +1,81 @@
+---
+title: "Estadística 101"
+output: html_document
+---
+
+## Capítulo 1b: ¿Que es lo más esencial que debería saber?
+
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZdIZuvGySMRfKq2r1UKnCg" target="_blank">Ver</a>-->
+
+Contenido: 6 videos (41 minutos en total)
+
+#### Parte 1
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/FRotXNmdzwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 2
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/JdhW8gV9dOI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 3
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/BsXkMAIRaLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 4
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/ZDrbXr_VJOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 5
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/0vNh-JNx2b0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 6
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/-ktM6xENx-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+Preguntas clave:
+
+- ¿Qué aspectos son importantes a la hora de diseñar un experimento?
+- ¿Qué es la validez de una medición?
+- ¿Qué es la replicabilidad de una medición?
+- ¿Qué es un factor confundente?
+
+- ¿Qué hace un prueba estadística (en términos de los cambios que experimenta una variable)?
+- ¿Qué es la variación sistemática? ¿Qué es la variación no sistemática?
+
+- ¿Cuál es la diferencia entre un diseño intra-sujetos y un diseño entre-sujetos?
+- ¿Cuál es la relación entre un diseño experimental y su análisis estadístico asociado?
+
+- ¿Quién fué Roland Fisher?
+- ¿Dé dónde viene el 5% (o p = 0.05) que usamos en estadística?
+
+- ¿Para que se usa la randomización?
+- ¿Qué son los efectos de práctica y de aburrimiento en un diseño intra-sujetos?
+- ¿Cómo podemos confeccionar un buen diseño entre-sujetos?
+
+<br/>
+<br/>

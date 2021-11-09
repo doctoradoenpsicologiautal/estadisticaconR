@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Estadística 101</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="C:/Proyectos/Fuentes/JAG/jlb/estadisticaconR/style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="site_libs/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
+  <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+  <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+  <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+  <style>h1 {font-size: 34px;}
+         h1.title {font-size: 38px;}
+         h2 {font-size: 30px;}
+         h3 {font-size: 24px;}
+         h4 {font-size: 18px;}
+         h5 {font-size: 16px;}
+         h6 {font-size: 12px;}
+         code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+         pre:not([class]) { background-color: white }</style>
+  <script src="site_libs/navigation-1.1/tabsets.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <a href="index.html" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline">Estadística 101</span>
+                </a>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Introducción</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Capítulo 1</span> </a>
+                        <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                            <li class="w-100">
+                                <a href="chapter01a.html" class="nav-link px-0"> <span class="d-none d-sm-inline">Capítulo 1a: ¿Para qué nos sirve la estadística?</span> </a>
+                            </li>
+                            <li>
+                                <a href="chapter01b.html" class="nav-link px-0"> <span class="d-none d-sm-inline">Capítulo 1b: ¿Que es lo más esencial que debería saber?</span> </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="chapter02.html" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Capítulo 2: ¿Por qué importa tanto tanto la curva normal?</span></a>
+                    </li>
+                    <li>
+                        <a href="chapter03.html" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Capítulo 3: ¿Que es un t-test?</span></a>
+                    </li>
+                    <li>
+                        <a href="chapter04.html" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Capítulo 4: ¿Que es un modelo estadístico?</span></a>
+                    </li>
+                    <li>
+                        <a href="chapter05.html" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Capítulo 5: ¿Que es un ANOVA?</span></a>
+                    </li>
+                    <li>
+                        <a href="chapter06.html" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Capítulo 6: ¿Y que hago después que calculo un ANOVA?</span></a>
+                    </li>
+                    <li>
+                        <a href="chapter07.html" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Capítulo 7: ¿Qué conceptos estadísticos debería manejar?</span></a>
+                    </li>
+                    <li>
+                        <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                            <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Programación</span></a>
+                        <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                            <li class="w-100">
+                                <a href="r01.html" class="nav-link px-0"> <span class="d-none d-sm-inline">Capítulo 1</span></a>
+                            </li>
+                            <li>
+                                <a href="r02.html" class="nav-link px-0"> <span class="d-none d-sm-inline">Capítulo 2</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="shinny01.html" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Ejemplo Shinny</span> </a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+        <div class="col py-3">
+
+
+
+<header id="title-block-header">
+<h1 class="title">Estadística 101</h1>
+</header>
+<div id="capítulo-2-por-qué-importa-tanto-tanto-la-curva-normal" class="section level2">
+<h2>Capítulo 2: ¿Por qué importa tanto tanto la curva normal?</h2>
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGYNH1thjd8KkRyr-JVPzvR3" target="_blank">Ver</a>-->
+<p>Contenido: 8 videos (1 hora 32 minutos en total)</p>
+<div id="parte-1" class="section level4">
+<h4>Parte 1</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/IFNrCATEjxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-2" class="section level4">
+<h4>Parte 2</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/AdPw4jita2o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-3" class="section level4">
+<h4>Parte 3</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/kcxyC1b-QZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-4" class="section level4">
+<h4>Parte 4</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/zKnxXD9C-78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-5" class="section level4">
+<h4>Parte 5</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/BpH3_BJf5do" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-6" class="section level4">
+<h4>Parte 6</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/SF4vsowPyrw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-7" class="section level4">
+<h4>Parte 7</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/WPgwrvY8SEw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-8" class="section level4">
+<h4>Parte 8</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/tHovt9mI7Xg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+<ul>
+<li><p>¿Por qué es importante graficar los datos?</p></li>
+<li><p>¿Cómo se calcula la desviación estándar?</p></li>
+<li><p>¿Qué es la suma de cuadrados (o suma de los errores al cuadrado)?</p></li>
+<li><p>¿Cómo se puede visualizar la “forma” de los datos?</p></li>
+<li><p>¿Qué características tiene la curva normal?</p></li>
+<li><p>¿Cómo estimamos cuantas observaciones caen entre dos valores para una set de datos?</p></li>
+<li><p>¿Qué porcentaje de los datos esta entre -1 SD y 1 SD?</p></li>
+<li><p>¿Qué significa generalizar nuestros hallazgos?</p></li>
+<li><p>¿Qué es la variación de la muestra (o sampling variation)?</p></li>
+<li><p>¿Qué es el error estándar y como se calcula?</p></li>
+<li><p>¿Qué son los intervalos de confianza?</p></li>
+<li><p>¿Qué significa que cálculemos un promedio con un intervalo de confianza al 68%?</p></li>
+<li><p>¿Qué significa que cálculemos un promedio con un intervalo de confianza al 95%?</p></li>
+</ul>
+<p><br/> <br/></p>
+</div>
+</div>
+
+</div>
+    </div>
+</div>
+
+</body>
+</html>

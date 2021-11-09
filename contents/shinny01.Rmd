@@ -1,0 +1,12 @@
+---
+title: "Estadística 101"
+output: html_document
+---
+
+## Ejemplo Shinny
+
+<div class="video-responsive">
+<iframe src="https://abender.shinyapps.io/histogramApp/" title="YouTube video player" frameborder="no"></iframe>
+</div>
+
+<br/>

@@ -1,0 +1,61 @@
+---
+title: "Estadística 101"
+output: html_document
+---
+
+## Capítulo 5: ¿Que es un ANOVA?
+
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGb7SIBsvmQpwy3Wi5wH7fBe" target="_blank">Ver</a>-->
+
+Contenido: 4 videos (53 minutos en total)
+
+#### Parte 1
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/hzasDQY0GVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 2
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/CyrNtF3C0Mc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 3
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/sWdZHcBWTGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 4
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/uYsCQR-7uRo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>>
+</div>
+
+<br/>
+
+- ¿Cómo comparamos varias condiciones experimentales?
+- ¿Cuántos distintos tipos de ANOVA existen?
+- ¿De qué dependen del tipo de ANOVA que usemos para realizar un análisis?
+- ¿Qué es un factor en un ANOVA?
+- ¿Qué es un nivel en un ANOVA?
+- ¿Qué es un ANOVA mixto?
+- ¿En un experimento hipotético con 3 condiciones experimentales por qué no podemos usar 3 t-test?
+- ¿Cuanto aumenta el error de tipo 1 cuando aumentamos el número de comparaciones que hacemos?
+- ¿Qué es una prueba omnibus?
+- ¿Cuáles son los supuestos del ANOVA?
+- ¿Qué nos dice el valor F en un ANOVA?
+- ¿Por qué el ANOVA se puede representar como una regresión?
+- ¿Para que nos sirven las variables ficticias (dummy coding) en el ANOVA?
+- ¿Qué es el intercepto en la ecuación que representa el ANOVA?
+- ¿Qué indican los coeficientes (o betas) en la ecuación que representa el ANOVA?
+
+<br/>
+<br/>
