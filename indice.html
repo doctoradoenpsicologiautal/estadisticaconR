@@ -13,7 +13,6 @@
 
 <title>Estadística 101</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
@@ -91,76 +90,6 @@ pre code {
 </style>
 
 
-<style type="text/css">
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script type="text/javascript">
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
-});
-</script>
 
 <!-- tabsets -->
 
@@ -306,29 +235,6 @@ div.tocify {
 
 
 
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html"></a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-  <a href="index.html">Curso</a>
-</li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-
 <div id="header">
 
 
@@ -340,7 +246,7 @@ div.tocify {
 
 <div id="introducción" class="section level2">
 <h2>Introducción</h2>
-<p>Este curso se basa en <a href="https://www.goodreads.com/book/show/578667.Statistics_Without_Tears" target="_blank">Statistics without tears</a> de Derek Rowntree y <a href="https://www.discoveringstatistics.com/books/discovering-statistics-using-r/" target="_blank">Discovering statistics using R</a> de Andy Field, Jeremy Miles y Zoë Field. Dicho eso, cualquier error que puedas encontrar es mi responsabilidad.<br/> Este curso también utiliza material del libro “Discovering statistics using R”. Este material no me pertenece y es accesible <a href="https://studysites.uk.sagepub.com/dsur/study/articles.htm" target="_blank">aquí.</a></p>
+<p>Este curso se basa en <a href="https://www.goodreads.com/book/show/578667.Statistics_Without_Tears" target="_blank">Statistics without tears</a> de Derek Rowntree y <a href="https://www.discoveringstatistics.com/books/discovering-statistics-using-r/" target="_blank">Discovering statistics using R</a> de Andy Field, Jeremy Miles y Zoë Field. Dicho eso, cualquier error que puedas encontrar es mi responsabilidad.<br/> Este curso también utiliza material del libro &quot;Discovering statistics using R&quot;. Este material no me pertenece y es accesible <a href="https://studysites.uk.sagepub.com/dsur/study/articles.htm" target="_blank">aquí.</a></p>
 <p>Este curso asume que no sabes nada de estadística. Sin embargo, si asume que sabes lo básico de aritmética y fracciones. La mejor manera de aprender es que respondas las preguntas clave de cada capítulo. Y que realizes los ejercicios con la ayuda de Jamovi. La base de datos que vamos a utilizar se encuentra <a href="https://github.com/joseluisulloafulgeri/estadistica101_database" target="_blank">aquí.</a> Y las diapositivas están <a href="https://osf.io/6hv75/" target="_blank">aquí.</a></p>
 <p>¡Que disfrutes el curso!</p>
 <p><br/> <br/></p>
@@ -384,19 +290,19 @@ div.tocify {
 <p><br/></p>
 <p>Preguntas clave:</p>
 <ul>
-<li><p>¿Qué es la estadística descriptiva? ¿Qué es la estadística inferencial?</p></li>
-<li><p>¿Qué es una población y una muestra? ¿Qué son los parámetros y los estadísticos?</p></li>
-<li><p>¿Por qué necesitamos obtener una muestra para nuestros experimentos?</p></li>
+<li>¿Qué es la estadística descriptiva? ¿Qué es la estadística inferencial?</li>
+<li>¿Qué es una población y una muestra? ¿Qué son los parámetros y los estadísticos?</li>
+<li>¿Por qué necesitamos obtener una muestra para nuestros experimentos?</li>
 <li><p>¿Por qué necesitamos las probabilidades para análisis estadísticos?</p></li>
-<li><p>¿Que tipos de variables nos sirven para describir una muestra?</p></li>
-<li><p>¿Que significa definir variables y operacionalizar?</p></li>
-<li><p>¿Que es una variable independiente? ¿Que es una variable dependiente?</p></li>
+<li>¿Que tipos de variables nos sirven para describir una muestra?</li>
+<li>¿Que significa definir variables y operacionalizar?</li>
+<li>¿Que es una variable independiente? ¿Que es una variable dependiente?</li>
 <li><p>¿Cómo se construye una hipótesis?</p></li>
-<li><p>En un diseño experimental ¿qué es un factor?</p></li>
-<li><p>En un diseño experimental ¿qué es un nivel?</p></li>
-<li><p>¿Cuál es la diferencia entre un diseño intra-sujetos y un diseño entre-sujetos?</p></li>
-<li><p>¿Qué es un diseño experimental mixto?</p></li>
-<li><p>¿Qué tipo de prueba se utiliza para comparar dos grupos experimentales?</p></li>
+<li>En un diseño experimental ¿qué es un factor?</li>
+<li>En un diseño experimental ¿qué es un nivel?</li>
+<li>¿Cuál es la diferencia entre un diseño intra-sujetos y un diseño entre-sujetos?</li>
+<li>¿Qué es un diseño experimental mixto?</li>
+<li>¿Qué tipo de prueba se utiliza para comparar dos grupos experimentales?</li>
 <li><p>¿Qué tipo de prueba se utiliza para comparar mas de dos grupos experimentales?</p></li>
 </ul>
 <p><br/> <br/></p>
@@ -455,18 +361,18 @@ div.tocify {
 <p><br/></p>
 <p>Preguntas clave:</p>
 <ul>
-<li><p>¿Qué aspectos son importantes a la hora de diseñar un experimento?</p></li>
-<li><p>¿Qué es la validez de una medición?</p></li>
-<li><p>¿Qué es la replicabilidad de una medición?</p></li>
+<li>¿Qué aspectos son importantes a la hora de diseñar un experimento?</li>
+<li>¿Qué es la validez de una medición?</li>
+<li>¿Qué es la replicabilidad de una medición?</li>
 <li><p>¿Qué es un factor confundente?</p></li>
-<li><p>¿Qué hace un prueba estadística (en términos de los cambios que experimenta una variable)?</p></li>
+<li>¿Qué hace un prueba estadística (en términos de los cambios que experimenta una variable)?</li>
 <li><p>¿Qué es la variación sistemática? ¿Qué es la variación no sistemática?</p></li>
-<li><p>¿Cuál es la diferencia entre un diseño intra-sujetos y un diseño entre-sujetos?</p></li>
+<li>¿Cuál es la diferencia entre un diseño intra-sujetos y un diseño entre-sujetos?</li>
 <li><p>¿Cuál es la relación entre un diseño experimental y su análisis estadístico asociado?</p></li>
-<li><p>¿Quién fué Roland Fisher?</p></li>
+<li>¿Quién fué Roland Fisher?</li>
 <li><p>¿Dé dónde viene el 5% (o p = 0.05) que usamos en estadística?</p></li>
-<li><p>¿Para que se usa la randomización?</p></li>
-<li><p>¿Qué son los efectos de práctica y de aburrimiento en un diseño intra-sujetos?</p></li>
+<li>¿Para que se usa la randomización?</li>
+<li>¿Qué son los efectos de práctica y de aburrimiento en un diseño intra-sujetos?</li>
 <li><p>¿Cómo podemos confeccionar un buen diseño entre-sujetos?</p></li>
 </ul>
 <p><br/> <br/></p>
@@ -541,18 +447,18 @@ div.tocify {
 </div>
 <p><br/></p>
 <ul>
-<li><p>¿Por qué es importante graficar los datos?</p></li>
-<li><p>¿Cómo se calcula la desviación estándar?</p></li>
+<li>¿Por qué es importante graficar los datos?</li>
+<li>¿Cómo se calcula la desviación estándar?</li>
 <li><p>¿Qué es la suma de cuadrados (o suma de los errores al cuadrado)?</p></li>
-<li><p>¿Cómo se puede visualizar la “forma” de los datos?</p></li>
-<li><p>¿Qué características tiene la curva normal?</p></li>
-<li><p>¿Cómo estimamos cuantas observaciones caen entre dos valores para una set de datos?</p></li>
+<li>¿Cómo se puede visualizar la &quot;forma&quot; de los datos?</li>
+<li>¿Qué características tiene la curva normal?</li>
+<li>¿Cómo estimamos cuantas observaciones caen entre dos valores para una set de datos?</li>
 <li><p>¿Qué porcentaje de los datos esta entre -1 SD y 1 SD?</p></li>
-<li><p>¿Qué significa generalizar nuestros hallazgos?</p></li>
-<li><p>¿Qué es la variación de la muestra (o sampling variation)?</p></li>
-<li><p>¿Qué es el error estándar y como se calcula?</p></li>
-<li><p>¿Qué son los intervalos de confianza?</p></li>
-<li><p>¿Qué significa que cálculemos un promedio con un intervalo de confianza al 68%?</p></li>
+<li>¿Qué significa generalizar nuestros hallazgos?</li>
+<li>¿Qué es la variación de la muestra (o sampling variation)?</li>
+<li>¿Qué es el error estándar y como se calcula?</li>
+<li>¿Qué son los intervalos de confianza?</li>
+<li>¿Qué significa que cálculemos un promedio con un intervalo de confianza al 68%?</li>
 <li><p>¿Qué significa que cálculemos un promedio con un intervalo de confianza al 95%?</p></li>
 </ul>
 <p><br/> <br/></p>
@@ -939,7 +845,7 @@ metallicaAges &lt;- c(47, 47, 48, 46)
 
 # Eliminate a column
 metallica$Name &lt;- NULL</code></pre>
-<pre><code>## Warning in metallica$Name &lt;- NULL: Realizando coercion de LHD a una lista</code></pre>
+<pre><code>## Warning in metallica$Name &lt;- NULL: Coercing LHS to a list</code></pre>
 <p><br/></p>
 </div>
 <div id="data-frames" class="section level4">
@@ -1203,20 +1109,20 @@ satisfactionData &lt;- read.delim(&quot;Honeymoon_Period.dat&quot;, header = TRU
 
 # check data
 head(satisfactionData)</code></pre>
-<pre><code>##   Person Satisfaction_Base Satisfaction_6_Months Satisfaction_12_Months
-## 1      1                 6                     6                      5
-## 2      2                 7                     7                      8
-## 3      3                 4                     6                      2
-## 4      4                 6                     9                      4
-## 5      5                 6                     7                      6
-## 6      6                 5                    10                      4
-##   Satisfaction_18_Months Gender
-## 1                      2      0
-## 2                      4      1
-## 3                      2      1
-## 4                      1      0
-## 5                      6      0
-## 6                      2      1</code></pre>
+<pre><code>##   Person Satisfaction_Base Satisfaction_6_Months Satisfaction_12_Months Satisfaction_18_Months
+## 1      1                 6                     6                      5                      2
+## 2      2                 7                     7                      8                      4
+## 3      3                 4                     6                      2                      2
+## 4      4                 6                     9                      4                      1
+## 5      5                 6                     7                      6                      6
+## 6      6                 5                    10                      4                      2
+##   Gender
+## 1      0
+## 2      1
+## 3      1
+## 4      0
+## 5      0
+## 6      1</code></pre>
 <pre class="r"><code>str(satisfactionData)</code></pre>
 <pre><code>## &#39;data.frame&#39;:    115 obs. of  6 variables:
 ##  $ Person                : int  1 2 3 4 5 6 7 8 9 10 ...
@@ -1286,20 +1192,13 @@ satisfactionUnstacked &lt;- unstack(satisfactionStacked)
 
 # check it
 head(satisfactionUnstacked)</code></pre>
-<pre><code>##   Satisfaction_Base Satisfaction_6_Months Satisfaction_12_Months
-## 1                 6                     6                      5
-## 2                 7                     7                      8
-## 3                 4                     6                      2
-## 4                 6                     9                      4
-## 5                 6                     7                      6
-## 6                 5                    10                      4
-##   Satisfaction_18_Months
-## 1                      2
-## 2                      4
-## 3                      2
-## 4                      1
-## 5                      6
-## 6                      2</code></pre>
+<pre><code>##   Satisfaction_Base Satisfaction_6_Months Satisfaction_12_Months Satisfaction_18_Months
+## 1                 6                     6                      5                      2
+## 2                 7                     7                      8                      4
+## 3                 4                     6                      2                      2
+## 4                 6                     9                      4                      1
+## 5                 6                     7                      6                      6
+## 6                 5                    10                      4                      2</code></pre>
 <pre class="r"><code>str(satisfactionUnstacked)</code></pre>
 <pre><code>## &#39;data.frame&#39;:    115 obs. of  4 variables:
 ##  $ Satisfaction_Base     : int  6 7 4 6 6 5 6 2 10 10 ...
@@ -1318,20 +1217,13 @@ satisfactionUnstacked2 &lt;- unstack(satisfactionStacked,
 
 # check it
 head(satisfactionUnstacked2)</code></pre>
-<pre><code>##   Satisfaction_Base Satisfaction_6_Months Satisfaction_12_Months
-## 1                 6                     6                      5
-## 2                 7                     7                      8
-## 3                 4                     6                      2
-## 4                 6                     9                      4
-## 5                 6                     7                      6
-## 6                 5                    10                      4
-##   Satisfaction_18_Months
-## 1                      2
-## 2                      4
-## 3                      2
-## 4                      1
-## 5                      6
-## 6                      2</code></pre>
+<pre><code>##   Satisfaction_Base Satisfaction_6_Months Satisfaction_12_Months Satisfaction_18_Months
+## 1                 6                     6                      5                      2
+## 2                 7                     7                      8                      4
+## 3                 4                     6                      2                      2
+## 4                 6                     9                      4                      1
+## 5                 6                     7                      6                      6
+## 6                 5                    10                      4                      2</code></pre>
 <pre class="r"><code>str(satisfactionUnstacked2)</code></pre>
 <pre><code>## &#39;data.frame&#39;:    115 obs. of  4 variables:
 ##  $ Satisfaction_Base     : int  6 7 4 6 6 5 6 2 10 10 ...
@@ -1449,11 +1341,11 @@ setwd(&quot;./data&quot;)
 library(ggplot2)
 library(reshape)
 library(plyr)</code></pre>
-<pre><code>## ------------------------------------------------------------------------------</code></pre>
+<pre><code>## ---------------------------------------------------------------------------------------------</code></pre>
 <pre><code>## You have loaded plyr after dplyr - this is likely to cause problems.
 ## If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
 ## library(plyr); library(dplyr)</code></pre>
-<pre><code>## ------------------------------------------------------------------------------</code></pre>
+<pre><code>## ---------------------------------------------------------------------------------------------</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;plyr&#39;</code></pre>
 <pre><code>## The following objects are masked from &#39;package:reshape&#39;:
@@ -1461,8 +1353,7 @@ library(plyr)</code></pre>
 ##     rename, round_any</code></pre>
 <pre><code>## The following objects are masked from &#39;package:dplyr&#39;:
 ## 
-##     arrange, count, desc, failwith, id, mutate, rename, summarise,
-##     summarize</code></pre>
+##     arrange, count, desc, failwith, id, mutate, rename, summarise, summarize</code></pre>
 <pre class="r"><code>library(Rmisc)</code></pre>
 <pre><code>## Loading required package: lattice</code></pre>
 <pre class="r"><code>#---1. dot graphs-----
@@ -1768,8 +1659,6 @@ bar +
   # stat_summary(fun.data = mean_se, geom = &quot;pointrange&quot;) +
   labs(x = &quot;Film&quot;, y = &quot;Mean Arousal&quot;)</code></pre>
 <pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
-<pre><code>## Warning: Computation failed in `stat_summary()`:
-## The `Hmisc` package is required.</code></pre>
 <p><img src="indice_files/figure-html/plotting-23.png" width="672" /></p>
 <pre class="r"><code># fig 1b with ggplot, type 2,
 # we use summarySE to compute the SE
@@ -1801,10 +1690,7 @@ bar +
                    position = position_dodge(width=0.9),
                    width = 0.2) +
   labs(x = &quot;Film&quot;, y = &quot;Mean Arousal&quot;, fill = &quot;Gender&quot;)</code></pre>
-<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.
-
-## Warning: Computation failed in `stat_summary()`:
-## The `Hmisc` package is required.</code></pre>
+<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
 <p><img src="indice_files/figure-html/plotting-25.png" width="672" /></p>
 <pre class="r"><code># Or maybe is better to switch the layers
 bar +
@@ -1815,10 +1701,7 @@ bar +
   stat_summary(fun.y = mean, 
                geom = &quot;bar&quot;, position=&quot;dodge&quot;) +
   labs(x = &quot;Film&quot;, y = &quot;Mean Arousal&quot;, fill = &quot;Gender&quot;)</code></pre>
-<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.
-
-## Warning: Computation failed in `stat_summary()`:
-## The `Hmisc` package is required.</code></pre>
+<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
 <p><img src="indice_files/figure-html/plotting-26.png" width="672" /></p>
 <pre class="r"><code># And if we want to get ride of the title of the legend
 bar +
@@ -1830,10 +1713,7 @@ bar +
                geom = &quot;bar&quot;, position=&quot;dodge&quot;) +
   labs(x = &quot;Film&quot;, y = &quot;Mean Arousal&quot;, fill = &quot;&quot;) +
   labs(title = &quot;fig 2&quot;)</code></pre>
-<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.
-
-## Warning: Computation failed in `stat_summary()`:
-## The `Hmisc` package is required.</code></pre>
+<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
 <p><img src="indice_files/figure-html/plotting-27.png" width="672" /></p>
 <pre class="r"><code># The second way to express gender
 
@@ -1846,13 +1726,7 @@ bar +
   facet_wrap( ~ gender) +
   labs(x = &quot;Film&quot;, y = &quot;Mean Arousal&quot;) +
   theme(legend.position = &quot;none&quot;)</code></pre>
-<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.
-
-## Warning: Computation failed in `stat_summary()`:
-## The `Hmisc` package is required.
-
-## Warning: Computation failed in `stat_summary()`:
-## The `Hmisc` package is required.</code></pre>
+<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
 <p><img src="indice_files/figure-html/plotting-28.png" width="672" /></p>
 <pre class="r"><code># fig 3b with ggplot, type 2,
 # we use summarySE to compute the SE
@@ -1966,8 +1840,6 @@ line +
   labs(x = &quot;Intervention&quot;, y = &quot;Mean Number of Hiccups&quot;)</code></pre>
 <pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
 <pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
-<pre><code>## Warning: Computation failed in `stat_summary()`:
-## The `Hmisc` package is required.</code></pre>
 <p><img src="indice_files/figure-html/plotting-30.png" width="672" /></p>
 <pre class="r"><code># We can check what happen if we change the order of the conditions
 line2 &lt;- ggplot(hiccups, aes(Intervention2, Hiccups))
@@ -1976,10 +1848,9 @@ line2 +
   stat_summary(fun.y = mean, geom = &quot;line&quot;, aes(group=1), colour = &quot;Red&quot;, linetype = &quot;dashed&quot;) +
   stat_summary(fun.data = mean_cl_boot, geom = &quot;errorbar&quot;, width = 0.2) +
   labs(x = &quot;Intervention&quot;, y = &quot;Mean Number of Hiccups&quot;)</code></pre>
-<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
-<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
-<pre><code>## Warning: Computation failed in `stat_summary()`:
-## The `Hmisc` package is required.</code></pre>
+<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.
+
+## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
 <p><img src="indice_files/figure-html/plotting-31.png" width="672" /></p>
 <pre class="r"><code># fig with ggplot, type 2,
 # we use summarySE to compute the SE
@@ -2082,8 +1953,9 @@ line +
   stat_summary(fun.data = mean_se, geom = &quot;errorbar&quot;, width = 0.2, position = pd) +
   labs(x = &quot;Time&quot;, y = &quot;Mean Grammar Score&quot;, colour = &quot;Group&quot;) +
   coord_cartesian(ylim = c(45, 70))</code></pre>
-<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
-<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
+<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.
+
+## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
 <p><img src="indice_files/figure-html/plotting-33.png" width="672" /></p>
 <pre class="r"><code># fig with ggplot, type 2,
 # we use summarySE to compute the SE
