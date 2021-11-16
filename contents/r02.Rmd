@@ -5,7 +5,73 @@ output: html_document
 
 ### Capítulo 2
 
-<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGbTjJEkzZLLQHIOHYdK1-Ca" target="_blank">Ver</a>
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGbTjJEkzZLLQHIOHYdK1-Ca" target="_blank">Ver</a>-->
+
+Contenido: 8 videos
+
+#### Parte 1
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/7Fr30ForPjI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 2
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/HLWtweTLCN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 3
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/hL7kBmxA18s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 4
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/USdytRder4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 5
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/b_C-9zmgeHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 6
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/GnkpIqIrcUI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 7
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/g2qmDn1iqAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+#### Parte 8
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/tYQyh9BIX7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
 
 ```{r plotting}
 
