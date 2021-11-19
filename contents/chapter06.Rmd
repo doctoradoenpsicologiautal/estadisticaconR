@@ -33,10 +33,13 @@ Contenido: 3 videos (35 minutos en total)
 
 <br/>
 
+Preguntas clave:
+
 - ¿Que hago después de una prueba omnibus?
 - ¿De qué depende el tipo de análisis que se hace después del ANOVA?
 - ¿Qué significa que desglocemos la varianza explicada en los distintos contrastes en el análisis de contrastes planificados?
 - ¿En un experimento dónde analizo el efecto de dos dosis de droga comparada con un placebo, que contrastes planificados se podrían hacer y que indican el intercepto y los betas de este modelo?
+
 - ¿Por que es importante que el contraste que hagamos sea un contraste ortogonal?
 - ¿Para que sirven los contrastes que evaluan una tendencia líneal o cuadrática?
 - ¿Qué tipos de pruebas post-hoc existen?

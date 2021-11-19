@@ -73,6 +73,8 @@ Contenido: 8 videos (1 hora 32 minutos en total)
 
 <br/>
 
+Preguntas clave:
+
 - ¿Por qué es importante graficar los datos?
 - ¿Cómo se calcula la desviación estándar?
 - ¿Qué es la suma de cuadrados (o suma de los errores al cuadrado)?

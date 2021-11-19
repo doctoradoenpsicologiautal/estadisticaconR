@@ -33,9 +33,12 @@ Contenido: 3 videos (39 minutos en total)
 
 <br/>
 
+Preguntas clave:
+
 - ¿Qué es un modelo estadístico?
 - ¿Por qué es importante tener buenos modelos?
 - ¿Cómo de determina el error en un modelo?
+
 - ¿Qué son los grados de libertad?
 - ¿Cómo se define la línea de la ecuación de un GLM que se ajuste mejor a los datos?
 - ¿Cuál es el modelo más básico con el cual se compara un modelo que uno construya?

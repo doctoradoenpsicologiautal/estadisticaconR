@@ -5,9 +5,10 @@ output: html_document
 
 ## Capítulo 7: ¿Qué conceptos estadísticos debería manejar?
 
-<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGb_yYkeLqCSX0xz_0n1tu9z" target="_blank">Ver</a>
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGb_yYkeLqCSX0xz_0n1tu9z" target="_blank">Ver</a>-->
 
 Contenido: 5 videos (46 minutos en total)
+
 
 #### Parte 1
 
@@ -49,12 +50,15 @@ Contenido: 5 videos (46 minutos en total)
 
 <br/>
 
+Preguntas clave:
+
 - ¿Qué me dice y qué no me dice el valor de p?
 - ¿Cómo se interpreta un resultado estadístico nulo?
 - ¿Cuál es la diferencia entre una hipótesis de una cola y una hipótesis de dos colas?
 - ¿Por qué los criterios de significancia son más altos para una hipótesis de una cola que para una hipótesis de dos colas?
 - ¿Qué es un error de tipo I?
 - ¿Qué es un error de tipo II?
+
 - ¿Por qué hay un balance entre el error de tipo I y II?
 - ¿Qué es mas perjudicial para un estudio? ¿Un error de tipo I o II?
 - ¿Qué es el tamaño del efecto?

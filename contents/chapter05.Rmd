@@ -41,6 +41,8 @@ Contenido: 4 videos (53 minutos en total)
 
 <br/>
 
+Preguntas clave:
+
 - ¿Cómo comparamos varias condiciones experimentales?
 - ¿Cuántos distintos tipos de ANOVA existen?
 - ¿De qué dependen del tipo de ANOVA que usemos para realizar un análisis?
@@ -49,6 +51,7 @@ Contenido: 4 videos (53 minutos en total)
 - ¿Qué es un ANOVA mixto?
 - ¿En un experimento hipotético con 3 condiciones experimentales por qué no podemos usar 3 t-test?
 - ¿Cuanto aumenta el error de tipo 1 cuando aumentamos el número de comparaciones que hacemos?
+
 - ¿Qué es una prueba omnibus?
 - ¿Cuáles son los supuestos del ANOVA?
 - ¿Qué nos dice el valor F en un ANOVA?

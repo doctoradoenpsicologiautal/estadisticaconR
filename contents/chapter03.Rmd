@@ -49,11 +49,15 @@ Contenido: 4 videos (45 minutos en total)
 
 <br/>
 
+Preguntas clave:
+
 - ¿Cómo se sabe si dos muestras viene de una misma población o de poblaciones diferentes?
 - ¿Para que nos sirve la distribución normal para compara dos muestras?
+
 - ¿Cuál es la hipótesis nula cuando comparamos dos muestras?
 - ¿Cómo se refleja un t-test en un modelo lineal general (GLM)?
 - ¿Qué representa el intercepto de la ecuación de un GLM para una variable outcome cuando se comparan dos grupos?
+
 - ¿Qué representa la pendiente de la ecuación de un GLM para una variable outcome cuando se comparan dos grupos?
 
 <br/>
