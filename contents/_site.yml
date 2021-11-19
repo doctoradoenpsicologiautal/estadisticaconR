@@ -3,6 +3,6 @@ title: "Estadística 101"
 output: 
   html_document:
     template: default.html5
-    theme: lumen
+    #theme: lumen
     css: "style.css"
 output_dir: "."
