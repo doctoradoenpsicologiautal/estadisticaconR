@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Estadística 101</title>
+
+<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Estadística 101</h1>
+
+</div>
+
+
+<div id="capítulo-1" class="section level3">
+<h3>Capítulo 1</h3>
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZZ-qzu160UrC8TC6EfBvCr" target="_blank">Ver</a>-->
+<p>Contenido: 6 videos</p>
+<div id="parte-1" class="section level4">
+<h4>Parte 1</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/oY6OMnVRkjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-2" class="section level4">
+<h4>Parte 2</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/ryTQ33oOsMw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-3" class="section level4">
+<h4>Parte 3</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/UREdS1HRKN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-4" class="section level4">
+<h4>Parte 4</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/BXXUvriQvb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-5" class="section level4">
+<h4>Parte 5</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/CzIwGwyga8o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-6" class="section level4">
+<h4>Parte 6</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/9U9BycYwmbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+<p><br/></p>
+</div>
+<div id="comentarios" class="section level4">
+<h4>Comentarios</h4>
+<pre class="r"><code># a &lt;- 1
+# always write down your name and the date
+# 
+# JLUF 09/12/2017
+# add some general description to your script
+# description: getting started with R and some descriptive stats
+
+# always comment!
+# always comment!
+# always comment!
+
+# let&#39;s get started with some basic stuff</code></pre>
+<p><br/></p>
+</div>
+<div id="paquetes" class="section level4">
+<h4>Paquetes</h4>
+<pre class="r"><code># R has some built-in functions like: mean (mean), standard deviation (sd) ... etc
+# however, many time you will need to install packages
+# you can do it by hand, o by typing &quot;install.packages&quot; like in:
+
+# install.packages(&quot;foreign&quot;)
+library(foreign)
+
+# install.packages(&quot;Hmisc&quot;)
+# install.packages(&quot;reshape&quot;) # uncomment this last one and try it, we will use it later
+
+# next, in order to use the package or library type ...
+# library(reshape) # uncomment this and try it
+# we will use it later, and it will become clearer</code></pre>
+<p><br/></p>
+</div>
+<div id="asignación" class="section level4">
+<h4>Asignación</h4>
+<pre class="r"><code># let&#39;s move on
+
+#    __ 
+#   /\ \   
+#  / /\ \ assignment ----
+# / /__\ \
+# \/____\/
+
+a &lt;- 5
+b &lt;- 4
+
+# a command line is usually composed of an object and a function
+# they are usually separated by a &quot;&lt;-&quot; (which means &quot;created from&quot;)
+# for instance you can create a dataset with the funtion &quot;c&quot;, which means concatenate
+# I&#39;m going to create the object &quot;metallica&quot;
+metallica &lt;- c(&quot;Lars&quot;, &quot;James&quot;, &quot;Jason&quot;, &quot;Kirk&quot;)
+
+# this is a vector of characters
+
+# or you can simply type
+metallica</code></pre>
+<pre><code>## [1] &quot;Lars&quot;  &quot;James&quot; &quot;Jason&quot; &quot;Kirk&quot;</code></pre>
+<pre class="r"><code># the [1] means one row, which make sense because is a simple row vector
+
+# you can check the type of data by using &quot;class&quot;
+class(metallica)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<pre class="r"><code># you can also check the structure of your data with &quot;str&quot;
+str(metallica)</code></pre>
+<pre><code>##  chr [1:4] &quot;Lars&quot; &quot;James&quot; &quot;Jason&quot; &quot;Kirk&quot;</code></pre>
+<pre class="r"><code># in addition it tells you there are 4 elements
+# this is also something you can check within the working space, under &quot;Values&quot;</code></pre>
+<p><br/></p>
+</div>
+<div id="indices" class="section level4">
+<h4>Indices</h4>
+<pre class="r"><code>#    __ 
+#   /\ \   
+#  / /\ \ indexing ----
+# / /__\ \
+# \/____\/
+
+# you can also check each element of the objects by using the square brackets
+# for instance, the first element
+# this is called indexing, and is very useful!
+metallica[1]</code></pre>
+<pre><code>## [1] &quot;Lars&quot;</code></pre>
+<pre class="r"><code># for instance, the second element
+metallica[2]</code></pre>
+<pre><code>## [1] &quot;James&quot;</code></pre>
+<pre class="r"><code># or, for instance, from the first to the second element
+metallica[1:2]</code></pre>
+<pre><code>## [1] &quot;Lars&quot;  &quot;James&quot;</code></pre>
+<pre class="r"><code># you can also realize your list is wrong
+# for instance Jason was an old member of the group but not now anymore
+# we also use the square brackets, but instead of a number
+# we tell R we want all element of metallica except Jason (this is the &quot;!=&quot;)
+# so to get ride of jason we do
+metallica2 &lt;- metallica[metallica != &quot;Jason&quot;]
+
+# Eliminate 2+ elements
+metallica3 &lt;- metallica[-c(2,3)]
+
+# we might also want to add a new member, for instance Rob
+# we do this by concatenating the previous list with a new element
+metallica4 &lt;- c(metallica2, &quot;Rob&quot;)
+
+metallica_X &lt;- c(metallica, &quot;Rob&quot;) # Add at the end
+metallica_Y &lt;- c(&quot;Rob&quot;, metallica) # Add at the beginning
+# Add in the middle
+metallica &lt;- c(metallica[1:2], &quot;Rob&quot;, metallica[3:4])
+
+# --- exercise ---
+# create an object that represent your favorite band
+####
+
+# we can create variables of distinct types
+# string variables
+metallicaNames &lt;- c(&quot;Lars&quot;, &quot;James&quot;, &quot;Kirk&quot;, &quot;Rob&quot;)
+
+# numeric variables
+metallicaAges &lt;- c(47, 47, 48, 46)
+
+# Eliminate a column
+metallica$Name &lt;- NULL</code></pre>
+<pre><code>## Warning in metallica$Name &lt;- NULL: Realizando coercion de LHD a una lista</code></pre>
+<p><br/></p>
+</div>
+<div id="data-frames" class="section level4">
+<h4>Data frames</h4>
+<pre class="r"><code>#    __ 
+#   /\ \   
+#  / /\ \ data frames ----
+# / /__\ \
+# \/____\/
+
+# there are different type of data, among them vectors and data frames
+# vectors can accomodate either numbers or characters
+# data frames can accomodate different kind of data, like in boxes
+# let&#39;s create a data frame
+# we use the function &quot;data.frame&quot;
+metallicaDataFrame &lt;- data.frame(metallicaNames, metallicaAges)
+
+# the name in each box is the name of the variable itself
+# this happen by default
+# but, you can change these names
+# you can change this by using &quot;colnames&quot; which means column names
+colnames(metallicaDataFrame) &lt;- c(&quot;name&quot;, &quot;age&quot;)
+
+# or you can name it at the moment of creating the data frame
+metallicaDataFrame2 &lt;- data.frame(Name = metallicaNames, Age = metallicaAges)
+
+# also check
+str(metallicaDataFrame2)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    4 obs. of  2 variables:
+##  $ Name: chr  &quot;Lars&quot; &quot;James&quot; &quot;Kirk&quot; &quot;Rob&quot;
+##  $ Age : num  47 47 48 46</code></pre>
+<pre class="r"><code># you can check there are 4 observations, for 2 variables: names and ages
+# &quot;Name&quot; has become now a factor, R recognize this automatically
+# We will see factors in detail later
+
+# To access each variable we use the &quot;$&quot;
+metallica$Name</code></pre>
+<pre><code>## NULL</code></pre>
+<pre class="r"><code>metallica$Age</code></pre>
+<pre><code>## NULL</code></pre>
+<pre class="r"><code># let&#39;s do some mathematical operations
+# we can add more data by creating a new variable in the data frame
+# and asigning it data, for instance, a data vector
+metallicaDataFrame$childAge &lt;- c(12, 12, 4, 6)
+
+# we can calculate new variables from existing ones
+metallicaDataFrame$fatherhoodAge &lt;- metallicaDataFrame$age - metallicaDataFrame$childAge
+
+# rename
+colnames(metallicaDataFrame) &lt;- c(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)
+
+# we can also create a numeric vector using the function &quot;rep&quot;
+vector1 &lt;- c(rep(1,5), rep(2,5), rep(3,5))
+
+# remember you can create a data frame with this data
+new_df &lt;- data.frame(vector1)
+
+# there is also other functions like list&quot; and &quot;cbind&quot; functions
+metallica &lt;- list(metallicaNames, metallicaAges)
+metallica &lt;- cbind(metallicaNames, metallicaAges)
+# these are different kind of data
+
+# a complete example for creating a dataframe is the next:
+
+name &lt;- c(&quot;Ben&quot;, &quot;Martin&quot;,&quot;Andy&quot;,&quot;Paul&quot;, &quot;Graham&quot;,&quot;Carina&quot;,&quot;Karina&quot;,&quot;Doug&quot;,&quot;Mark&quot;, &quot;Zoe&quot;)
+
+birth_date &lt;- as.Date(c(&quot;1977-07-03&quot;, &quot;1969-05-24&quot;, &quot;1973-06-21&quot;, &quot;1970-07-16&quot;, &quot;1949-10-10&quot;, &quot;1983-11-05&quot;, &quot;1987-10-08&quot;, &quot;1989-09-16&quot;, &quot;1973-05-20&quot;, &quot;1984-11-12&quot;))
+# the default date format is yyyy-mm-dd
+
+job &lt;- c(rep(1, 5), rep(2, 5)) # which is the same as job &lt;- c(1,1,1,1,1,2,2,2,2,2)
+
+# job is a categorial variable
+# that can allows you for instance to check differences between lectures and students
+
+# so far, this is just plain numbers with 1 indicating &quot;lecturers&quot; and 2 indicating &quot;students&quot;
+# also &quot;job&quot; is so far a vector of numbers
+# but you can convert it to a factor and give a name to the distinct levels of this factor
+job &lt;- factor(job, levels = c(1:2), labels = c(&quot;Lecturer&quot;, &quot;Student&quot;))
+
+# putting all togetger
+dataframe1 &lt;- data.frame(name, birth_date, job)
+
+# check it
+dataframe1</code></pre>
+<pre><code>##      name birth_date      job
+## 1     Ben 1977-07-03 Lecturer
+## 2  Martin 1969-05-24 Lecturer
+## 3    Andy 1973-06-21 Lecturer
+## 4    Paul 1970-07-16 Lecturer
+## 5  Graham 1949-10-10 Lecturer
+## 6  Carina 1983-11-05  Student
+## 7  Karina 1987-10-08  Student
+## 8    Doug 1989-09-16  Student
+## 9    Mark 1973-05-20  Student
+## 10    Zoe 1984-11-12  Student</code></pre>
+<pre class="r"><code># ---- exercise ----
+# create a new data frame incorporating friends, alcohol, income and neurotic
+
+dataframe1$friends &lt;- c(5,2,0,4,1,10,12,15,12,17)
+dataframe1$alcohol &lt;- c(10,15,20,5,30,25,20,16,17,18)
+dataframe1$income &lt;- c(20000,40000,35000,22000,50000,5000,100,3000,10000,10)
+dataframe1$neurotic &lt;- c(10,17,14,13,21,7,13,9,14,13)</code></pre>
+<p><br/></p>
+</div>
+<div id="importación-de-datos" class="section level4">
+<h4>Importación de datos</h4>
+<pre class="r"><code>#    __ 
+#   /\ \   
+#  / /\ \ import data ----
+# / /__\ \
+# \/____\/
+
+# however, most of the time we are going to import data
+
+# whenever you work with imported data you will need to set the working directory
+
+# set working directory
+setwd(&quot;../data&quot;)
+
+#setwd(&quot;C:/Users/Usuario/Documents/JoseLuis/UTalca_2018/Stats_101/course_2018/part2_how_to_use_R/1_data&quot;)
+
+# getwd() this function allows you to see what is your current working directory,
+# so, it allows you to check whether you set correctly (previous lines) your current directory,
+
+# import data
+dat2 &lt;- read.delim(file = &quot;facebook_friends_2.txt&quot;)
+# in this case we noticed that the imported data will be wrong because the &quot;header&quot; is set to TRUE by default
+
+# this is the same as: 
+dat2 &lt;- read.delim(&quot;facebook_friends_2.txt&quot;, header = FALSE)
+
+dat3 &lt;- read.delim(&quot;facebook_friends_1.txt&quot;, header = FALSE)
+colnames(dat3) &lt;- c(&quot;friends&quot;)
+
+# this means that some parameters such as &quot;header&quot; have values by default,
+# in this case R assumes that the data has a &quot;header&quot;
+# the 108 is out
+ 
+# to correct this we tell R that there is no header, hence we put header equal to FALSE
+
+# import data
+dat2 &lt;- read.delim(&quot;facebook_friends_2.txt&quot;)
+dat3 &lt;- read.csv(&quot;facebook_friends_1.csv&quot;, header = FALSE)
+
+# checking the structure of the data you might realize this is a &quot;data frame&quot;
+str(dat2)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    11 obs. of  1 variable:
+##  $ CASAS: int  108 103 252 121 93 57 40 53 22 116 ...</code></pre>
+<pre class="r"><code>#  this is a special data format that can accomodate data of different types in boxes: numeric, characters, etc
+
+# let&#39;s do some descriptive stats
+# let&#39;s see some centre of a distribution
+
+# to visualize the mode () the score that occurs more frequently) we can do an histogram
+hist(dat2$CASAS, 10)</code></pre>
+<p><img src="r01_files/figure-html/import-1.png" width="672" /></p>
+<pre class="r"><code># how to compute the median?
+# we can sort the data
+sort(dat2$CASAS)</code></pre>
+<pre><code>##  [1]  22  40  53  57  93  98 103 108 116 121 252</code></pre>
+<pre class="r"><code># seems there is an outlier, let&#39;s compare data with and without the outlier
+dat3 &lt;- dat2 # we copy the data
+
+#OJO dat3$V1[3] &lt;- NA # and we replace one value for an NA (NA stands for non available)
+
+colnames(dat2) &lt;- c(&quot;friendsNb&quot;) # rename header
+
+hist(dat2$friendsNb, 10) # plot</code></pre>
+<p><img src="r01_files/figure-html/import-2.png" width="672" /></p>
+<pre class="r"><code>dat2$friendsNb &lt;- dat2[order(dat2$friendsNb),] # sort data
+#OJO dat2$NUMEROS &lt;- dat2[order(dat2$NUMEROS),] # sort data
+
+# get ride of last value in a new dataframe
+#dat2woOL &lt;- data.frame(friendsNb = dat2$friendsNb[-length(dat2$friendsNb)])
+
+summary(dat2$friendsNb) # descrip stats</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   22.00   55.00   98.00   96.64  112.00  252.00</code></pre>
+<pre class="r"><code>#OJO summary(dat2woOL$friendsNb) # descrip stats
+
+sum1 &lt;- summary(dat2$friendsNb) # descrip stats
+
+IQR(dat2$friendsNb)</code></pre>
+<pre><code>## [1] 57</code></pre>
+<pre class="r"><code>summary(dat2)</code></pre>
+<pre><code>##    friendsNb     
+##  Min.   : 22.00  
+##  1st Qu.: 55.00  
+##  Median : 98.00  
+##  Mean   : 96.64  
+##  3rd Qu.:112.00  
+##  Max.   :252.00</code></pre>
+<pre class="r"><code>summary(dat3)</code></pre>
+<pre><code>##      CASAS       
+##  Min.   : 22.00  
+##  1st Qu.: 55.00  
+##  Median : 98.00  
+##  Mean   : 96.64  
+##  3rd Qu.:112.00  
+##  Max.   :252.00</code></pre>
+<pre class="r"><code># the median does not change a lot
+# question: why use the mean instead of the median?
+
+# let&#39;s look at some dipersion in the distribution of the data
+
+# range
+max(dat2) - min(dat2)</code></pre>
+<pre><code>## [1] 230</code></pre>
+<pre class="r"><code># range
+max(dat3, na.rm = TRUE) - min(dat3, na.rm = TRUE)</code></pre>
+<pre><code>## [1] 230</code></pre>
+<pre class="r"><code>errorstad &lt;- sd(dat2$V1) / sqrt(length(dat2$V1))
+
+# range is affected by extreme values, one workaorund would be excluding values at the extremes
+# we cut off the top and bottom 25% of scores and compute the range of the middle 50% of scores, this is the &#39;interquartile range&#39;
+
+# first, we need to compute the quartiles
+# But, we have already seen this data, remember summary??
+summary(dat2)</code></pre>
+<pre><code>##    friendsNb     
+##  Min.   : 22.00  
+##  1st Qu.: 55.00  
+##  Median : 98.00  
+##  Mean   : 96.64  
+##  3rd Qu.:112.00  
+##  Max.   :252.00</code></pre>
+<pre class="r"><code># if only we could funnel this data into a variable!!
+# wait a minute... maybe somebody already do this? ...
+# just find the right words, for instance type: &quot;r save summary to data frame&quot; in google!
+
+summaryDat2 &lt;- do.call(cbind, lapply(dat2, summary))
+summaryDat2</code></pre>
+<pre><code>##         friendsNb
+## Min.     22.00000
+## 1st Qu.  55.00000
+## Median   98.00000
+## Mean     96.63636
+## 3rd Qu. 112.00000
+## Max.    252.00000</code></pre>
+<pre class="r"><code># compute the interquartile range
+summaryDat2[5] - summaryDat2[2]</code></pre>
+<pre><code>## [1] 57</code></pre>
+<pre class="r"><code># let&#39;s see this graphically!
+boxplot(dat2)
+
+# let&#39;s see this graphically!
+boxplot(dat3)</code></pre>
+<p><img src="r01_files/figure-html/import-3.png" width="672" /></p>
+<pre class="r"><code># set directory
+setwd(&quot;../data&quot;)
+#setwd(&quot;C:/Users/Usuario/Documents/JoseLuis/UTalca_2018/Stats_UTalca/database_2020_DocPsychol&quot;)
+
+library(reshape)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;reshape&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     rename</code></pre>
+<pre class="r"><code># load data
+satisfactionData &lt;- read.delim(&quot;Honeymoon_Period.dat&quot;, header = TRUE)
+
+# check data
+head(satisfactionData)</code></pre>
+<pre><code>##   Person Satisfaction_Base Satisfaction_6_Months Satisfaction_12_Months
+## 1      1                 6                     6                      5
+## 2      2                 7                     7                      8
+## 3      3                 4                     6                      2
+## 4      4                 6                     9                      4
+## 5      5                 6                     7                      6
+## 6      6                 5                    10                      4
+##   Satisfaction_18_Months Gender
+## 1                      2      0
+## 2                      4      1
+## 3                      2      1
+## 4                      1      0
+## 5                      6      0
+## 6                      2      1</code></pre>
+<pre class="r"><code>str(satisfactionData)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    115 obs. of  6 variables:
+##  $ Person                : int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ Satisfaction_Base     : int  6 7 4 6 6 5 6 2 10 10 ...
+##  $ Satisfaction_6_Months : int  6 7 6 9 7 10 6 5 9 10 ...
+##  $ Satisfaction_12_Months: int  5 8 2 4 6 4 4 4 5 10 ...
+##  $ Satisfaction_18_Months: int  2 4 2 1 6 2 2 NA 6 9 ...
+##  $ Gender                : int  0 1 1 0 0 1 0 0 0 0 ...</code></pre>
+<pre class="r"><code>#    __ 
+#   /\ \   
+#  / /\ \ wide to long (stack) ----
+# / /__\ \
+# \/____\/
+
+# using stack
+# ex:
+# newDataFrame &lt;- stack(oldDataFrame, select = c(variable_list))
+# here we stack relative to the &quot;life satisfaction scores&quot;
+
+satisfactionStacked &lt;- stack(satisfactionData, 
+                             select = c(&quot;Satisfaction_Base&quot;,
+                                        &quot;Satisfaction_6_Months&quot;,
+                                        &quot;Satisfaction_12_Months&quot;,
+                                        &quot;Satisfaction_18_Months&quot;))
+
+# check it
+head(satisfactionStacked)</code></pre>
+<pre><code>##   values               ind
+## 1      6 Satisfaction_Base
+## 2      7 Satisfaction_Base
+## 3      4 Satisfaction_Base
+## 4      6 Satisfaction_Base
+## 5      6 Satisfaction_Base
+## 6      5 Satisfaction_Base</code></pre>
+<pre class="r"><code>str(satisfactionStacked)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    460 obs. of  2 variables:
+##  $ values: int  6 7 4 6 6 5 6 2 10 10 ...
+##  $ ind   : Factor w/ 4 levels &quot;Satisfaction_Base&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<pre class="r"><code># optionally we can change the name of the columns
+
+colnames(satisfactionStacked) &lt;- c(&quot;Values&quot;, &quot;SatisfType&quot;)
+# check it
+head(satisfactionStacked)</code></pre>
+<pre><code>##   Values        SatisfType
+## 1      6 Satisfaction_Base
+## 2      7 Satisfaction_Base
+## 3      4 Satisfaction_Base
+## 4      6 Satisfaction_Base
+## 5      6 Satisfaction_Base
+## 6      5 Satisfaction_Base</code></pre>
+<pre class="r"><code>str(satisfactionStacked)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    460 obs. of  2 variables:
+##  $ Values    : int  6 7 4 6 6 5 6 2 10 10 ...
+##  $ SatisfType: Factor w/ 4 levels &quot;Satisfaction_Base&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<pre class="r"><code># attention!!: we lose the info about &quot;person&quot; and &quot;gender&quot;
+
+#    __ 
+#   /\ \   
+#  / /\ \ long to wide (unstack) ----
+# / /__\ \
+# \/____\/
+
+# to reverse this procedure we can &quot;unstack&quot;
+
+# simple unstack
+satisfactionUnstacked &lt;- unstack(satisfactionStacked)
+
+# check it
+head(satisfactionUnstacked)</code></pre>
+<pre><code>##   Satisfaction_Base Satisfaction_6_Months Satisfaction_12_Months
+## 1                 6                     6                      5
+## 2                 7                     7                      8
+## 3                 4                     6                      2
+## 4                 6                     9                      4
+## 5                 6                     7                      6
+## 6                 5                    10                      4
+##   Satisfaction_18_Months
+## 1                      2
+## 2                      4
+## 3                      2
+## 4                      1
+## 5                      6
+## 6                      2</code></pre>
+<pre class="r"><code>str(satisfactionUnstacked)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    115 obs. of  4 variables:
+##  $ Satisfaction_Base     : int  6 7 4 6 6 5 6 2 10 10 ...
+##  $ Satisfaction_6_Months : int  6 7 6 9 7 10 6 5 9 10 ...
+##  $ Satisfaction_12_Months: int  5 8 2 4 6 4 4 4 5 10 ...
+##  $ Satisfaction_18_Months: int  2 4 2 1 6 2 2 NA 6 9 ...</code></pre>
+<pre class="r"><code># or you can specify the name for the values themselves and for the name of the variables
+# ex: 
+# newDataFrame &lt;- unstack(oldDataFrame, scores ~ columns)
+
+# scores: name of the variable containing your scores
+# columns: name of the variable that indicates the variable to which the score belongs
+
+satisfactionUnstacked2 &lt;- unstack(satisfactionStacked,
+                                  Values ~ SatisfType)
+
+# check it
+head(satisfactionUnstacked2)</code></pre>
+<pre><code>##   Satisfaction_Base Satisfaction_6_Months Satisfaction_12_Months
+## 1                 6                     6                      5
+## 2                 7                     7                      8
+## 3                 4                     6                      2
+## 4                 6                     9                      4
+## 5                 6                     7                      6
+## 6                 5                    10                      4
+##   Satisfaction_18_Months
+## 1                      2
+## 2                      4
+## 3                      2
+## 4                      1
+## 5                      6
+## 6                      2</code></pre>
+<pre class="r"><code>str(satisfactionUnstacked2)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    115 obs. of  4 variables:
+##  $ Satisfaction_Base     : int  6 7 4 6 6 5 6 2 10 10 ...
+##  $ Satisfaction_6_Months : int  6 7 6 9 7 10 6 5 9 10 ...
+##  $ Satisfaction_12_Months: int  5 8 2 4 6 4 4 4 5 10 ...
+##  $ Satisfaction_18_Months: int  2 4 2 1 6 2 2 NA 6 9 ...</code></pre>
+<pre class="r"><code>#    __ 
+#   /\ \   
+#  / /\ \ wide to long (melt) ----
+# / /__\ \
+# \/____\/
+
+# melt
+# ex: 
+# newDataFrame &lt;- melt(oldDataFrame, id = c(constant_variables), measured = c(variables_that_change_across_columns))
+
+# id: This option specifies any variables in the dataframe that do not vary over time, ex: person identifier (Person), and gender (Gender)
+# id = c(Person, Gender)
+
+# measured: This option specifies the variables that do vary over time or are repeated measures(i.e., scores within the same entity).
+
+# In other words, it specifies the names of variables currently in different columns that you would like to be restructured so that they are in different rows. 
+
+# We have 4 columns that we want to restructure (Satisfaction_Base, Satisfaction_6_Months, Satisfaction_12_ Months, Satisfaction_18_Months). 
+
+# These can be specified as: 
+# measured = c(&quot;Satisfaction_Base&quot;, &quot;Satisfaction_6_Months&quot;, &quot;Satisfaction_12_Months&quot;,  &quot;Satisfaction_18_Months&quot;)
+
+restructuredData &lt;- melt(satisfactionData,
+                         id = c(&quot;Person&quot;, &quot;Gender&quot;),
+                         measured = c(&quot;Satisfaction_Base&quot;,
+                                      &quot;Satisfaction_6_Months&quot;,
+                                      &quot;Satisfaction_12_Months&quot;,
+                                      &quot;Satisfaction_18_Months&quot;))
+
+# optionally we can change the name of the columns
+colnames(restructuredData)[3:4] &lt;- c(&quot;SatisfType&quot;, &quot;Values&quot;)
+
+# we can also reorder data
+# datLongreorder &lt;- datLong[order(datLong$Person),]
+reorder2 &lt;- restructuredData[order(restructuredData$Person),]
+
+# check it
+head(restructuredData)</code></pre>
+<pre><code>##   Person Gender        SatisfType Values
+## 1      1      0 Satisfaction_Base      6
+## 2      2      1 Satisfaction_Base      7
+## 3      3      1 Satisfaction_Base      4
+## 4      4      0 Satisfaction_Base      6
+## 5      5      0 Satisfaction_Base      6
+## 6      6      1 Satisfaction_Base      5</code></pre>
+<pre class="r"><code>str(restructuredData)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    460 obs. of  4 variables:
+##  $ Person    : int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ Gender    : int  0 1 1 0 0 1 0 0 0 0 ...
+##  $ SatisfType: Factor w/ 4 levels &quot;Satisfaction_Base&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ Values    : int  6 7 4 6 6 5 6 2 10 10 ...</code></pre>
+<pre class="r"><code>#    __ 
+#   /\ \   
+#  / /\ \ long to wide (cast) ----
+# / /__\ \
+# \/____\/
+
+# cast
+# ex: 
+# newData &lt;- cast(longData, variables_coded_within_a_single_column ~ variables_coded_across_many_columns, value = &quot;outcome_variable&quot;)
+
+wideData &lt;- cast(restructuredData, Person + Gender ~ SatisfType, value = &quot;Values&quot;)
+
+# check it
+head(wideData)</code></pre>
+<pre><code>##   Person Gender Satisfaction_Base Satisfaction_6_Months Satisfaction_12_Months
+## 1      1      0                 6                     6                      5
+## 2      2      1                 7                     7                      8
+## 3      3      1                 4                     6                      2
+## 4      4      0                 6                     9                      4
+## 5      5      0                 6                     7                      6
+## 6      6      1                 5                    10                      4
+##   Satisfaction_18_Months
+## 1                      2
+## 2                      4
+## 3                      2
+## 4                      1
+## 5                      6
+## 6                      2</code></pre>
+<pre class="r"><code>str(wideData)</code></pre>
+<pre><code>## List of 6
+##  $ Person                : int [1:115] 1 2 3 4 5 6 7 8 9 10 ...
+##  $ Gender                : int [1:115] 0 1 1 0 0 1 0 0 0 0 ...
+##  $ Satisfaction_Base     : int [1:115] 6 7 4 6 6 5 6 2 10 10 ...
+##  $ Satisfaction_6_Months : int [1:115] 6 7 6 9 7 10 6 5 9 10 ...
+##  $ Satisfaction_12_Months: int [1:115] 5 8 2 4 6 4 4 4 5 10 ...
+##  $ Satisfaction_18_Months: int [1:115] 2 4 2 1 6 2 2 NA 6 9 ...
+##  - attr(*, &quot;row.names&quot;)= int [1:115] 1 2 3 4 5 6 7 8 9 10 ...
+##  - attr(*, &quot;idvars&quot;)= chr [1:2] &quot;Person&quot; &quot;Gender&quot;
+##  - attr(*, &quot;rdimnames&quot;)=List of 2
+##   ..$ :&#39;data.frame&#39;: 115 obs. of  2 variables:
+##   .. ..$ Person: int [1:115] 1 2 3 4 5 6 7 8 9 10 ...
+##   .. ..$ Gender: int [1:115] 0 1 1 0 0 1 0 0 0 0 ...
+##   ..$ :&#39;data.frame&#39;: 4 obs. of  1 variable:
+##   .. ..$ SatisfType: Factor w/ 4 levels &quot;Satisfaction_Base&quot;,..: 1 2 3 4</code></pre>
+<pre class="r"><code># END</code></pre>
+<p><br/> <br/></p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

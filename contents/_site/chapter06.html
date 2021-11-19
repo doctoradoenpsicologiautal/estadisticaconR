@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Estadística 101</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Estadística 101</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <!--<p>Dummy Heading</p>-->
+                <li><a href="index.html">Introducción</a></li>
+                <li>
+                    <a href="#01Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Capítulo 1</a>
+                    <ul class="collapse list-unstyled" id="01Submenu">
+                        <li><a href="chapter01a.html">1a: ¿Para qué nos sirve la estadística?</a></li>
+                        <li><a href="chapter01b.html">1b: ¿Que es lo más esencial que debería saber?</a></li>
+                    </ul>
+                </li>
+                <li><a href="chapter02.html">Capítulo 2: ¿Por qué importa tanto tanto la curva normal?</a></li>
+                <li><a href="chapter03.html">Capítulo 3: ¿Que es un t-test?</a></li>
+                <li><a href="chapter04.html">Capítulo 4: ¿Que es un modelo estadístico?</a></li>
+                <li><a href="chapter05.html">Capítulo 5: ¿Que es un ANOVA?</a></li>
+                <li><a href="chapter06.html">Capítulo 6: ¿Y que hago después que calculo un ANOVA?</a></li>
+                <li><a href="chapter07.html">Capítulo 7: ¿Qué conceptos estadísticos debería manejar?</a></li>
+                <li>
+                    <a href="#programacionSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Programación</a>
+                    <ul class="collapse list-unstyled" id="programacionSubmenu">
+                        <li><a href="r01.html">Capítulo 1</a></li>
+                        <li><a href="r02.html">Capítulo 2</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="shinny01.html">Ejemplo Shinny</a></li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Inicio</a>
+                            </li>
+                            <!--
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            -->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+<header id="title-block-header">
+<h1 class="title">Estadística 101</h1>
+</header>
+<div id="capítulo-6-y-que-hago-después-que-calculo-un-anova" class="section level2">
+<h2>Capítulo 6: ¿Y que hago después que calculo un ANOVA?</h2>
+<!--<a href="https://www.youtube.com/playlist?list=PLzyW6TZJNgGZyMYhJtEN7PtT_a_ebC4nY" target="_blank">Ver</a>-->
+<p>Contenido: 3 videos (35 minutos en total)</p>
+<div id="parte-1" class="section level4">
+<h4>Parte 1</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/nFcxN5qVYxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-2" class="section level4">
+<h4>Parte 2</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/z_jVSEKOVZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+</div>
+<div id="parte-3" class="section level4">
+<h4>Parte 3</h4>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/qXR27qqjDvU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p><br/></p>
+<ul>
+<li>¿Que hago después de una prueba omnibus?</li>
+<li>¿De qué depende el tipo de análisis que se hace después del ANOVA?</li>
+<li>¿Qué significa que desglocemos la varianza explicada en los distintos contrastes en el análisis de contrastes planificados?</li>
+<li>¿En un experimento dónde analizo el efecto de dos dosis de droga comparada con un placebo, que contrastes planificados se podrían hacer y que indican el intercepto y los betas de este modelo?</li>
+<li>¿Por que es importante que el contraste que hagamos sea un contraste ortogonal?</li>
+<li>¿Para que sirven los contrastes que evaluan una tendencia líneal o cuadrática?</li>
+<li>¿Qué tipos de pruebas post-hoc existen?</li>
+<li>¿Cuál es el riesgo que corremos si usamos una prueba post-hoc muy exigente (o conservadora)?</li>
+<li>¿Cuál es el riesgo que corremos si usamos una prueba post-hoc poco exigente (o conservadora)?</li>
+</ul>
+<p><br/> <br/></p>
+</div>
+</div>
+
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>

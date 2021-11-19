@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$" />
+$endif$
+$if(keywords)$
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+$endif$
+$if(description-meta)$
+  <meta name="description" content="$description-meta$" />
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+  <style>
+    $styles.html()$
+  </style>
+
+    <!-- bootstrap 5 css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <!-- BOX ICONS CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  
+$for(css)$
+  <link rel="stylesheet" href="$css$" />
+$endfor$
+$if(math)$
+  $math$
+$endif$
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+$for(header-includes)$
+  $header-includes$
+$endfor$
+</head>
+<body>
+
+    <!-- Side-Nav -->
+    <div
+      class="side-navbar active-nav d-flex justify-content-start flex-wrap flex-column"
+      id="sidebar"
+    >
+      <ul class="nav flex-column text-white w-100">
+        <a href="index.html" class="nav-link h3 text-white my-2">
+          Estadística 101
+        </a>
+        <a href="index.html" class="nav-link text-white">
+          <span class="mx-2">Introducción</span>
+        </a>
+        <a href="chapter01a.html" class="nav-link text-white">
+          <span class="mx-2">Capítulo 1a: ¿Para qué nos sirve la estadística?</span>
+        </a>
+        <a href="chapter01b.html" class="nav-link text-white">
+          <span class="mx-2">Capítulo 1b: ¿Que es lo más esencial que debería saber?</span>
+        </a>
+		
+        <a href="chapter02.html" class="nav-link text-white">
+          <span class="mx-2">Capítulo 2: ¿Por qué importa tanto tanto la curva normal?</span>
+        </a>
+        <a href="chapter03.html" class="nav-link text-white">
+          <span class="mx-2">Capítulo 3: ¿Que es un t-test?</span>
+        </a>
+        <a href="chapter04.html" class="nav-link text-white">
+          <span class="mx-2">Capítulo 4: ¿Que es un modelo estadístico?</span>
+        </a>
+        <a href="chapter05.html" class="nav-link text-white">
+          <span class="mx-2">Capítulo 5: ¿Que es un ANOVA?</span>
+        </a>
+        <a href="chapter06.html" class="nav-link text-white">
+          <span class="mx-2">Capítulo 6: ¿Y que hago después que calculo un ANOVA?</span>
+        </a>
+        <a href="chapter07.html" class="nav-link text-white">
+          <span class="mx-2">Capítulo 7: ¿Qué conceptos estadísticos debería manejar?</span>
+        </a>
+        <li class="nav-link">
+          <span class="mx-2">Programación</span>
+        </li>
+        <a href="r01.html" class="nav-link text-white">
+          <span class="mx-4">Capítulo 1</span>
+        </a>
+        <a href="r02.html" class="nav-link text-white">
+          <span class="mx-4">Capítulo 2</span>
+        </a>
+        <a href="shinny01.html" class="nav-link text-white">
+          <span class="mx-2">Ejemplo Shinny</span>
+        </a>
+      </ul>
+    </div>
+
+    <!-- Main Wrapper -->
+    <div class="p-3 my-container active-cont">
+      <!-- Top Nav -->
+      <nav class="navbar top-navbar px-5">
+        <a class="btn border-0" id="menu-btn"><i class="bx bx-menu"></i></a>
+      </nav>
+      <!--End Top Nav -->
+
+$for(include-before)$
+$include-before$
+$endfor$
+$if(title)$
+<header id="title-block-header">
+<h1 class="title">$title$</h1>
+$if(subtitle)$
+<p class="subtitle">$subtitle$</p>
+$endif$
+$for(author)$
+<p class="author">$author$</p>
+$endfor$
+$if(date)$
+<p class="date">$date$</p>
+$endif$
+</header>
+$endif$
+$if(toc)$
+<nav id="$idprefix$TOC" role="doc-toc">
+$if(toc-title)$
+<h2 id="$idprefix$toc-title">$toc-title$</h2>
+$endif$
+$table-of-contents$
+</nav>
+$endif$
+$body$
+$for(include-after)$
+$include-after$
+$endfor$
+
+   </div>
+
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom js -->
+    <script>
+      var menu_btn = document.querySelector("#menu-btn");
+      var sidebar = document.querySelector("#sidebar");
+      var container = document.querySelector(".my-container");
+      menu_btn.addEventListener("click", () => {
+        sidebar.classList.toggle("active-nav");
+        container.classList.toggle("active-cont");
+      });
+    </script>
+ 
+</body>
+</html>
